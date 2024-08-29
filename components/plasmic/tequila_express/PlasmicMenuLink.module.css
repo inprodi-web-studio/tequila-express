@@ -1,0 +1,29 @@
+.container {
+  display: inline-flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  justify-self: flex-start;
+}
+.text {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  color: var(--token-iDr9UfHUA5XI);
+  font-weight: 600;
+  cursor: pointer;
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  min-width: 0;
+  -webkit-transition-property: all;
+  -webkit-transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 0.3s;
+}
+.container .text:hover {
+  color: #344a6b;
+}

@@ -3,23 +3,23 @@
 import * as React from "react";
 import { PageParamsProvider as PageParamsProvider__ } from "@plasmicapp/react-web/lib/host";
 import GlobalContextsProvider from "../components/plasmic/tequila_express/PlasmicGlobalContextsProvider";
-import { PlasmicInicio } from "../components/plasmic/tequila_express/PlasmicInicio";
+import { PlasmicContacto } from "../components/plasmic/tequila_express/PlasmicContacto";
 import { useRouter } from "next/router";
 
-function Inicio() {
-  // Use PlasmicInicio to render this component as it was
+function Contacto() {
+  // Use PlasmicContacto to render this component as it was
   // designed in Plasmic, by activating the appropriate variants,
   // attaching the appropriate event handlers, etc.  You
   // can also install whatever React hooks you need here to manage state or
   // fetch data.
   //
-  // Props you can pass into PlasmicInicio are:
+  // Props you can pass into PlasmicContacto are:
   // 1. Variants you want to activate,
   // 2. Contents for slots you want to fill,
   // 3. Overrides for any named node in the component to attach behavior and data,
   // 4. Props to set on the root node.
   //
-  // By default, PlasmicInicio is wrapped by your project's global
+  // By default, PlasmicContacto is wrapped by your project's global
   // variant context providers. These wrappers may be moved to
   // Next.js Custom App component
   // (https://nextjs.org/docs/advanced-features/custom-app).
@@ -30,10 +30,10 @@ function Inicio() {
         params={useRouter()?.query}
         query={useRouter()?.query}
       >
-        <PlasmicInicio />
+        <PlasmicContacto />
       </PageParamsProvider__>
     </GlobalContextsProvider>
   );
 }
 
-export default Inicio;
+export default Contacto;

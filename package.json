@@ -11,9 +11,14 @@
   "dependencies": {
     "@plasmicapp/cli": "^0.1.331",
     "@plasmicapp/react-web": "^0.2.350",
+    "@plasmicpkgs/antd5": "^0.0.249",
+    "@plasmicpkgs/plasmic-embed-css": "^0.1.191",
+    "@plasmicpkgs/react-slick": "^0.0.227",
     "next": "14.2.6",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-slick": "^0.30.2",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "eslint": "^8",
