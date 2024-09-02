@@ -1,3 +1,4 @@
+import React from 'react';
 import '@/styles/globals.css'
 import { PlasmicRootProvider } from "@plasmicapp/react-web";
 import Head from "next/head";
