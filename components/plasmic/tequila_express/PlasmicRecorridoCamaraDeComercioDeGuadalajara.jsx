@@ -29,7 +29,7 @@ import {
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import MainHeader from "../../MainHeader"; // plasmic-import: wtnE0On9QToy/component
 import Button2 from "../../Button2"; // plasmic-import: 48nEEeCzck2s/component
-import { Anchor } from "inprodi-design-system"; // plasmic-import: ONinya1RhOT2/codeComponent
+import { Anchor } from "../../registerAnchor"; // plasmic-import: ONinya1RhOT2/codeComponent
 import { AntdAccordion } from "@plasmicpkgs/antd5/skinny/registerCollapse";
 import { accordionHelpers as AntdAccordion_Helpers } from "@plasmicpkgs/antd5/skinny/registerCollapse";
 import { AntdAccordionItem } from "@plasmicpkgs/antd5/skinny/registerCollapse";

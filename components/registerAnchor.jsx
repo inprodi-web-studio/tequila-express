@@ -28,7 +28,7 @@ export const anchorMeta = {
             defaultValue : 0,
         },
     },
-    importPath: "inprodi-design-system",
+    importPath: "./components/registerAnchor",
     importName: "Anchor",
 };
 
