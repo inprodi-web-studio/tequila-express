@@ -19,6 +19,7 @@ import {
   deriveRenderOpts,
   ensureGlobalVariants,
   generateOnMutateForSpec,
+  generateStateOnChangeProp,
   generateStateOnChangePropForCodeComponents,
   generateStateValueProp,
   hasVariant,
@@ -71,6 +72,12 @@ function PlasmicViajarEnTren__RenderFunc(props) {
         initFunc: ({ $props, $state, $queries, $ctx }) => 0,
         refName: "sliderCarousel",
         onMutate: generateOnMutateForSpec("currentSlide", SliderWrapper_Helpers)
+      },
+      {
+        path: "mainHeader.menuOpen",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => false
       }
     ],
 
@@ -129,6 +136,14 @@ function PlasmicViajarEnTren__RenderFunc(props) {
             data-plasmic-name={"mainHeader"}
             data-plasmic-override={overrides.mainHeader}
             className={classNames("__wab_instance", sty.mainHeader)}
+            menuOpen={generateStateValueProp($state, [
+              "mainHeader",
+              "menuOpen"
+            ])}
+            onMenuOpenChange={generateStateOnChangeProp($state, [
+              "mainHeader",
+              "menuOpen"
+            ])}
           />
 
           <div
@@ -196,7 +211,7 @@ function PlasmicViajarEnTren__RenderFunc(props) {
                 )}
               >
                 {
-                  "Abre los ojos para disfrutar cada segundo de tu camino destino Tequila con vistas inaccesibles desde la carretera.\n\n\nTequila Express es m\u00e1s que una experiencia cultural en Jalisco; tambi\u00e9n es una manera de practicar el turismo responsable, utilizando uno de los medios de transporte m\u00e1s sustentables mientras descubres el paisaje agavero catalogado por la UNESCO como Patrimonio Cultural de la Humanidad."
+                  "Abre los ojos para disfrutar cada segundo de tu camino destino Tequila con vistas inaccesibles desde la carretera.\n\nTequila Express es m\u00e1s que una experiencia cultural en Jalisco; tambi\u00e9n es una manera de practicar el turismo responsable, utilizando uno de los medios de transporte m\u00e1s sustentables mientras descubres el paisaje agavero catalogado por la UNESCO como Patrimonio Cultural de la Humanidad."
                 }
               </div>
             </Stack__>
@@ -325,7 +340,7 @@ function PlasmicViajarEnTren__RenderFunc(props) {
                 )}
               >
                 {
-                  "Ya sea que viajes solo, en pareja, con amigos o en familia; en Tequila Express encontrar\u00e1s el itinerario ideal para ti."
+                  "Ya sea que viajes solo, en pareja, con amigos o en familia;\nen Tequila Express encontrar\u00e1s el itinerario ideal para ti."
                 }
               </div>
               <div

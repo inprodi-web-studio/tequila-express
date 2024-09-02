@@ -18,7 +18,10 @@ import {
   createPlasmicElementProxy,
   deriveRenderOpts,
   ensureGlobalVariants,
-  hasVariant
+  generateStateOnChangeProp,
+  generateStateValueProp,
+  hasVariant,
+  useDollarState
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import MainHeader from "../../MainHeader"; // plasmic-import: wtnE0On9QToy/component
@@ -56,6 +59,24 @@ function PlasmicNosotros__RenderFunc(props) {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
+  const stateSpecs = React.useMemo(
+    () => [
+      {
+        path: "mainHeader.menuOpen",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => false
+      }
+    ],
+
+    [$props, $ctx, $refs]
+  );
+  const $state = useDollarState(stateSpecs, {
+    $props,
+    $ctx,
+    $queries: {},
+    $refs
+  });
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsraGa2MJbEFd()
   });
@@ -103,6 +124,14 @@ function PlasmicNosotros__RenderFunc(props) {
             data-plasmic-name={"mainHeader"}
             data-plasmic-override={overrides.mainHeader}
             className={classNames("__wab_instance", sty.mainHeader)}
+            menuOpen={generateStateValueProp($state, [
+              "mainHeader",
+              "menuOpen"
+            ])}
+            onMenuOpenChange={generateStateOnChangeProp($state, [
+              "mainHeader",
+              "menuOpen"
+            ])}
           />
 
           <div
@@ -208,7 +237,7 @@ function PlasmicNosotros__RenderFunc(props) {
                     sty.text___9HF
                   )}
                 >
-                  {"Tequila Express integra las experiencias ferroviarias"}
+                  {"Tequila Express integra \nlas experiencias ferroviarias"}
                 </div>
                 <div
                   className={classNames(
@@ -280,7 +309,7 @@ function PlasmicNosotros__RenderFunc(props) {
                     sty.text__eZDbV
                   )}
                 >
-                  {"Tu Slow Travel en M\u00e9xico"}
+                  {"Tu Slow Travel\nen M\u00e9xico"}
                 </div>
                 <div
                   className={classNames(

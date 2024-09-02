@@ -91,6 +91,7 @@
   color: #ffffff;
   font-size: 48px;
   font-weight: 600;
+  line-height: 1.25;
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .text___3VcK1 {
@@ -144,7 +145,7 @@
 }
 .text___44Xtd {
   position: relative;
-  width: 75%;
+  width: 60%;
   height: auto;
   max-width: 100%;
   font-weight: 500;

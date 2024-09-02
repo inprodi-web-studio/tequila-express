@@ -13,7 +13,9 @@ import { useRouter } from "next/router";
 import {
   classNames,
   createPlasmicElementProxy,
-  deriveRenderOpts
+  deriveRenderOpts,
+  hasVariant,
+  useDollarState
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import "@plasmicapp/react-web/lib/plasmic.css";
@@ -23,7 +25,7 @@ import sty from "./PlasmicButton2.module.css"; // plasmic-import: 48nEEeCzck2s/c
 
 createPlasmicElementProxy;
 
-export const PlasmicButton2__VariantProps = new Array();
+export const PlasmicButton2__VariantProps = new Array("light");
 
 export const PlasmicButton2__ArgProps = new Array("label");
 
@@ -56,6 +58,24 @@ function PlasmicButton2__RenderFunc(props) {
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
+  const stateSpecs = React.useMemo(
+    () => [
+      {
+        path: "light",
+        type: "private",
+        variableType: "variant",
+        initFunc: ({ $props, $state, $queries, $ctx }) => $props.light
+      }
+    ],
+
+    [$props, $ctx, $refs]
+  );
+  const $state = useDollarState(stateSpecs, {
+    $props,
+    $ctx,
+    $queries: {},
+    $refs
+  });
   return (
     <button
       data-plasmic-name={"root"}
@@ -70,13 +90,16 @@ function PlasmicButton2__RenderFunc(props) {
         projectcss.plasmic_mixins,
         projectcss.plasmic_tokens,
         plasmic_antd_5_hostless_css.plasmic_tokens,
-        sty.root
+        sty.root,
+        { [sty.rootlight]: hasVariant($state, "light", "light") }
       )}
     >
       <div
         data-plasmic-name={"text"}
         data-plasmic-override={overrides.text}
-        className={classNames(projectcss.all, projectcss.__wab_text, sty.text)}
+        className={classNames(projectcss.all, projectcss.__wab_text, sty.text, {
+          [sty.textlight]: hasVariant($state, "light", "light")
+        })}
       >
         <React.Fragment>
           {(() => {

@@ -19,6 +19,7 @@
   transition-property: all;
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
+  white-space: pre;
   min-width: 0;
   -webkit-transition-property: all;
   -webkit-transition-timing-function: ease-in-out;

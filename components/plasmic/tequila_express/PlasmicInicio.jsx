@@ -18,8 +18,10 @@ import {
   deriveRenderOpts,
   ensureGlobalVariants,
   generateOnMutateForSpec,
+  generateStateOnChangeProp,
   generateStateOnChangePropForCodeComponents,
   generateStateValueProp,
+  hasVariant,
   initializeCodeComponentStates,
   useDollarState
 } from "@plasmicapp/react-web";
@@ -83,6 +85,12 @@ function PlasmicInicio__RenderFunc(props) {
           "activePanelId",
           AntdAccordion_Helpers
         )
+      },
+      {
+        path: "mainHeader.menuOpen",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => false
       }
     ],
 
@@ -127,6 +135,14 @@ function PlasmicInicio__RenderFunc(props) {
             data-plasmic-name={"mainHeader"}
             data-plasmic-override={overrides.mainHeader}
             className={classNames("__wab_instance", sty.mainHeader)}
+            menuOpen={generateStateValueProp($state, [
+              "mainHeader",
+              "menuOpen"
+            ])}
+            onMenuOpenChange={generateStateOnChangeProp($state, [
+              "mainHeader",
+              "menuOpen"
+            ])}
           />
 
           {(() => {
@@ -189,7 +205,7 @@ function PlasmicInicio__RenderFunc(props) {
                         sty.text__gJpEt
                       )}
                     >
-                      {"Convierte el trayecto en parte de tu destino"}
+                      {"Convierte el trayecto en \nparte de tu destino"}
                     </div>
                     <div
                       className={classNames(
@@ -218,10 +234,10 @@ function PlasmicInicio__RenderFunc(props) {
                       className={classNames(
                         projectcss.all,
                         projectcss.__wab_text,
-                        sty.text___5NFbR
+                        sty.text__rxMkB
                       )}
                     >
-                      {"Convierte el trayecto en parte de tu destino"}
+                      {"Convierte el trayecto en \nparte de tu destino"}
                     </div>
                     <div
                       className={classNames(
@@ -250,10 +266,10 @@ function PlasmicInicio__RenderFunc(props) {
                       className={classNames(
                         projectcss.all,
                         projectcss.__wab_text,
-                        sty.text__n2AFu
+                        sty.text__wmrPc
                       )}
                     >
-                      {"Convierte el trayecto en parte de tu destino"}
+                      {"Convierte el trayecto en \nparte de tu destino"}
                     </div>
                     <div
                       className={classNames(
@@ -347,7 +363,7 @@ function PlasmicInicio__RenderFunc(props) {
                   sty.text__qX3
                 )}
               >
-                {"Tequila Express integra las experiencias ferroviarias"}
+                {"Tequila Express integra\nlas experiencias ferroviarias"}
               </div>
               <div
                 className={classNames(
@@ -465,7 +481,9 @@ function PlasmicInicio__RenderFunc(props) {
                   sty.text__wkBk
                 )}
               >
-                {"Si\u00e9ntete acompa\u00f1ado en el camino"}
+                {hasVariant(globalVariants, "screen", "medium")
+                  ? "Si\u00e9ntete acompa\u00f1ado\nen el camino"
+                  : "Si\u00e9ntete acompa\u00f1ado en el camino"}
               </div>
               <div
                 className={classNames(
