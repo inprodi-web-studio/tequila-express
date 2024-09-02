@@ -35,7 +35,7 @@ export default function GlobalContextsProvider(props) {
       colorPrimary={
         antdConfigProviderProps && "colorPrimary" in antdConfigProviderProps
           ? antdConfigProviderProps.colorPrimary
-          : "#1677ff"
+          : "#C96A5F"
       }
       colorSuccess={
         antdConfigProviderProps && "colorSuccess" in antdConfigProviderProps
@@ -107,7 +107,7 @@ export default function GlobalContextsProvider(props) {
         css={
           embedCssProps && "css" in embedCssProps
             ? embedCssProps.css
-            : '.ant-collapse-header {\n    border: 1px solid rgba(14, 28, 43, 0.30);\n    padding: 18px !important;\n    border-radius: 20px !important;\n}\n\n.ant-collapse-header[aria-expanded="true"] {\n    border-bottom: 0 !important;\n    border-radius: 20px 20px 0 0  !important;\n}\n\n.ant-collapse-content.ant-collapse-content-active .ant-collapse-content-box {\n    padding: 0 18px 18px 18px !important;\n    border: 1px solid rgba(14, 28, 43, 0.30);\n    border-top: none;\n    border-radius: 0 0 20px 20px;\n}\n\n.ant-collapse-item {\n    margin-bottom: 16px;\n}\n\na {\n  cursor: pointer;\n}'
+            : '.ant-collapse-header {\n    border: 1px solid rgba(14, 28, 43, 0.30);\n    padding: 18px !important;\n    border-radius: 20px !important;\n}\n\n.ant-collapse-header[aria-expanded="true"] {\n    border-bottom: 0 !important;\n    border-radius: 20px 20px 0 0  !important;\n}\n\n.ant-collapse-content.ant-collapse-content-active .ant-collapse-content-box {\n    padding: 0 18px 18px 18px !important;\n    border: 1px solid rgba(14, 28, 43, 0.30);\n    border-top: none;\n    border-radius: 0 0 20px 20px;\n}\n\n.ant-collapse-item {\n    margin-bottom: 16px;\n}\n\na {\n  cursor: pointer;\n}\n\n.ant-anchor-link.ant-anchor-link-active a {\n    color: red !important;\n}\n\nspan.ant-anchor-ink.ant-anchor-ink-visible {\n  background-color: red !important;\n}\n\nli.ant-dropdown-menu-item span {\n    font-size: 14px;\n    font-weight: 600;\n    color: #0E1C2B;\n}'
         }
       >
         {children}

@@ -162,25 +162,104 @@
           "scheme": "blackbox",
           "componentType": "page",
           "path": "/contacto"
+        },
+        {
+          "id": "IQiQ2GDBiFpG",
+          "name": "RecorridoGrupoMexicoTransportes",
+          "type": "managed",
+          "projectId": "uEWT1C6ySrjtSMWJntBego",
+          "renderModuleFilePath": "plasmic/tequila_express/PlasmicRecorridoGrupoMexicoTransportes.jsx",
+          "importSpec": {
+            "modulePath": "../pages/recorridos/grupo-mexico-transportes.jsx"
+          },
+          "cssFilePath": "plasmic/tequila_express/PlasmicRecorridoGrupoMexicoTransportes.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/recorridos/grupo-mexico-transportes"
+        },
+        {
+          "id": "eAA_aT1s0SEU",
+          "name": "Drawer",
+          "type": "managed",
+          "projectId": "uEWT1C6ySrjtSMWJntBego",
+          "renderModuleFilePath": "plasmic/tequila_express/PlasmicDrawer.jsx",
+          "importSpec": {
+            "modulePath": "Drawer.jsx"
+          },
+          "cssFilePath": "plasmic/tequila_express/PlasmicDrawer.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "tA-NZv-IllJf",
+          "name": "AvisoDePrivacidad",
+          "type": "managed",
+          "projectId": "uEWT1C6ySrjtSMWJntBego",
+          "renderModuleFilePath": "plasmic/tequila_express/PlasmicAvisoDePrivacidad.jsx",
+          "importSpec": {
+            "modulePath": "../pages/privacidad.jsx"
+          },
+          "cssFilePath": "plasmic/tequila_express/PlasmicAvisoDePrivacidad.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/privacidad"
+        },
+        {
+          "id": "PqhjiJqPbh80",
+          "name": "TerminosYCondiciones",
+          "type": "managed",
+          "projectId": "uEWT1C6ySrjtSMWJntBego",
+          "renderModuleFilePath": "plasmic/tequila_express/PlasmicTerminosYCondiciones.jsx",
+          "importSpec": {
+            "modulePath": "../pages/terminos.jsx"
+          },
+          "cssFilePath": "plasmic/tequila_express/PlasmicTerminosYCondiciones.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/terminos"
+        },
+        {
+          "id": "8lN_knEESkxt",
+          "name": "RecorridoCamaraDeComercioDeGuadalajara",
+          "type": "managed",
+          "projectId": "uEWT1C6ySrjtSMWJntBego",
+          "renderModuleFilePath": "plasmic/tequila_express/PlasmicRecorridoCamaraDeComercioDeGuadalajara.jsx",
+          "importSpec": {
+            "modulePath": "../pages/recorridos/camara-comercio-gdl.jsx"
+          },
+          "cssFilePath": "plasmic/tequila_express/PlasmicRecorridoCamaraDeComercioDeGuadalajara.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/recorridos/camara-comercio-gdl"
         }
       ],
       "icons": [
         {
           "id": "aMp-_KpuhKzH",
-          "name": "ChecksvgIcon",
-          "moduleFilePath": "plasmic/tequila_express/icons/PlasmicIcon__Checksvg.jsx"
+          "name": "CheckSvgIcon",
+          "moduleFilePath": "plasmic/tequila_express/icons/PlasmicIcon__CheckSvg.jsx"
         },
         {
           "id": "Qq4h6xXgNmFh",
           "name": "IconIcon",
           "moduleFilePath": "plasmic/tequila_express/icons/PlasmicIcon__Icon.jsx"
+        },
+        {
+          "id": "Yxs93ms14aPR",
+          "name": "ListSvgIcon",
+          "moduleFilePath": "plasmic/tequila_express/icons/PlasmicIcon__ListSvg.jsx"
+        },
+        {
+          "id": "qlGWzT8MyovL",
+          "name": "CaretDownFillSvgIcon",
+          "moduleFilePath": "plasmic/tequila_express/icons/PlasmicIcon__CaretDownFillSvg.jsx"
         }
       ],
       "images": [
         {
           "id": "Sq8NYA6Tetpy",
           "name": "logo_tequila.png",
-          "filePath": "../public/plasmic/tequila_express/images/logoTequilapng.png"
+          "filePath": "../public/plasmic/tequila_express/images/logoTequilaPng.png"
         },
         {
           "id": "HEDah9t1yegM",
@@ -225,7 +304,7 @@
         {
           "id": "c3qKvd3RDcIT",
           "name": "Logo - Jalisco es México - Blanco.png",
-          "filePath": "../public/plasmic/tequila_express/images/logoJaliscoEsMexicoBlancopng.png"
+          "filePath": "../public/plasmic/tequila_express/images/logoJaliscoEsMexicoBlancoPng.png"
         },
         {
           "id": "77w-CKv5L1za",
@@ -235,12 +314,12 @@
         {
           "id": "OmPzrygRVbb_",
           "name": "logo gdl gdl_bco.png",
-          "filePath": "../public/plasmic/tequila_express/images/logoGdlGdlBcopng.png"
+          "filePath": "../public/plasmic/tequila_express/images/logoGdlGdlBcoPng.png"
         },
         {
           "id": "11_70qCFpxZ7",
           "name": "Turismo.png",
-          "filePath": "../public/plasmic/tequila_express/images/turismopng.png"
+          "filePath": "../public/plasmic/tequila_express/images/turismoPng.png"
         },
         {
           "id": "CopJtLXu7ccK",
@@ -311,6 +390,46 @@
           "id": "fUHMAploXQfM",
           "name": "IMG_8187 1.jpg",
           "filePath": "../public/plasmic/tequila_express/images/img81871Jpg.jpg"
+        },
+        {
+          "id": "NnYXJnMU_ib0",
+          "name": "img_1.jpg",
+          "filePath": "../public/plasmic/tequila_express/images/img1Jpg.jpg"
+        },
+        {
+          "id": "h8DSFNYrdSu7",
+          "name": "Rectangle 49.jpg",
+          "filePath": "../public/plasmic/tequila_express/images/rectangle49Jpg.jpg"
+        },
+        {
+          "id": "oVMFWCLGcqs6",
+          "name": "Group 82.jpg",
+          "filePath": "../public/plasmic/tequila_express/images/group82Jpg.jpg"
+        },
+        {
+          "id": "ynuzU9Km2Gur",
+          "name": "image.jpg",
+          "filePath": "../public/plasmic/tequila_express/images/imageJpg.jpg"
+        },
+        {
+          "id": "vOXIzusUbG5f",
+          "name": "Rectangle 70.jpg",
+          "filePath": "../public/plasmic/tequila_express/images/rectangle70Jpg.jpg"
+        },
+        {
+          "id": "t6-EUpLN_qfs",
+          "name": "Rectangle 70.jpg 2",
+          "filePath": "../public/plasmic/tequila_express/images/rectangle70Jpg2.jpg"
+        },
+        {
+          "id": "nQRenRZQqQcS",
+          "name": "img_1.jpg 2",
+          "filePath": "../public/plasmic/tequila_express/images/img1Jpg2.jpg"
+        },
+        {
+          "id": "VsWQ0HcnaWJT",
+          "name": "image.jpg 2",
+          "filePath": "../public/plasmic/tequila_express/images/imageJpg2.jpg"
         }
       ],
       "indirect": false,
@@ -328,6 +447,12 @@
           "name": "Fetcher",
           "displayName": "plasmic-data-source-fetcher",
           "componentImportPath": "@plasmicapp/react-web/lib/data-sources"
+        },
+        {
+          "id": "ONinya1RhOT2",
+          "name": "Anchor",
+          "displayName": "Anchor",
+          "componentImportPath": "inprodi-design-system"
         }
       ],
       "customFunctions": []
@@ -352,7 +477,8 @@
           "componentImportPath": "@plasmicpkgs/plasmic-embed-css"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "ohDidvG9XsCeFumugENU3J",
@@ -752,7 +878,8 @@
           "componentImportPath": "@plasmicpkgs/antd5/skinny/registerBreadcrumb"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "r3ASNrnyvLLLAtDvzUioQ",
@@ -776,6 +903,97 @@
             "name": "sliderHelpers",
             "importPath": "@plasmicpkgs/react-slick"
           }
+        }
+      ],
+      "customFunctions": [],
+      "jsBundleThemes": []
+    },
+    {
+      "projectId": "sqPBLwEBBKHA2WDuGb17eV",
+      "projectApiToken": "iSkfEguGYRieW7aywQdeHJ2kHCgSYAzIucSfo1aoYAmuxbDKSEVLpn0OWlulrvi7DOO5qF0Mrt3ZjgPrFi2RA",
+      "projectName": "radix-ui",
+      "version": ">0.0.0",
+      "cssFilePath": "plasmic/radix_ui/plasmic.module.css",
+      "components": [
+        {
+          "id": "5nirPCGmCnRD",
+          "name": "Button",
+          "type": "managed",
+          "projectId": "sqPBLwEBBKHA2WDuGb17eV",
+          "renderModuleFilePath": "plasmic/radix_ui/PlasmicButton.jsx",
+          "importSpec": {
+            "modulePath": "Button.jsx"
+          },
+          "cssFilePath": "plasmic/radix_ui/PlasmicButton.module.css",
+          "scheme": "blackbox",
+          "componentType": "component",
+          "plumeType": "button"
+        }
+      ],
+      "icons": [
+        {
+          "id": "Wyt3GMMsLefj",
+          "name": "CheckSvgIcon",
+          "moduleFilePath": "plasmic/radix_ui/icons/PlasmicIcon__CheckSvg.jsx"
+        },
+        {
+          "id": "MbDRsJU0e3bw",
+          "name": "IconIcon",
+          "moduleFilePath": "plasmic/radix_ui/icons/PlasmicIcon__Icon.jsx"
+        }
+      ],
+      "images": [],
+      "indirect": true,
+      "globalContextsFilePath": "",
+      "splitsProviderFilePath": "",
+      "codeComponents": [
+        {
+          "id": "-VVCIjLHaMgA",
+          "name": "Popover",
+          "displayName": "hostless-radix-popover",
+          "componentImportPath": "@plasmicpkgs/radix-ui"
+        },
+        {
+          "id": "z4QhkqHluocO",
+          "name": "Dialog",
+          "displayName": "hostless-radix-dialog",
+          "componentImportPath": "@plasmicpkgs/radix-ui"
+        },
+        {
+          "id": "logdOHtqNj-h",
+          "name": "DialogClose",
+          "displayName": "hostless-radix-dialog-close",
+          "componentImportPath": "@plasmicpkgs/radix-ui"
+        },
+        {
+          "id": "7LzIe7AaW4AB",
+          "name": "SheetContent",
+          "displayName": "hostless-radix-sheet-content",
+          "componentImportPath": "@plasmicpkgs/radix-ui"
+        },
+        {
+          "id": "iYIxAkansYwL",
+          "name": "DialogContent",
+          "displayName": "hostless-radix-dialog-content",
+          "componentImportPath": "@plasmicpkgs/radix-ui"
+        },
+        {
+          "id": "iNBmY1xCN2UL",
+          "name": "DialogTitle",
+          "displayName": "hostless-radix-dialog-title",
+          "componentImportPath": "@plasmicpkgs/radix-ui"
+        },
+        {
+          "id": "92yIzUPezjQ1",
+          "name": "DialogDescription",
+          "displayName": "hostless-radix-dialog-description",
+          "componentImportPath": "@plasmicpkgs/radix-ui"
+        },
+        {
+          "id": "wI1aJ4FfrKn1",
+          "name": "Tooltip",
+          "displayName": "hostless-radix-tooltip",
+          "componentImportPath": "@plasmicpkgs/radix-ui"
         }
       ],
       "customFunctions": []

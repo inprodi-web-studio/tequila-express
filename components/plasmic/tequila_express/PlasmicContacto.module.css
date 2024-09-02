@@ -86,6 +86,7 @@
   color: #ffffff;
   font-size: 48px;
   font-weight: 600;
+  line-height: 1.25;
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .text__zKqr {

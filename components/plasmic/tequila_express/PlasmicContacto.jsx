@@ -18,6 +18,7 @@ import {
   deriveRenderOpts,
   ensureGlobalVariants,
   generateOnMutateForSpec,
+  generateStateOnChangeProp,
   generateStateOnChangePropForCodeComponents,
   generateStateValueProp,
   initializeCodeComponentStates,
@@ -72,6 +73,12 @@ function PlasmicContacto__RenderFunc(props) {
           "activePanelId",
           AntdAccordion_Helpers
         )
+      },
+      {
+        path: "mainHeader.menuOpen",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => false
       }
     ],
 
@@ -130,6 +137,14 @@ function PlasmicContacto__RenderFunc(props) {
             data-plasmic-name={"mainHeader"}
             data-plasmic-override={overrides.mainHeader}
             className={classNames("__wab_instance", sty.mainHeader)}
+            menuOpen={generateStateValueProp($state, [
+              "mainHeader",
+              "menuOpen"
+            ])}
+            onMenuOpenChange={generateStateOnChangeProp($state, [
+              "mainHeader",
+              "menuOpen"
+            ])}
           />
 
           <div
@@ -151,7 +166,7 @@ function PlasmicContacto__RenderFunc(props) {
                   sty.text__zKqr
                 )}
               >
-                {"Queremos que tu viaje sea \u00fanico"}
+                {"Queremos que\ntu viaje sea \u00fanico"}
               </div>
               <div
                 className={classNames(

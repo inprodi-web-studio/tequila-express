@@ -12,6 +12,9 @@
   border-radius: 100px;
   border-width: 0px;
 }
+.rootlight {
+  background: linear-gradient(#ffffff, #ffffff), var(--token-iInYpm5FuiZ3);
+}
 .text {
   position: relative;
   width: 100%;
@@ -19,6 +22,10 @@
   max-width: 100%;
   font-weight: 700;
   color: #ffffff;
+  white-space: pre;
   min-width: 0;
   padding: 10px 35px;
+}
+.textlight {
+  color: var(--token-iDr9UfHUA5XI);
 }

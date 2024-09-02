@@ -13,6 +13,7 @@
     "@plasmicapp/react-web": "^0.2.350",
     "@plasmicpkgs/antd5": "^0.0.249",
     "@plasmicpkgs/plasmic-embed-css": "^0.1.191",
+    "@plasmicpkgs/radix-ui": "^0.0.62",
     "@plasmicpkgs/react-slick": "^0.0.227",
     "next": "14.2.6",
     "react": "^18",

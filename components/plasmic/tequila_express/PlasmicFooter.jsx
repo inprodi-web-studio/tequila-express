@@ -134,6 +134,7 @@ function PlasmicFooter__RenderFunc(props) {
                 sty.link__jrmPx
               )}
               component={Link}
+              href={`/`}
               platform={"nextjs"}
             >
               {"Inicio"}
@@ -146,6 +147,7 @@ function PlasmicFooter__RenderFunc(props) {
                 sty.link__pOtbK
               )}
               component={Link}
+              href={`/nosotros`}
               platform={"nextjs"}
             >
               {"Sobre Nosotros"}
@@ -158,6 +160,7 @@ function PlasmicFooter__RenderFunc(props) {
                 sty.link___6PGu
               )}
               component={Link}
+              href={`/contacto`}
               platform={"nextjs"}
             >
               {"Contacto"}
@@ -191,6 +194,7 @@ function PlasmicFooter__RenderFunc(props) {
                 sty.link__sesRf
               )}
               component={Link}
+              href={`/recorridos/grupo-mexico-transportes`}
               platform={"nextjs"}
             >
               {"Grupo M\u00e9xico Transportes"}
@@ -236,6 +240,7 @@ function PlasmicFooter__RenderFunc(props) {
                 sty.link__pTYo
               )}
               component={Link}
+              href={`/privacidad`}
               platform={"nextjs"}
             >
               {"Aviso de Privacidad"}
@@ -248,6 +253,7 @@ function PlasmicFooter__RenderFunc(props) {
                 sty.link__uh97L
               )}
               component={Link}
+              href={`/terminos`}
               platform={"nextjs"}
             >
               {"T\u00e9rminos y Condiciones"}
@@ -285,7 +291,7 @@ function PlasmicFooter__RenderFunc(props) {
           displayWidth={"78px"}
           loading={"lazy"}
           src={{
-            src: "/plasmic/tequila_express/images/logoJaliscoEsMexicoBlancopng.png",
+            src: "/plasmic/tequila_express/images/logoJaliscoEsMexicoBlancoPng.png",
             fullWidth: 156,
             fullHeight: 51,
             aspectRatio: undefined
@@ -321,7 +327,7 @@ function PlasmicFooter__RenderFunc(props) {
           displayWidth={"85px"}
           loading={"lazy"}
           src={{
-            src: "/plasmic/tequila_express/images/logoGdlGdlBcopng.png",
+            src: "/plasmic/tequila_express/images/logoGdlGdlBcoPng.png",
             fullWidth: 171,
             fullHeight: 71,
             aspectRatio: undefined
@@ -339,7 +345,7 @@ function PlasmicFooter__RenderFunc(props) {
           displayWidth={"105px"}
           loading={"lazy"}
           src={{
-            src: "/plasmic/tequila_express/images/turismopng.png",
+            src: "/plasmic/tequila_express/images/turismoPng.png",
             fullWidth: 210,
             fullHeight: 81,
             aspectRatio: undefined
@@ -413,7 +419,7 @@ function PlasmicFooter__RenderFunc(props) {
             displayWidth={"78px"}
             loading={"lazy"}
             src={{
-              src: "/plasmic/tequila_express/images/logoJaliscoEsMexicoBlancopng.png",
+              src: "/plasmic/tequila_express/images/logoJaliscoEsMexicoBlancoPng.png",
               fullWidth: 156,
               fullHeight: 51,
               aspectRatio: undefined
@@ -449,7 +455,7 @@ function PlasmicFooter__RenderFunc(props) {
             displayWidth={"85px"}
             loading={"lazy"}
             src={{
-              src: "/plasmic/tequila_express/images/logoGdlGdlBcopng.png",
+              src: "/plasmic/tequila_express/images/logoGdlGdlBcoPng.png",
               fullWidth: 171,
               fullHeight: 71,
               aspectRatio: undefined
@@ -467,7 +473,7 @@ function PlasmicFooter__RenderFunc(props) {
             displayWidth={"105px"}
             loading={"lazy"}
             src={{
-              src: "/plasmic/tequila_express/images/turismopng.png",
+              src: "/plasmic/tequila_express/images/turismoPng.png",
               fullWidth: 210,
               fullHeight: 81,
               aspectRatio: undefined
@@ -542,7 +548,7 @@ function PlasmicFooter__RenderFunc(props) {
             displayWidth={"78px"}
             loading={"lazy"}
             src={{
-              src: "/plasmic/tequila_express/images/logoJaliscoEsMexicoBlancopng.png",
+              src: "/plasmic/tequila_express/images/logoJaliscoEsMexicoBlancoPng.png",
               fullWidth: 156,
               fullHeight: 51,
               aspectRatio: undefined
@@ -578,7 +584,7 @@ function PlasmicFooter__RenderFunc(props) {
             displayWidth={"105px"}
             loading={"lazy"}
             src={{
-              src: "/plasmic/tequila_express/images/turismopng.png",
+              src: "/plasmic/tequila_express/images/turismoPng.png",
               fullWidth: 210,
               fullHeight: 81,
               aspectRatio: undefined
@@ -659,7 +665,7 @@ function PlasmicFooter__RenderFunc(props) {
             displayWidth={"78px"}
             loading={"lazy"}
             src={{
-              src: "/plasmic/tequila_express/images/logoJaliscoEsMexicoBlancopng.png",
+              src: "/plasmic/tequila_express/images/logoJaliscoEsMexicoBlancoPng.png",
               fullWidth: 156,
               fullHeight: 51,
               aspectRatio: undefined
@@ -695,7 +701,7 @@ function PlasmicFooter__RenderFunc(props) {
             displayWidth={"105px"}
             loading={"lazy"}
             src={{
-              src: "/plasmic/tequila_express/images/turismopng.png",
+              src: "/plasmic/tequila_express/images/turismoPng.png",
               fullWidth: 210,
               fullHeight: 81,
               aspectRatio: undefined
