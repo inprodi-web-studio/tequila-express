@@ -35,8 +35,8 @@ import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css";
 import projectcss from "../website_starter/plasmic.module.css"; // plasmic-import: uEWT1C6ySrjtSMWJntBego/projectcss
 import sty from "./PlasmicMainHeader.module.css"; // plasmic-import: wtnE0On9QToy/css
 import CaretDownFillSvgIcon from "./icons/PlasmicIcon__CaretDownFillSvg"; // plasmic-import: qlGWzT8MyovL/icon
-import ListSvgIcon from "./icons/PlasmicIcon__ListSvg"; // plasmic-import: Yxs93ms14aPR/icon
 import XSvgIcon from "./icons/PlasmicIcon__XSvg"; // plasmic-import: wbQGNqEUKbny/icon
+import ListSvgIcon from "./icons/PlasmicIcon__ListSvg"; // plasmic-import: Yxs93ms14aPR/icon
 
 createPlasmicElementProxy;
 
@@ -81,7 +81,21 @@ function PlasmicMainHeader__RenderFunc(props) {
         type: "private",
         variableType: "boolean",
         initFunc: ({ $props, $state, $queries, $ctx }) =>
-          hasVariant(globalVariants, "screen", "mobile") ? true : undefined
+          hasVariant(globalVariants, "screen", "mobile")
+            ? (() => {
+                try {
+                  return $state.menuOpen;
+                } catch (e) {
+                  if (
+                    e instanceof TypeError ||
+                    e?.plasmicType === "PlasmicUndefinedDataError"
+                  ) {
+                    return false;
+                  }
+                  throw e;
+                }
+              })()
+            : undefined
       }
     ],
 
@@ -426,26 +440,40 @@ function PlasmicMainHeader__RenderFunc(props) {
           )
         })}
         modalScopeClassName={sty["modal__modal"]}
+        onCancel={async () => {
+          const $steps = {};
+          $steps["updateMenuOpen"] = true
+            ? (() => {
+                const actionArgs = {
+                  variable: {
+                    objRoot: $state,
+                    variablePath: ["menuOpen"]
+                  },
+                  operation: 0,
+                  value: false
+                };
+                return (({ variable, value, startIndex, deleteCount }) => {
+                  if (!variable) {
+                    return;
+                  }
+                  const { objRoot, variablePath } = variable;
+                  $stateSet(objRoot, variablePath, value);
+                  return value;
+                })?.apply(null, [actionArgs]);
+              })()
+            : undefined;
+          if (
+            $steps["updateMenuOpen"] != null &&
+            typeof $steps["updateMenuOpen"] === "object" &&
+            typeof $steps["updateMenuOpen"].then === "function"
+          ) {
+            $steps["updateMenuOpen"] = await $steps["updateMenuOpen"];
+          }
+        }}
         onOpenChange={generateStateOnChangeProp($state, ["modal", "open"])}
         open={generateStateValueProp($state, ["modal", "open"])}
         title={null}
-        trigger={
-          (hasVariant(globalVariants, "screen", "mobile") ? true : false) ? (
-            <AntdButton
-              data-plasmic-name={"button"}
-              data-plasmic-override={overrides.button}
-              className={classNames("__wab_instance", sty.button)}
-              type={"default"}
-            >
-              <div className={classNames(projectcss.all, sty.freeBox___1O7Jy)}>
-                <ListSvgIcon
-                  className={classNames(projectcss.all, sty.svg__kvG9)}
-                  role={"img"}
-                />
-              </div>
-            </AntdButton>
-          ) : null
-        }
+        trigger={null}
         width={
           hasVariant(globalVariants, "screen", "mobile") ? "100%" : undefined
         }
@@ -495,12 +523,12 @@ function PlasmicMainHeader__RenderFunc(props) {
                 ) {
                   $steps["goToInicio"] = await $steps["goToInicio"];
                 }
-                $steps["updateModalOpen"] = true
+                $steps["updateMenuOpen"] = true
                   ? (() => {
                       const actionArgs = {
                         variable: {
                           objRoot: $state,
-                          variablePath: ["modal", "open"]
+                          variablePath: ["menuOpen"]
                         },
                         operation: 0,
                         value: false
@@ -521,11 +549,11 @@ function PlasmicMainHeader__RenderFunc(props) {
                     })()
                   : undefined;
                 if (
-                  $steps["updateModalOpen"] != null &&
-                  typeof $steps["updateModalOpen"] === "object" &&
-                  typeof $steps["updateModalOpen"].then === "function"
+                  $steps["updateMenuOpen"] != null &&
+                  typeof $steps["updateMenuOpen"] === "object" &&
+                  typeof $steps["updateMenuOpen"].then === "function"
                 ) {
-                  $steps["updateModalOpen"] = await $steps["updateModalOpen"];
+                  $steps["updateMenuOpen"] = await $steps["updateMenuOpen"];
                 }
               }}
             >
@@ -563,12 +591,12 @@ function PlasmicMainHeader__RenderFunc(props) {
                 ) {
                   $steps["goToNosotros"] = await $steps["goToNosotros"];
                 }
-                $steps["updateModalOpen"] = true
+                $steps["updateMenuOpen"] = true
                   ? (() => {
                       const actionArgs = {
                         variable: {
                           objRoot: $state,
-                          variablePath: ["modal", "open"]
+                          variablePath: ["menuOpen"]
                         },
                         operation: 0,
                         value: false
@@ -589,11 +617,11 @@ function PlasmicMainHeader__RenderFunc(props) {
                     })()
                   : undefined;
                 if (
-                  $steps["updateModalOpen"] != null &&
-                  typeof $steps["updateModalOpen"] === "object" &&
-                  typeof $steps["updateModalOpen"].then === "function"
+                  $steps["updateMenuOpen"] != null &&
+                  typeof $steps["updateMenuOpen"] === "object" &&
+                  typeof $steps["updateMenuOpen"].then === "function"
                 ) {
-                  $steps["updateModalOpen"] = await $steps["updateModalOpen"];
+                  $steps["updateMenuOpen"] = await $steps["updateMenuOpen"];
                 }
               }}
             >
@@ -631,12 +659,12 @@ function PlasmicMainHeader__RenderFunc(props) {
                 ) {
                   $steps["goToViajarEnTren"] = await $steps["goToViajarEnTren"];
                 }
-                $steps["updateModalOpen"] = true
+                $steps["updateMenuOpen"] = true
                   ? (() => {
                       const actionArgs = {
                         variable: {
                           objRoot: $state,
-                          variablePath: ["modal", "open"]
+                          variablePath: ["menuOpen"]
                         },
                         operation: 0,
                         value: false
@@ -657,11 +685,11 @@ function PlasmicMainHeader__RenderFunc(props) {
                     })()
                   : undefined;
                 if (
-                  $steps["updateModalOpen"] != null &&
-                  typeof $steps["updateModalOpen"] === "object" &&
-                  typeof $steps["updateModalOpen"].then === "function"
+                  $steps["updateMenuOpen"] != null &&
+                  typeof $steps["updateMenuOpen"] === "object" &&
+                  typeof $steps["updateMenuOpen"].then === "function"
                 ) {
-                  $steps["updateModalOpen"] = await $steps["updateModalOpen"];
+                  $steps["updateMenuOpen"] = await $steps["updateMenuOpen"];
                 }
               }}
             >
@@ -712,12 +740,12 @@ function PlasmicMainHeader__RenderFunc(props) {
                     "goToRecorridoFerromex"
                   ];
                 }
-                $steps["updateModalOpen"] = true
+                $steps["updateMenuOpen"] = true
                   ? (() => {
                       const actionArgs = {
                         variable: {
                           objRoot: $state,
-                          variablePath: ["modal", "open"]
+                          variablePath: ["menuOpen"]
                         },
                         operation: 0,
                         value: false
@@ -738,11 +766,11 @@ function PlasmicMainHeader__RenderFunc(props) {
                     })()
                   : undefined;
                 if (
-                  $steps["updateModalOpen"] != null &&
-                  typeof $steps["updateModalOpen"] === "object" &&
-                  typeof $steps["updateModalOpen"].then === "function"
+                  $steps["updateMenuOpen"] != null &&
+                  typeof $steps["updateMenuOpen"] === "object" &&
+                  typeof $steps["updateMenuOpen"].then === "function"
                 ) {
-                  $steps["updateModalOpen"] = await $steps["updateModalOpen"];
+                  $steps["updateMenuOpen"] = await $steps["updateMenuOpen"];
                 }
               }}
             >
@@ -789,12 +817,12 @@ function PlasmicMainHeader__RenderFunc(props) {
                 ) {
                   $steps["goToContacto"] = await $steps["goToContacto"];
                 }
-                $steps["updateModalOpen"] = true
+                $steps["updateMenuOpen"] = true
                   ? (() => {
                       const actionArgs = {
                         variable: {
                           objRoot: $state,
-                          variablePath: ["modal", "open"]
+                          variablePath: ["menuOpen"]
                         },
                         operation: 0,
                         value: false
@@ -815,11 +843,11 @@ function PlasmicMainHeader__RenderFunc(props) {
                     })()
                   : undefined;
                 if (
-                  $steps["updateModalOpen"] != null &&
-                  typeof $steps["updateModalOpen"] === "object" &&
-                  typeof $steps["updateModalOpen"].then === "function"
+                  $steps["updateMenuOpen"] != null &&
+                  typeof $steps["updateMenuOpen"] === "object" &&
+                  typeof $steps["updateMenuOpen"].then === "function"
                 ) {
-                  $steps["updateModalOpen"] = await $steps["updateModalOpen"];
+                  $steps["updateMenuOpen"] = await $steps["updateMenuOpen"];
                 }
               }}
             >
@@ -828,6 +856,51 @@ function PlasmicMainHeader__RenderFunc(props) {
           </Stack__>
         ) : null}
       </AntdModal>
+      {(hasVariant(globalVariants, "screen", "mobile") ? true : false) ? (
+        <AntdButton
+          data-plasmic-name={"button"}
+          data-plasmic-override={overrides.button}
+          className={classNames("__wab_instance", sty.button)}
+          onClick={async () => {
+            const $steps = {};
+            $steps["updateMenuOpen"] = true
+              ? (() => {
+                  const actionArgs = {
+                    variable: {
+                      objRoot: $state,
+                      variablePath: ["menuOpen"]
+                    },
+                    operation: 0,
+                    value: true
+                  };
+                  return (({ variable, value, startIndex, deleteCount }) => {
+                    if (!variable) {
+                      return;
+                    }
+                    const { objRoot, variablePath } = variable;
+                    $stateSet(objRoot, variablePath, value);
+                    return value;
+                  })?.apply(null, [actionArgs]);
+                })()
+              : undefined;
+            if (
+              $steps["updateMenuOpen"] != null &&
+              typeof $steps["updateMenuOpen"] === "object" &&
+              typeof $steps["updateMenuOpen"].then === "function"
+            ) {
+              $steps["updateMenuOpen"] = await $steps["updateMenuOpen"];
+            }
+          }}
+          type={"default"}
+        >
+          <div className={classNames(projectcss.all, sty.freeBox__m3A4S)}>
+            <ListSvgIcon
+              className={classNames(projectcss.all, sty.svg__txEd)}
+              role={"img"}
+            />
+          </div>
+        </AntdButton>
+      ) : null}
     </div>
   );
 }
@@ -837,7 +910,7 @@ const PlasmicDescendants = {
   img: ["img"],
   menu: ["menu", "dropdown"],
   dropdown: ["dropdown"],
-  modal: ["modal", "button"],
+  modal: ["modal"],
   button: ["button"]
 };
 
