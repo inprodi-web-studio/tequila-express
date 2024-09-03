@@ -26,7 +26,7 @@ import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import MenuLink from "../../MenuLink"; // plasmic-import: QGAZksd0OJe_/component
 import { AntdDropdown } from "@plasmicpkgs/antd5/skinny/registerDropdown";
 import { AntdMenuItem } from "@plasmicpkgs/antd5/skinny/registerMenu";
-import Drawer from "../../Drawer"; // plasmic-import: eAA_aT1s0SEU/component
+import { AntdModal } from "@plasmicpkgs/antd5/skinny/registerModal";
 import { AntdButton } from "@plasmicpkgs/antd5/skinny/registerButton";
 import { useScreenVariants as useScreenVariantsraGa2MJbEFd } from "../website_starter/PlasmicGlobalVariant__Screen"; // plasmic-import: RaGa2M-JbEFd/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
@@ -35,6 +35,7 @@ import projectcss from "../website_starter/plasmic.module.css"; // plasmic-impor
 import sty from "./PlasmicMainHeader.module.css"; // plasmic-import: wtnE0On9QToy/css
 import CaretDownFillSvgIcon from "./icons/PlasmicIcon__CaretDownFillSvg"; // plasmic-import: qlGWzT8MyovL/icon
 import ListSvgIcon from "./icons/PlasmicIcon__ListSvg"; // plasmic-import: Yxs93ms14aPR/icon
+import XSvgIcon from "./icons/PlasmicIcon__XSvg"; // plasmic-import: wbQGNqEUKbny/icon
 
 createPlasmicElementProxy;
 
@@ -68,30 +69,18 @@ function PlasmicMainHeader__RenderFunc(props) {
   const stateSpecs = React.useMemo(
     () => [
       {
-        path: "menu2.open",
-        type: "private",
-        variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) =>
-          (() => {
-            try {
-              return $state.menuOpen;
-            } catch (e) {
-              if (
-                e instanceof TypeError ||
-                e?.plasmicType === "PlasmicUndefinedDataError"
-              ) {
-                return undefined;
-              }
-              throw e;
-            }
-          })()
-      },
-      {
         path: "menuOpen",
         type: "writable",
         variableType: "boolean",
         valueProp: "menuOpen",
         onChangeProp: "onMenuOpenChange"
+      },
+      {
+        path: "modal.open",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) =>
+          hasVariant(globalVariants, "screen", "mobile") ? true : undefined
       }
     ],
 
@@ -408,278 +397,286 @@ function PlasmicMainHeader__RenderFunc(props) {
           }}
         />
       </Stack__>
-      {(
-        hasVariant(globalVariants, "screen", "mobile")
-          ? true
-          : hasVariant(globalVariants, "screen", "tablet")
-          ? false
-          : hasVariant(globalVariants, "screen", "medium")
-          ? false
-          : false
-      ) ? (
-        <Drawer
-          data-plasmic-name={"menu2"}
-          data-plasmic-override={overrides.menu2}
-          className={classNames("__wab_instance", sty.menu2)}
-          onOpenChange={async (...eventArgs) => {
-            generateStateOnChangeProp($state, ["menu2", "open"]).apply(
-              null,
-              eventArgs
-            );
-            (async val => {
-              const $steps = {};
-            }).apply(null, eventArgs);
-          }}
-          open={generateStateValueProp($state, ["menu2", "open"])}
-          slot={
-            <Stack__
-              as={"div"}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.freeBox__cfUb8)}
-            >
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text__q8Tcg
-                )}
-                onClick={async event => {
-                  const $steps = {};
-                  $steps["goToInicio"] = true
-                    ? (() => {
-                        const actionArgs = { destination: `/` };
-                        return (({ destination }) => {
-                          if (
-                            typeof destination === "string" &&
-                            destination.startsWith("#")
-                          ) {
-                            document
-                              .getElementById(destination.substr(1))
-                              .scrollIntoView({ behavior: "smooth" });
-                          } else {
-                            __nextRouter?.push(destination);
-                          }
-                        })?.apply(null, [actionArgs]);
-                      })()
-                    : undefined;
-                  if (
-                    $steps["goToInicio"] != null &&
-                    typeof $steps["goToInicio"] === "object" &&
-                    typeof $steps["goToInicio"].then === "function"
-                  ) {
-                    $steps["goToInicio"] = await $steps["goToInicio"];
-                  }
-                }}
-              >
-                {"Inicio"}
-              </div>
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text__hyXx3
-                )}
-                onClick={async event => {
-                  const $steps = {};
-                  $steps["goToNosotros"] = true
-                    ? (() => {
-                        const actionArgs = { destination: `/nosotros` };
-                        return (({ destination }) => {
-                          if (
-                            typeof destination === "string" &&
-                            destination.startsWith("#")
-                          ) {
-                            document
-                              .getElementById(destination.substr(1))
-                              .scrollIntoView({ behavior: "smooth" });
-                          } else {
-                            __nextRouter?.push(destination);
-                          }
-                        })?.apply(null, [actionArgs]);
-                      })()
-                    : undefined;
-                  if (
-                    $steps["goToNosotros"] != null &&
-                    typeof $steps["goToNosotros"] === "object" &&
-                    typeof $steps["goToNosotros"].then === "function"
-                  ) {
-                    $steps["goToNosotros"] = await $steps["goToNosotros"];
-                  }
-                }}
-              >
-                {"Nosotros"}
-              </div>
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text__hGjb9
-                )}
-                onClick={async event => {
-                  const $steps = {};
-                  $steps["goToViajarEnTren"] = true
-                    ? (() => {
-                        const actionArgs = { destination: `/viajar-en-tren` };
-                        return (({ destination }) => {
-                          if (
-                            typeof destination === "string" &&
-                            destination.startsWith("#")
-                          ) {
-                            document
-                              .getElementById(destination.substr(1))
-                              .scrollIntoView({ behavior: "smooth" });
-                          } else {
-                            __nextRouter?.push(destination);
-                          }
-                        })?.apply(null, [actionArgs]);
-                      })()
-                    : undefined;
-                  if (
-                    $steps["goToViajarEnTren"] != null &&
-                    typeof $steps["goToViajarEnTren"] === "object" &&
-                    typeof $steps["goToViajarEnTren"].then === "function"
-                  ) {
-                    $steps["goToViajarEnTren"] = await $steps[
-                      "goToViajarEnTren"
-                    ];
-                  }
-                }}
-              >
-                {"Viaja en Tren"}
-              </div>
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text__ilkO1
-                )}
-              >
-                {"Recorridos"}
-              </div>
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text__tgu2O
-                )}
-                onClick={async event => {
-                  const $steps = {};
-                  $steps["goToRecorridoFerromex"] = true
-                    ? (() => {
-                        const actionArgs = {
-                          destination: `/recorridos/grupo-mexico-transportes`
-                        };
-                        return (({ destination }) => {
-                          if (
-                            typeof destination === "string" &&
-                            destination.startsWith("#")
-                          ) {
-                            document
-                              .getElementById(destination.substr(1))
-                              .scrollIntoView({ behavior: "smooth" });
-                          } else {
-                            __nextRouter?.push(destination);
-                          }
-                        })?.apply(null, [actionArgs]);
-                      })()
-                    : undefined;
-                  if (
-                    $steps["goToRecorridoFerromex"] != null &&
-                    typeof $steps["goToRecorridoFerromex"] === "object" &&
-                    typeof $steps["goToRecorridoFerromex"].then === "function"
-                  ) {
-                    $steps["goToRecorridoFerromex"] = await $steps[
-                      "goToRecorridoFerromex"
-                    ];
-                  }
-                }}
-              >
-                {"Grupo M\u00e9xico Transportes"}
-              </div>
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text__dcqwk
-                )}
-              >
-                {"C\u00e1mara de Comercio de Guadalajara"}
-              </div>
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text__aNy4K
-                )}
-                onClick={async event => {
-                  const $steps = {};
-                  $steps["goToContacto"] = true
-                    ? (() => {
-                        const actionArgs = { destination: `/contacto` };
-                        return (({ destination }) => {
-                          if (
-                            typeof destination === "string" &&
-                            destination.startsWith("#")
-                          ) {
-                            document
-                              .getElementById(destination.substr(1))
-                              .scrollIntoView({ behavior: "smooth" });
-                          } else {
-                            __nextRouter?.push(destination);
-                          }
-                        })?.apply(null, [actionArgs]);
-                      })()
-                    : undefined;
-                  if (
-                    $steps["goToContacto"] != null &&
-                    typeof $steps["goToContacto"] === "object" &&
-                    typeof $steps["goToContacto"].then === "function"
-                  ) {
-                    $steps["goToContacto"] = await $steps["goToContacto"];
-                  }
-                }}
-              >
-                {"Contacto"}
-              </div>
-            </Stack__>
-          }
-          trigger={
+      <AntdModal
+        data-plasmic-name={"modal"}
+        data-plasmic-override={overrides.modal}
+        className={classNames("__wab_instance", sty.modal)}
+        closeIcon={
+          <XSvgIcon
+            className={classNames(projectcss.all, sty.svg__k5U7K)}
+            role={"img"}
+          />
+        }
+        defaultStylesClassName={classNames(
+          projectcss.root_reset,
+          projectcss.plasmic_default_styles,
+          projectcss.plasmic_mixins,
+          projectcss.plasmic_tokens,
+          plasmic_antd_5_hostless_css.plasmic_tokens
+        )}
+        hideFooter={
+          hasVariant(globalVariants, "screen", "mobile") ? true : undefined
+        }
+        modalContentClassName={classNames({
+          [sty["pcls_MPhBVAFsdfE2"]]: hasVariant(
+            globalVariants,
+            "screen",
+            "mobile"
+          )
+        })}
+        modalScopeClassName={sty["modal__modal"]}
+        onOpenChange={generateStateOnChangeProp($state, ["modal", "open"])}
+        open={generateStateValueProp($state, ["modal", "open"])}
+        title={null}
+        trigger={
+          (hasVariant(globalVariants, "screen", "mobile") ? true : false) ? (
             <AntdButton
               data-plasmic-name={"button"}
               data-plasmic-override={overrides.button}
               className={classNames("__wab_instance", sty.button)}
               type={"default"}
             >
-              <div className={classNames(projectcss.all, sty.freeBox__tH8Vu)}>
+              <div className={classNames(projectcss.all, sty.freeBox___1O7Jy)}>
                 <ListSvgIcon
-                  className={classNames(projectcss.all, sty.svg__qIxW)}
+                  className={classNames(projectcss.all, sty.svg__kvG9)}
                   role={"img"}
                 />
               </div>
             </AntdButton>
-          }
-        >
-          <div
-            className={classNames(
-              projectcss.all,
-              projectcss.__wab_text,
-              sty.text__qO9M
-            )}
+          ) : null
+        }
+        width={
+          hasVariant(globalVariants, "screen", "mobile") ? "100%" : undefined
+        }
+        wrapClassName={classNames({
+          [sty["pcls_gM1SCXyO7RvB"]]: hasVariant(
+            globalVariants,
+            "screen",
+            "mobile"
+          )
+        })}
+      >
+        {(hasVariant(globalVariants, "screen", "mobile") ? true : false) ? (
+          <Stack__
+            as={"div"}
+            hasGap={true}
+            className={classNames(projectcss.all, sty.freeBox__z4Ma)}
           >
-            {"Drawer title"}
-          </div>
-        </Drawer>
-      ) : null}
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__zroml
+              )}
+              onClick={async event => {
+                const $steps = {};
+                $steps["goToInicio"] = true
+                  ? (() => {
+                      const actionArgs = { destination: `/` };
+                      return (({ destination }) => {
+                        if (
+                          typeof destination === "string" &&
+                          destination.startsWith("#")
+                        ) {
+                          document
+                            .getElementById(destination.substr(1))
+                            .scrollIntoView({ behavior: "smooth" });
+                        } else {
+                          __nextRouter?.push(destination);
+                        }
+                      })?.apply(null, [actionArgs]);
+                    })()
+                  : undefined;
+                if (
+                  $steps["goToInicio"] != null &&
+                  typeof $steps["goToInicio"] === "object" &&
+                  typeof $steps["goToInicio"].then === "function"
+                ) {
+                  $steps["goToInicio"] = await $steps["goToInicio"];
+                }
+              }}
+            >
+              {"Inicio"}
+            </div>
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__uLs
+              )}
+              onClick={async event => {
+                const $steps = {};
+                $steps["goToNosotros"] = true
+                  ? (() => {
+                      const actionArgs = { destination: `/nosotros` };
+                      return (({ destination }) => {
+                        if (
+                          typeof destination === "string" &&
+                          destination.startsWith("#")
+                        ) {
+                          document
+                            .getElementById(destination.substr(1))
+                            .scrollIntoView({ behavior: "smooth" });
+                        } else {
+                          __nextRouter?.push(destination);
+                        }
+                      })?.apply(null, [actionArgs]);
+                    })()
+                  : undefined;
+                if (
+                  $steps["goToNosotros"] != null &&
+                  typeof $steps["goToNosotros"] === "object" &&
+                  typeof $steps["goToNosotros"].then === "function"
+                ) {
+                  $steps["goToNosotros"] = await $steps["goToNosotros"];
+                }
+              }}
+            >
+              {"Nosotros"}
+            </div>
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__mwVh
+              )}
+              onClick={async event => {
+                const $steps = {};
+                $steps["goToViajarEnTren"] = true
+                  ? (() => {
+                      const actionArgs = { destination: `/viajar-en-tren` };
+                      return (({ destination }) => {
+                        if (
+                          typeof destination === "string" &&
+                          destination.startsWith("#")
+                        ) {
+                          document
+                            .getElementById(destination.substr(1))
+                            .scrollIntoView({ behavior: "smooth" });
+                        } else {
+                          __nextRouter?.push(destination);
+                        }
+                      })?.apply(null, [actionArgs]);
+                    })()
+                  : undefined;
+                if (
+                  $steps["goToViajarEnTren"] != null &&
+                  typeof $steps["goToViajarEnTren"] === "object" &&
+                  typeof $steps["goToViajarEnTren"].then === "function"
+                ) {
+                  $steps["goToViajarEnTren"] = await $steps["goToViajarEnTren"];
+                }
+              }}
+            >
+              {"Viaja en Tren"}
+            </div>
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text___2FhT
+              )}
+            >
+              {"Recorridos"}
+            </div>
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__hhjrd
+              )}
+              onClick={async event => {
+                const $steps = {};
+                $steps["goToRecorridoFerromex"] = true
+                  ? (() => {
+                      const actionArgs = {
+                        destination: `/recorridos/grupo-mexico-transportes`
+                      };
+                      return (({ destination }) => {
+                        if (
+                          typeof destination === "string" &&
+                          destination.startsWith("#")
+                        ) {
+                          document
+                            .getElementById(destination.substr(1))
+                            .scrollIntoView({ behavior: "smooth" });
+                        } else {
+                          __nextRouter?.push(destination);
+                        }
+                      })?.apply(null, [actionArgs]);
+                    })()
+                  : undefined;
+                if (
+                  $steps["goToRecorridoFerromex"] != null &&
+                  typeof $steps["goToRecorridoFerromex"] === "object" &&
+                  typeof $steps["goToRecorridoFerromex"].then === "function"
+                ) {
+                  $steps["goToRecorridoFerromex"] = await $steps[
+                    "goToRecorridoFerromex"
+                  ];
+                }
+              }}
+            >
+              {"Grupo M\u00e9xico Transportes"}
+            </div>
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__nMfD
+              )}
+            >
+              {"C\u00e1mara de Comercio de Guadalajara"}
+            </div>
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__azdEw
+              )}
+              onClick={async event => {
+                const $steps = {};
+                $steps["goToContacto"] = true
+                  ? (() => {
+                      const actionArgs = { destination: `/contacto` };
+                      return (({ destination }) => {
+                        if (
+                          typeof destination === "string" &&
+                          destination.startsWith("#")
+                        ) {
+                          document
+                            .getElementById(destination.substr(1))
+                            .scrollIntoView({ behavior: "smooth" });
+                        } else {
+                          __nextRouter?.push(destination);
+                        }
+                      })?.apply(null, [actionArgs]);
+                    })()
+                  : undefined;
+                if (
+                  $steps["goToContacto"] != null &&
+                  typeof $steps["goToContacto"] === "object" &&
+                  typeof $steps["goToContacto"].then === "function"
+                ) {
+                  $steps["goToContacto"] = await $steps["goToContacto"];
+                }
+              }}
+            >
+              {"Contacto"}
+            </div>
+          </Stack__>
+        ) : null}
+      </AntdModal>
     </div>
   );
 }
 
 const PlasmicDescendants = {
-  header: ["header", "img", "menu", "dropdown", "menu2", "button"],
+  header: ["header", "img", "menu", "dropdown", "modal", "button"],
   img: ["img"],
   menu: ["menu", "dropdown"],
   dropdown: ["dropdown"],
-  menu2: ["menu2", "button"],
+  modal: ["modal", "button"],
   button: ["button"]
 };
 
@@ -718,7 +715,7 @@ export const PlasmicMainHeader = Object.assign(
     img: makeNodeComponent("img"),
     menu: makeNodeComponent("menu"),
     dropdown: makeNodeComponent("dropdown"),
-    menu2: makeNodeComponent("menu2"),
+    modal: makeNodeComponent("modal"),
     button: makeNodeComponent("button"),
     // Metadata about props expected for PlasmicMainHeader
     internalVariantProps: PlasmicMainHeader__VariantProps,

@@ -253,6 +253,11 @@
           "id": "qlGWzT8MyovL",
           "name": "CaretDownFillSvgIcon",
           "moduleFilePath": "plasmic/tequila_express/icons/PlasmicIcon__CaretDownFillSvg.jsx"
+        },
+        {
+          "id": "wbQGNqEUKbny",
+          "name": "XSvgIcon",
+          "moduleFilePath": "plasmic/tequila_express/icons/PlasmicIcon__XSvg.jsx"
         }
       ],
       "images": [

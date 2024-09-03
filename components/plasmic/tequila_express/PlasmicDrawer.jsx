@@ -111,7 +111,7 @@ function PlasmicDrawer__RenderFunc(props) {
         { [sty.dialognoTrigger]: hasVariant($state, "noTrigger", "noTrigger") }
       )}
       defaultOpen={true}
-      modal={hasVariant(globalVariants, "screen", "mobile") ? false : undefined}
+      modal={hasVariant(globalVariants, "screen", "mobile") ? true : undefined}
       noContain={true}
       onOpenChange={generateStateOnChangeProp($state, ["dialog", "open"])}
       open={generateStateValueProp($state, ["dialog", "open"])}
