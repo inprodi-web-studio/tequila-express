@@ -15,6 +15,7 @@ import {
   classNames,
   createPlasmicElementProxy,
   deriveRenderOpts,
+  ensureGlobalVariants,
   generateStateOnChangeProp,
   generateStateValueProp,
   hasVariant,
@@ -27,6 +28,7 @@ import Button from "../../Button"; // plasmic-import: 4EG1uUDBEib2/component
 import { SheetContent } from "@plasmicpkgs/radix-ui";
 import { DialogTitle } from "@plasmicpkgs/radix-ui";
 import { DialogClose } from "@plasmicpkgs/radix-ui";
+import { useScreenVariants as useScreenVariantsraGa2MJbEFd } from "../website_starter/PlasmicGlobalVariant__Screen"; // plasmic-import: RaGa2M-JbEFd/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import projectcss from "../website_starter/plasmic.module.css"; // plasmic-import: uEWT1C6ySrjtSMWJntBego/projectcss
@@ -89,6 +91,9 @@ function PlasmicDrawer__RenderFunc(props) {
     $queries: {},
     $refs
   });
+  const globalVariants = ensureGlobalVariants({
+    screen: useScreenVariantsraGa2MJbEFd()
+  });
   return (
     <Dialog
       data-plasmic-name={"dialog"}
@@ -106,6 +111,7 @@ function PlasmicDrawer__RenderFunc(props) {
         { [sty.dialognoTrigger]: hasVariant($state, "noTrigger", "noTrigger") }
       )}
       defaultOpen={true}
+      modal={hasVariant(globalVariants, "screen", "mobile") ? false : undefined}
       noContain={true}
       onOpenChange={generateStateOnChangeProp($state, ["dialog", "open"])}
       open={generateStateValueProp($state, ["dialog", "open"])}

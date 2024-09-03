@@ -430,6 +430,11 @@
           "id": "VsWQ0HcnaWJT",
           "name": "image.jpg 2",
           "filePath": "../public/plasmic/tequila_express/images/imageJpg2.jpg"
+        },
+        {
+          "id": "5dzU4U1rMzSj",
+          "name": "Group 37.jpg",
+          "filePath": "../public/plasmic/tequila_express/images/group37Jpg.jpg"
         }
       ],
       "indirect": false,
@@ -452,7 +457,7 @@
           "id": "ONinya1RhOT2",
           "name": "Anchor",
           "displayName": "Anchor",
-          "componentImportPath": "inprodi-design-system"
+          "componentImportPath": "./components/registerAnchor"
         }
       ],
       "customFunctions": []
@@ -996,7 +1001,8 @@
           "componentImportPath": "@plasmicpkgs/radix-ui"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     }
   ],
   "globalVariants": {
