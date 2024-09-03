@@ -319,7 +319,7 @@ function PlasmicMainHeader__RenderFunc(props) {
           menuItemsJson={(() => {
             const __composite = [
               { type: "item", value: "action1", label: null, onClick: null },
-              { type: "item", value: "action2", label: null }
+              { type: "item", value: "action2", label: null, onClick: null }
             ];
 
             __composite["0"]["label"] = "Grupo M\u00e9xico Transportes";
@@ -358,6 +358,38 @@ function PlasmicMainHeader__RenderFunc(props) {
             };
             __composite["1"]["label"] =
               "C\u00e1mara de Comercio de Guadalajara";
+            __composite["1"]["onClick"] = async info => {
+              const $steps = {};
+              $steps["goToRecorridoCamaraDeComercioDeGuadalajara"] = true
+                ? (() => {
+                    const actionArgs = {
+                      destination: `/recorridos/camara-comercio-gdl`
+                    };
+                    return (({ destination }) => {
+                      if (
+                        typeof destination === "string" &&
+                        destination.startsWith("#")
+                      ) {
+                        document
+                          .getElementById(destination.substr(1))
+                          .scrollIntoView({ behavior: "smooth" });
+                      } else {
+                        __nextRouter?.push(destination);
+                      }
+                    })?.apply(null, [actionArgs]);
+                  })()
+                : undefined;
+              if (
+                $steps["goToRecorridoCamaraDeComercioDeGuadalajara"] != null &&
+                typeof $steps["goToRecorridoCamaraDeComercioDeGuadalajara"] ===
+                  "object" &&
+                typeof $steps["goToRecorridoCamaraDeComercioDeGuadalajara"]
+                  .then === "function"
+              ) {
+                $steps["goToRecorridoCamaraDeComercioDeGuadalajara"] =
+                  await $steps["goToRecorridoCamaraDeComercioDeGuadalajara"];
+              }
+            };
             return __composite;
           })()}
           placement={"bottomRight"}
@@ -782,6 +814,72 @@ function PlasmicMainHeader__RenderFunc(props) {
                 projectcss.__wab_text,
                 sty.text__nMfD
               )}
+              onClick={async event => {
+                const $steps = {};
+                $steps["goToRecorridoCamaraDeComercioDeGuadalajara"] = true
+                  ? (() => {
+                      const actionArgs = {
+                        destination: `/recorridos/camara-comercio-gdl`
+                      };
+                      return (({ destination }) => {
+                        if (
+                          typeof destination === "string" &&
+                          destination.startsWith("#")
+                        ) {
+                          document
+                            .getElementById(destination.substr(1))
+                            .scrollIntoView({ behavior: "smooth" });
+                        } else {
+                          __nextRouter?.push(destination);
+                        }
+                      })?.apply(null, [actionArgs]);
+                    })()
+                  : undefined;
+                if (
+                  $steps["goToRecorridoCamaraDeComercioDeGuadalajara"] !=
+                    null &&
+                  typeof $steps[
+                    "goToRecorridoCamaraDeComercioDeGuadalajara"
+                  ] === "object" &&
+                  typeof $steps["goToRecorridoCamaraDeComercioDeGuadalajara"]
+                    .then === "function"
+                ) {
+                  $steps["goToRecorridoCamaraDeComercioDeGuadalajara"] =
+                    await $steps["goToRecorridoCamaraDeComercioDeGuadalajara"];
+                }
+                $steps["updateMenuOpen"] = true
+                  ? (() => {
+                      const actionArgs = {
+                        variable: {
+                          objRoot: $state,
+                          variablePath: ["menuOpen"]
+                        },
+                        operation: 0,
+                        value: false
+                      };
+                      return (({
+                        variable,
+                        value,
+                        startIndex,
+                        deleteCount
+                      }) => {
+                        if (!variable) {
+                          return;
+                        }
+                        const { objRoot, variablePath } = variable;
+                        $stateSet(objRoot, variablePath, value);
+                        return value;
+                      })?.apply(null, [actionArgs]);
+                    })()
+                  : undefined;
+                if (
+                  $steps["updateMenuOpen"] != null &&
+                  typeof $steps["updateMenuOpen"] === "object" &&
+                  typeof $steps["updateMenuOpen"].then === "function"
+                ) {
+                  $steps["updateMenuOpen"] = await $steps["updateMenuOpen"];
+                }
+              }}
             >
               {"C\u00e1mara de Comercio de Guadalajara"}
             </div>

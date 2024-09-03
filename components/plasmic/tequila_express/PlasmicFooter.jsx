@@ -207,6 +207,7 @@ function PlasmicFooter__RenderFunc(props) {
                 sty.link__lOp6Y
               )}
               component={Link}
+              href={`/recorridos/camara-comercio-gdl`}
               platform={"nextjs"}
             >
               {"C\u00e1mara de Comercio de Guadalajara"}
