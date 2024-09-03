@@ -65,6 +65,12 @@ function PlasmicContacto__RenderFunc(props) {
   const stateSpecs = React.useMemo(
     () => [
       {
+        path: "mainHeader.menuOpen",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => false
+      },
+      {
         path: "accordion.activePanelId",
         type: "private",
         variableType: "text",
@@ -73,12 +79,6 @@ function PlasmicContacto__RenderFunc(props) {
           "activePanelId",
           AntdAccordion_Helpers
         )
-      },
-      {
-        path: "mainHeader.menuOpen",
-        type: "private",
-        variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => false
       }
     ],
 
@@ -307,7 +307,7 @@ function PlasmicContacto__RenderFunc(props) {
                     <AntdAccordionItem
                       className={classNames(
                         "__wab_instance",
-                        sty.accordionItem__tcUo6
+                        sty.accordionItem__lwUfg
                       )}
                       id={1}
                       label2={
@@ -315,11 +315,11 @@ function PlasmicContacto__RenderFunc(props) {
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text__u1OZm
+                            sty.text___97DaE
                           )}
                         >
                           {
-                            "\u00bfVitae sed facilisi turpis nunc risus suscipit?"
+                            "\u00bfQu\u00e9 opciones de recorridos ofrece el Tequila Express?"
                           }
                         </div>
                       }
@@ -329,18 +329,18 @@ function PlasmicContacto__RenderFunc(props) {
                         className={classNames(
                           projectcss.all,
                           projectcss.__wab_text,
-                          sty.text__lseO3
+                          sty.text__obpFt
                         )}
                       >
                         {
-                          "Morbi torquent etiam tincidunt nisi tempus rutrum porta molestie fames lobortis nisl justo curae, consequat vivamus eros posuere laoreet imperdiet dictumst."
+                          "El Tequila Express ofrece varias opciones de itinerarios operados por diferentes socios, incluyendo Grupo M\u00e9xico Transportes y la C\u00e1mara de Comercio de Guadalajara. Cada recorrido tiene caracter\u00edsticas \u00fanicas como visitas a campos agaveros, degustaciones de tequila y espect\u00e1culos culturales."
                         }
                       </div>
                     </AntdAccordionItem>
                     <AntdAccordionItem
                       className={classNames(
                         "__wab_instance",
-                        sty.accordionItem__cw8Lz
+                        sty.accordionItem__nkDe8
                       )}
                       id={"2"}
                       label2={
@@ -348,11 +348,11 @@ function PlasmicContacto__RenderFunc(props) {
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text__fSoOw
+                            sty.text__ek4Xq
                           )}
                         >
                           {
-                            "\u00bfVitae sed facilisi turpis nunc risus suscipit?"
+                            "\u00bfCu\u00e1les son las fechas y horarios de salida del Tequila Express?"
                           }
                         </div>
                       }
@@ -362,18 +362,18 @@ function PlasmicContacto__RenderFunc(props) {
                         className={classNames(
                           projectcss.all,
                           projectcss.__wab_text,
-                          sty.text___2C9U1
+                          sty.text__jC0I
                         )}
                       >
                         {
-                          "Morbi torquent etiam tincidunt nisi tempus rutrum porta molestie fames lobortis nisl justo curae, consequat vivamus eros posuere laoreet imperdiet dictumst."
+                          "Los recorridos generalmente est\u00e1n disponibles los s\u00e1bados, con algunas salidas adicionales los viernes y domingos, dependiendo del operador. Los horarios espec\u00edficos de salida y regreso var\u00edan seg\u00fan el itinerario seleccionado."
                         }
                       </div>
                     </AntdAccordionItem>
                     <AntdAccordionItem
                       className={classNames(
                         "__wab_instance",
-                        sty.accordionItem___0TCm0
+                        sty.accordionItem__lXcdL
                       )}
                       id={"3"}
                       label2={
@@ -381,11 +381,11 @@ function PlasmicContacto__RenderFunc(props) {
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text__jany
+                            sty.text___8M00E
                           )}
                         >
                           {
-                            "\u00bfVitae sed facilisi turpis nunc risus suscipit?"
+                            "\u00bfQu\u00e9 debo llevar para mi viaje en el Tequila Express?"
                           }
                         </div>
                       }
@@ -395,18 +395,18 @@ function PlasmicContacto__RenderFunc(props) {
                         className={classNames(
                           projectcss.all,
                           projectcss.__wab_text,
-                          sty.text__vooFi
+                          sty.text__b2N5F
                         )}
                       >
                         {
-                          "Morbi torquent etiam tincidunt nisi tempus rutrum porta molestie fames lobortis nisl justo curae, consequat vivamus eros posuere laoreet imperdiet dictumst."
+                          "Se recomienda llevar identificaci\u00f3n oficial, copia de la confirmaci\u00f3n de reserva, zapato cerrado y c\u00f3modo, lentes de sol, sombrero, ropa c\u00f3moda, y protector solar. Para mayor comodidad, tambi\u00e9n se sugiere llevar una botella de agua."
                         }
                       </div>
                     </AntdAccordionItem>
                     <AntdAccordionItem
                       className={classNames(
                         "__wab_instance",
-                        sty.accordionItem__afzKu
+                        sty.accordionItem__wuDuu
                       )}
                       id={"4"}
                       label2={
@@ -414,11 +414,11 @@ function PlasmicContacto__RenderFunc(props) {
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text___7G3Kc
+                            sty.text___8AMaI
                           )}
                         >
                           {
-                            "\u00bfVitae sed facilisi turpis nunc risus suscipit?"
+                            "\u00bfEs posible cambiar o cancelar mi reservaci\u00f3n?"
                           }
                         </div>
                       }
@@ -428,18 +428,18 @@ function PlasmicContacto__RenderFunc(props) {
                         className={classNames(
                           projectcss.all,
                           projectcss.__wab_text,
-                          sty.text__sarr
+                          sty.text__mecxX
                         )}
                       >
                         {
-                          "Morbi torquent etiam tincidunt nisi tempus rutrum porta molestie fames lobortis nisl justo curae, consequat vivamus eros posuere laoreet imperdiet dictumst."
+                          "Las pol\u00edticas de cambios y cancelaciones dependen del operador con el que se haya hecho la reserva. Se recomienda revisar los t\u00e9rminos y condiciones al momento de la compra o contactarnos directamente para obtener m\u00e1s informaci\u00f3n."
                         }
                       </div>
                     </AntdAccordionItem>
                     <AntdAccordionItem
                       className={classNames(
                         "__wab_instance",
-                        sty.accordionItem__dIsOy
+                        sty.accordionItem__eu9Ih
                       )}
                       id={"5"}
                       label2={
@@ -447,11 +447,11 @@ function PlasmicContacto__RenderFunc(props) {
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text__tpl8H
+                            sty.text___9XM48
                           )}
                         >
                           {
-                            "\u00bfVitae sed facilisi turpis nunc risus suscipit?"
+                            "\u00bfExisten opciones de recorrido en ingl\u00e9s?"
                           }
                         </div>
                       }
@@ -461,18 +461,18 @@ function PlasmicContacto__RenderFunc(props) {
                         className={classNames(
                           projectcss.all,
                           projectcss.__wab_text,
-                          sty.text___8SNaz
+                          sty.text___8Fyai
                         )}
                       >
                         {
-                          "Morbi torquent etiam tincidunt nisi tempus rutrum porta molestie fames lobortis nisl justo curae, consequat vivamus eros posuere laoreet imperdiet dictumst."
+                          "S\u00ed, algunos itinerarios y servicios est\u00e1n disponibles en ingl\u00e9s para facilitar la experiencia de los visitantes extranjeros."
                         }
                       </div>
                     </AntdAccordionItem>
                     <AntdAccordionItem
                       className={classNames(
                         "__wab_instance",
-                        sty.accordionItem__rawz6
+                        sty.accordionItem___0Cvve
                       )}
                       id={"6"}
                       label2={
@@ -480,11 +480,11 @@ function PlasmicContacto__RenderFunc(props) {
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text__otxWt
+                            sty.text__fpKW
                           )}
                         >
                           {
-                            "\u00bfVitae sed facilisi turpis nunc risus suscipit?"
+                            "\u00bfC\u00f3mo puedo reservar mi lugar en el Tequila Express?"
                           }
                         </div>
                       }
@@ -494,11 +494,11 @@ function PlasmicContacto__RenderFunc(props) {
                         className={classNames(
                           projectcss.all,
                           projectcss.__wab_text,
-                          sty.text__lEw2O
+                          sty.text__oDgAg
                         )}
                       >
                         {
-                          "Morbi torquent etiam tincidunt nisi tempus rutrum porta molestie fames lobortis nisl justo curae, consequat vivamus eros posuere laoreet imperdiet dictumst."
+                          "Al seleccionar un itinerario, ser\u00e1s redirigido al sistema de reservaciones del operador correspondiente para completar tu compra."
                         }
                       </div>
                     </AntdAccordionItem>

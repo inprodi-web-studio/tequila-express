@@ -72,7 +72,7 @@ function PlasmicRecorridoGrupoMexicoTransportes__RenderFunc(props) {
         path: "accordion.activePanelId",
         type: "private",
         variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => "2",
+        initFunc: ({ $props, $state, $queries, $ctx }) => "1",
         onMutate: generateOnMutateForSpec(
           "activePanelId",
           AntdAccordion_Helpers
@@ -215,7 +215,24 @@ function PlasmicRecorridoGrupoMexicoTransportes__RenderFunc(props) {
               hasGap={true}
               className={classNames(projectcss.all, sty.freeBox__gd9Kz)}
             >
-              <div className={classNames(projectcss.all, sty.freeBox___6POd)} />
+              <PlasmicImg__
+                alt={""}
+                className={classNames(sty.img__zc7I)}
+                displayHeight={"40px"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"40px"}
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/tequila_express/images/group83Jpg.jpg",
+                  fullWidth: 81,
+                  fullHeight: 80,
+                  aspectRatio: undefined
+                }}
+              />
+
               <Stack__
                 as={"div"}
                 hasGap={true}
@@ -411,7 +428,7 @@ function PlasmicRecorridoGrupoMexicoTransportes__RenderFunc(props) {
                     ]),
                     bordered: true,
                     className: classNames("__wab_instance", sty.accordion),
-                    defaultActiveKey: "2",
+                    defaultActiveKey: "1",
                     ghost: true,
                     items: (
                       <React.Fragment>

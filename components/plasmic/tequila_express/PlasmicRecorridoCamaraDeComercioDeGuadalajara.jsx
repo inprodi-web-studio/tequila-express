@@ -24,21 +24,23 @@ import {
   generateStateValueProp,
   hasVariant,
   initializeCodeComponentStates,
+  set as $stateSet,
   useDollarState
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import MainHeader from "../../MainHeader"; // plasmic-import: wtnE0On9QToy/component
 import Button2 from "../../Button2"; // plasmic-import: 48nEEeCzck2s/component
 import { Anchor } from "../../registerAnchor"; // plasmic-import: ONinya1RhOT2/codeComponent
-import { AntdAccordion } from "@plasmicpkgs/antd5/skinny/registerCollapse";
-import { accordionHelpers as AntdAccordion_Helpers } from "@plasmicpkgs/antd5/skinny/registerCollapse";
-import { AntdAccordionItem } from "@plasmicpkgs/antd5/skinny/registerCollapse";
 import Footer from "../../Footer"; // plasmic-import: Iz_Y_kKZMHTD/component
+import { AntdModal } from "@plasmicpkgs/antd5/skinny/registerModal";
+import { SliderWrapper } from "@plasmicpkgs/react-slick";
+import { sliderHelpers as SliderWrapper_Helpers } from "@plasmicpkgs/react-slick";
 import { useScreenVariants as useScreenVariantsraGa2MJbEFd } from "../website_starter/PlasmicGlobalVariant__Screen"; // plasmic-import: RaGa2M-JbEFd/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import projectcss from "../website_starter/plasmic.module.css"; // plasmic-import: uEWT1C6ySrjtSMWJntBego/projectcss
 import sty from "./PlasmicRecorridoCamaraDeComercioDeGuadalajara.module.css"; // plasmic-import: 8lN_knEESkxt/css
+import XSvgIcon from "./icons/PlasmicIcon__XSvg"; // plasmic-import: wbQGNqEUKbny/icon
 
 createPlasmicElementProxy;
 
@@ -71,20 +73,43 @@ function PlasmicRecorridoCamaraDeComercioDeGuadalajara__RenderFunc(props) {
   const stateSpecs = React.useMemo(
     () => [
       {
-        path: "accordion.activePanelId",
-        type: "private",
-        variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => "2",
-        onMutate: generateOnMutateForSpec(
-          "activePanelId",
-          AntdAccordion_Helpers
-        )
-      },
-      {
         path: "mainHeader.menuOpen",
         type: "private",
         variableType: "boolean",
         initFunc: ({ $props, $state, $queries, $ctx }) => false
+      },
+      {
+        path: "itineraryModal.open",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) =>
+          (() => {
+            try {
+              return $state.itineraryModalOpened;
+            } catch (e) {
+              if (
+                e instanceof TypeError ||
+                e?.plasmicType === "PlasmicUndefinedDataError"
+              ) {
+                return undefined;
+              }
+              throw e;
+            }
+          })()
+      },
+      {
+        path: "itineraryModalOpened",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => false
+      },
+      {
+        path: "sliderCarousel.currentSlide",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $ctx }) => 0,
+        refName: "sliderCarousel",
+        onMutate: generateOnMutateForSpec("currentSlide", SliderWrapper_Helpers)
       }
     ],
 
@@ -170,7 +195,17 @@ function PlasmicRecorridoCamaraDeComercioDeGuadalajara__RenderFunc(props) {
               data-plasmic-override={overrides.banner}
               hasGap={true}
               className={classNames(projectcss.all, sty.banner)}
-            />
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text___0MGra
+                )}
+              >
+                {""}
+              </div>
+            </Stack__>
           </div>
           <Stack__
             as={"div"}
@@ -221,7 +256,24 @@ function PlasmicRecorridoCamaraDeComercioDeGuadalajara__RenderFunc(props) {
               hasGap={true}
               className={classNames(projectcss.all, sty.freeBox__tO2FH)}
             >
-              <div className={classNames(projectcss.all, sty.freeBox__mM6Z7)} />
+              <PlasmicImg__
+                alt={""}
+                className={classNames(sty.img___0U3HY)}
+                displayHeight={"40px"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"40px"}
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/tequila_express/images/group83Jpg.jpg",
+                  fullWidth: 81,
+                  fullHeight: 80,
+                  aspectRatio: undefined
+                }}
+              />
+
               <Stack__
                 as={"div"}
                 hasGap={true}
@@ -407,557 +459,1298 @@ function PlasmicRecorridoCamaraDeComercioDeGuadalajara__RenderFunc(props) {
                   className={classNames(projectcss.all, sty.freeBox__yXipv)}
                 />
 
-                {(() => {
-                  const child$Props = {
-                    activeKey: generateStateValueProp($state, [
-                      "accordion",
-                      "activePanelId"
-                    ]),
-                    bordered: true,
-                    className: classNames("__wab_instance", sty.accordion),
-                    defaultActiveKey: "2",
-                    ghost: true,
-                    items: (
-                      <React.Fragment>
-                        <AntdAccordionItem
-                          className={classNames(
-                            "__wab_instance",
-                            sty.accordionItem___8JBds
-                          )}
-                          id={1}
-                          label2={
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text__mcXk
-                              )}
-                            >
-                              {"Clase Ejecutiva"}
-                            </div>
-                          }
-                          showArrow={false}
-                        >
-                          <Stack__
-                            as={"div"}
-                            hasGap={true}
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__k1UgP
-                            )}
-                          >
-                            <PlasmicImg__
-                              alt={""}
-                              className={classNames(sty.img__mJCat)}
-                              displayHeight={"375px"}
-                              displayMaxHeight={"none"}
-                              displayMaxWidth={"100%"}
-                              displayMinHeight={"0"}
-                              displayMinWidth={"40%"}
-                              displayWidth={
-                                hasVariant(globalVariants, "screen", "tablet")
-                                  ? "100%"
-                                  : "40%"
-                              }
-                              loading={"lazy"}
-                              src={{
-                                src: "/plasmic/tequila_express/images/rectangle70Jpg.jpg",
-                                fullWidth: 846,
-                                fullHeight: 756,
-                                aspectRatio: undefined
-                              }}
-                            />
-
-                            <Stack__
-                              as={"div"}
-                              data-plasmic-name={"title2"}
-                              data-plasmic-override={overrides.title2}
-                              hasGap={true}
-                              className={classNames(projectcss.all, sty.title2)}
-                            >
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text__wLyVx
-                                )}
-                              >
-                                {"Viaje Sencillo"}
-                              </div>
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text__cCGmX
-                                )}
-                              >
-                                {hasVariant(globalVariants, "screen", "medium")
-                                  ? "$XXX.00 MXN"
-                                  : "$XXX.00 MXN"}
-                              </div>
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text__vki91
-                                )}
-                              >
-                                <React.Fragment>
-                                  <React.Fragment>
-                                    {
-                                      "La mayor comodidad para viajar con gran espacio entre asientos y una disposici\u00f3n que favorece la convivencia.\n"
-                                    }
-                                  </React.Fragment>
-                                  {
-                                    <ul
-                                      className={classNames(
-                                        projectcss.all,
-                                        projectcss.ul,
-                                        sty.ul__l9Elc
-                                      )}
-                                    >
-                                      <li
-                                        className={classNames(
-                                          projectcss.all,
-                                          projectcss.li,
-                                          projectcss.__wab_text,
-                                          sty.li__xqsd0
-                                        )}
-                                      >
-                                        {"Vag\u00f3n Bar"}
-                                      </li>
-                                    </ul>
-                                  }
-
-                                  <React.Fragment>{""}</React.Fragment>
-                                  {
-                                    <ul
-                                      className={classNames(
-                                        projectcss.all,
-                                        projectcss.ul,
-                                        sty.ul__xRQxN
-                                      )}
-                                    >
-                                      <li
-                                        className={classNames(
-                                          projectcss.all,
-                                          projectcss.li,
-                                          projectcss.__wab_text,
-                                          sty.li__n3BnX
-                                        )}
-                                      >
-                                        {"Ventanas panor\u00e1micas"}
-                                      </li>
-                                    </ul>
-                                  }
-
-                                  <React.Fragment>{""}</React.Fragment>
-                                  {
-                                    <ul
-                                      className={classNames(
-                                        projectcss.all,
-                                        projectcss.ul,
-                                        sty.ul__s74K8
-                                      )}
-                                    >
-                                      <li
-                                        className={classNames(
-                                          projectcss.all,
-                                          projectcss.li,
-                                          projectcss.__wab_text,
-                                          sty.li__osJjh
-                                        )}
-                                      >
-                                        {"60 asientos"}
-                                      </li>
-                                    </ul>
-                                  }
-
-                                  <React.Fragment>{""}</React.Fragment>
-                                  {
-                                    <ul
-                                      className={classNames(
-                                        projectcss.all,
-                                        projectcss.ul,
-                                        sty.ul___3ZH5J
-                                      )}
-                                    >
-                                      <li
-                                        className={classNames(
-                                          projectcss.all,
-                                          projectcss.li,
-                                          projectcss.__wab_text,
-                                          sty.li__ohwy9
-                                        )}
-                                      >
-                                        {"2 ba\u00f1os\n"}
-                                      </li>
-                                    </ul>
-                                  }
-
-                                  <React.Fragment>
-                                    {"\nIncluye:\n"}
-                                  </React.Fragment>
-                                  {
-                                    <ul
-                                      className={classNames(
-                                        projectcss.all,
-                                        projectcss.ul,
-                                        sty.ul___3Nmuk
-                                      )}
-                                    >
-                                      <li
-                                        className={classNames(
-                                          projectcss.all,
-                                          projectcss.li,
-                                          projectcss.__wab_text,
-                                          sty.li__ndvNw
-                                        )}
-                                      >
-                                        {
-                                          "Espacio para almacenar una maleta de mano (medidas)\u2026"
-                                        }
-                                      </li>
-                                    </ul>
-                                  }
-
-                                  <React.Fragment>{""}</React.Fragment>
-                                  {
-                                    <ul
-                                      className={classNames(
-                                        projectcss.all,
-                                        projectcss.ul,
-                                        sty.ul__gmeww
-                                      )}
-                                    >
-                                      <li
-                                        className={classNames(
-                                          projectcss.all,
-                                          projectcss.li,
-                                          projectcss.__wab_text,
-                                          sty.li__iz8W
-                                        )}
-                                      >
-                                        {
-                                          "Traslado en cami\u00f3n Estaci\u00f3n Tequila - Tequila Centro (ida y vuelta)"
-                                        }
-                                      </li>
-                                    </ul>
-                                  }
-
-                                  <React.Fragment>{""}</React.Fragment>
-                                  {
-                                    <ul
-                                      className={classNames(
-                                        projectcss.all,
-                                        projectcss.ul,
-                                        sty.ul__iq4D8
-                                      )}
-                                    >
-                                      <li
-                                        className={classNames(
-                                          projectcss.all,
-                                          projectcss.li,
-                                          projectcss.__wab_text,
-                                          sty.li___35Odk
-                                        )}
-                                      >
-                                        {"Seguro de viaje en el transporte"}
-                                      </li>
-                                    </ul>
-                                  }
-
-                                  <React.Fragment>{""}</React.Fragment>
-                                </React.Fragment>
-                              </div>
-                            </Stack__>
-                          </Stack__>
-                        </AntdAccordionItem>
-                        <AntdAccordionItem
-                          className={classNames(
-                            "__wab_instance",
-                            sty.accordionItem__tTjAo
-                          )}
-                          id={"2"}
-                          label2={
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text___7OkY
-                              )}
-                            >
-                              {"Primera Clase"}
-                            </div>
-                          }
-                          showArrow={false}
-                        >
-                          <Stack__
-                            as={"div"}
-                            hasGap={true}
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox___09St0
-                            )}
-                          >
-                            <PlasmicImg__
-                              alt={""}
-                              className={classNames(sty.img__mHsoZ)}
-                              displayHeight={"375px"}
-                              displayMaxHeight={"none"}
-                              displayMaxWidth={"100%"}
-                              displayMinHeight={"0"}
-                              displayMinWidth={"40%"}
-                              displayWidth={
-                                hasVariant(globalVariants, "screen", "tablet")
-                                  ? "100%"
-                                  : "40%"
-                              }
-                              loading={"lazy"}
-                              src={{
-                                src: "/plasmic/tequila_express/images/rectangle70Jpg2.jpg",
-                                fullWidth: 846,
-                                fullHeight: 756,
-                                aspectRatio: undefined
-                              }}
-                            />
-
-                            <Stack__
-                              as={"div"}
-                              data-plasmic-name={"title3"}
-                              data-plasmic-override={overrides.title3}
-                              hasGap={true}
-                              className={classNames(projectcss.all, sty.title3)}
-                            >
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text__fzhSw
-                                )}
-                              >
-                                {"Viaje Sencillo"}
-                              </div>
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text__hNpvi
-                                )}
-                              >
-                                {hasVariant(globalVariants, "screen", "medium")
-                                  ? "$XXX.00 MXN"
-                                  : "$XXX.00 MXN"}
-                              </div>
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text__pDb
-                                )}
-                              >
-                                <React.Fragment>
-                                  <React.Fragment>
-                                    {
-                                      "La mayor comodidad para viajar con gran espacio entre asientos y una disposici\u00f3n que favorece la convivencia.\n"
-                                    }
-                                  </React.Fragment>
-                                  {
-                                    <ul
-                                      className={classNames(
-                                        projectcss.all,
-                                        projectcss.ul,
-                                        sty.ul__o73F0
-                                      )}
-                                    >
-                                      <li
-                                        className={classNames(
-                                          projectcss.all,
-                                          projectcss.li,
-                                          projectcss.__wab_text,
-                                          sty.li___5ETbt
-                                        )}
-                                      >
-                                        {"Vag\u00f3n Bar"}
-                                      </li>
-                                    </ul>
-                                  }
-
-                                  <React.Fragment>{""}</React.Fragment>
-                                  {
-                                    <ul
-                                      className={classNames(
-                                        projectcss.all,
-                                        projectcss.ul,
-                                        sty.ul__vCje8
-                                      )}
-                                    >
-                                      <li
-                                        className={classNames(
-                                          projectcss.all,
-                                          projectcss.li,
-                                          projectcss.__wab_text,
-                                          sty.li__hveg6
-                                        )}
-                                      >
-                                        {"Ventanas panor\u00e1micas"}
-                                      </li>
-                                    </ul>
-                                  }
-
-                                  <React.Fragment>{""}</React.Fragment>
-                                  {
-                                    <ul
-                                      className={classNames(
-                                        projectcss.all,
-                                        projectcss.ul,
-                                        sty.ul__xBi8P
-                                      )}
-                                    >
-                                      <li
-                                        className={classNames(
-                                          projectcss.all,
-                                          projectcss.li,
-                                          projectcss.__wab_text,
-                                          sty.li___47MyC
-                                        )}
-                                      >
-                                        {"60 asientos"}
-                                      </li>
-                                    </ul>
-                                  }
-
-                                  <React.Fragment>{""}</React.Fragment>
-                                  {
-                                    <ul
-                                      className={classNames(
-                                        projectcss.all,
-                                        projectcss.ul,
-                                        sty.ul___6WCxl
-                                      )}
-                                    >
-                                      <li
-                                        className={classNames(
-                                          projectcss.all,
-                                          projectcss.li,
-                                          projectcss.__wab_text,
-                                          sty.li__xciPh
-                                        )}
-                                      >
-                                        {"2 ba\u00f1os\n"}
-                                      </li>
-                                    </ul>
-                                  }
-
-                                  <React.Fragment>
-                                    {"\nIncluye:\n"}
-                                  </React.Fragment>
-                                  {
-                                    <ul
-                                      className={classNames(
-                                        projectcss.all,
-                                        projectcss.ul,
-                                        sty.ul__zunY
-                                      )}
-                                    >
-                                      <li
-                                        className={classNames(
-                                          projectcss.all,
-                                          projectcss.li,
-                                          projectcss.__wab_text,
-                                          sty.li__mnPr5
-                                        )}
-                                      >
-                                        {
-                                          "Espacio para almacenar una maleta de mano (medidas)\u2026"
-                                        }
-                                      </li>
-                                    </ul>
-                                  }
-
-                                  <React.Fragment>{""}</React.Fragment>
-                                  {
-                                    <ul
-                                      className={classNames(
-                                        projectcss.all,
-                                        projectcss.ul,
-                                        sty.ul__bYk8V
-                                      )}
-                                    >
-                                      <li
-                                        className={classNames(
-                                          projectcss.all,
-                                          projectcss.li,
-                                          projectcss.__wab_text,
-                                          sty.li__zVxQi
-                                        )}
-                                      >
-                                        {
-                                          "Traslado en cami\u00f3n Estaci\u00f3n Tequila - Tequila Centro (ida y vuelta)"
-                                        }
-                                      </li>
-                                    </ul>
-                                  }
-
-                                  <React.Fragment>{""}</React.Fragment>
-                                  {
-                                    <ul
-                                      className={classNames(
-                                        projectcss.all,
-                                        projectcss.ul,
-                                        sty.ul__iTcPo
-                                      )}
-                                    >
-                                      <li
-                                        className={classNames(
-                                          projectcss.all,
-                                          projectcss.li,
-                                          projectcss.__wab_text,
-                                          sty.li__zn9EE
-                                        )}
-                                      >
-                                        {"Seguro de viaje en el transporte"}
-                                      </li>
-                                    </ul>
-                                  }
-
-                                  <React.Fragment>{""}</React.Fragment>
-                                </React.Fragment>
-                              </div>
-                            </Stack__>
-                          </Stack__>
-                        </AntdAccordionItem>
-                      </React.Fragment>
-                    ),
-
-                    onChange: generateStateOnChangePropForCodeComponents(
-                      $state,
-                      "activePanelId",
-                      ["accordion", "activePanelId"],
-                      AntdAccordion_Helpers
-                    )
-                  };
-                  initializeCodeComponentStates(
-                    $state,
-                    [
+                <div
+                  data-plasmic-name={"ejecutivo"}
+                  data-plasmic-override={overrides.ejecutivo}
+                  className={classNames(projectcss.all, sty.ejecutivo)}
+                >
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__xiY0X)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__ela6A
+                      )}
+                    >
+                      {"Vag\u00f3n Ejecutivo"}
+                    </div>
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___68Kz1
+                      )}
+                    >
                       {
-                        name: "activePanelId",
-                        plasmicStateName: "accordion.activePanelId"
+                        "Del\u00e9itate con la belleza del paisaje agavero mientras disfrutas el servicio de cocteler\u00eda a bordo y vives experiencias inolvidables."
                       }
-                    ],
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__w4Muq)}
+                  >
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__nNvnd)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__yodxE
+                        )}
+                      >
+                        {"Men\u00fa a bordo (ida GDL - TQL):"}
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__r8Epw
+                        )}
+                      >
+                        <React.Fragment>
+                          <React.Fragment>{""}</React.Fragment>
+                          {
+                            <ul
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.ul,
+                                sty.ul__osQv5
+                              )}
+                            >
+                              <li
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.li,
+                                  projectcss.__wab_text,
+                                  sty.li__zAQyO
+                                )}
+                              >
+                                {"Box Lunch con fruta, jugo y galletas"}
+                              </li>
+                            </ul>
+                          }
 
-                    [],
-                    AntdAccordion_Helpers ?? {},
-                    child$Props
-                  );
-                  return (
-                    <AntdAccordion
-                      data-plasmic-name={"accordion"}
-                      data-plasmic-override={overrides.accordion}
-                      {...child$Props}
-                    />
-                  );
-                })()}
+                          <React.Fragment>{""}</React.Fragment>
+                          {
+                            <ul
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.ul,
+                                sty.ul__e0Exn
+                              )}
+                            >
+                              <li
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.li,
+                                  projectcss.__wab_text,
+                                  sty.li__laMjI
+                                )}
+                              >
+                                {
+                                  "Cocteles preparados con Tequila Hornitos\n(blanco, reposado y a\u00f1ejo)"
+                                }
+                              </li>
+                            </ul>
+                          }
+
+                          <React.Fragment>{""}</React.Fragment>
+                          {
+                            <ul
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.ul,
+                                sty.ul__kpd9H
+                              )}
+                            >
+                              <li
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.li,
+                                  projectcss.__wab_text,
+                                  sty.li__dYyDf
+                                )}
+                              >
+                                {"Cerveza, refrescos y agua natura"}
+                              </li>
+                            </ul>
+                          }
+
+                          <React.Fragment>{""}</React.Fragment>
+                        </React.Fragment>
+                      </div>
+                    </div>
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__wtMmm)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__e9XU
+                        )}
+                      >
+                        {"Men\u00fa Quinta Sauza:"}
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__kPll2
+                        )}
+                      >
+                        <React.Fragment>
+                          <React.Fragment>{""}</React.Fragment>
+                          {
+                            <ul
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.ul,
+                                sty.ul__jiFxq
+                              )}
+                            >
+                              <li
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.li,
+                                  projectcss.__wab_text,
+                                  sty.li__ggkHg
+                                )}
+                              >
+                                {"Entradas: plat\u00f3n de botana mexicana"}
+                              </li>
+                              <li
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.li,
+                                  projectcss.__wab_text,
+                                  sty.li__fpuBo
+                                )}
+                              >
+                                {"Buffet a la mesa con 5 guisos"}
+                              </li>
+                              <li
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.li,
+                                  projectcss.__wab_text,
+                                  sty.li__h3Avr
+                                )}
+                              >
+                                {"Quesadillas y guarniciones"}
+                              </li>
+                              <li
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.li,
+                                  projectcss.__wab_text,
+                                  sty.li___7VCdX
+                                )}
+                              >
+                                {"Postre a la mesa"}
+                              </li>
+                              <li
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.li,
+                                  projectcss.__wab_text,
+                                  sty.li__dpSwG
+                                )}
+                              >
+                                {
+                                  "Servicio de tequila, refresco, cerveza, aguas frescas y caf\u00e9"
+                                }
+                              </li>
+                            </ul>
+                          }
+
+                          <React.Fragment>{""}</React.Fragment>
+                        </React.Fragment>
+                      </div>
+                    </div>
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__aoTwD)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__dw6F
+                        )}
+                      >
+                        {"Men\u00fa a bordo (vuelta TQL - GDL):"}
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__ehtFt
+                        )}
+                      >
+                        <React.Fragment>
+                          <React.Fragment>{""}</React.Fragment>
+                          {
+                            <ul
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.ul,
+                                sty.ul__wcCgB
+                              )}
+                            >
+                              <li
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.li,
+                                  projectcss.__wab_text,
+                                  sty.li__vkw2T
+                                )}
+                              >
+                                {"Botana salada"}
+                              </li>
+                              <li
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.li,
+                                  projectcss.__wab_text,
+                                  sty.li__oLvbz
+                                )}
+                              >
+                                {
+                                  "Servicio de tequila, refrescos, cerveza y agua natural"
+                                }
+                              </li>
+                            </ul>
+                          }
+
+                          <React.Fragment>{""}</React.Fragment>
+                        </React.Fragment>
+                      </div>
+                    </div>
+                  </div>
+                  <Stack__
+                    as={"div"}
+                    hasGap={true}
+                    className={classNames(projectcss.all, sty.freeBox__kL8Hg)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__lOk5C
+                      )}
+                    >
+                      {"Traslado redondo con experiencia (GDL - TQL - GDL)"}
+                    </div>
+                    <Stack__
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(projectcss.all, sty.freeBox___3EtD)}
+                    >
+                      <PlasmicImg__
+                        alt={""}
+                        className={classNames(sty.img__xqOpN)}
+                        displayHeight={
+                          hasVariant(globalVariants, "screen", "tablet")
+                            ? "300px"
+                            : "100%"
+                        }
+                        displayMaxHeight={"none"}
+                        displayMaxWidth={"100%"}
+                        displayMinHeight={"0"}
+                        displayMinWidth={"40%"}
+                        displayWidth={
+                          hasVariant(globalVariants, "screen", "tablet")
+                            ? "100%"
+                            : "40%"
+                        }
+                        loading={"lazy"}
+                        src={{
+                          src: "/plasmic/tequila_express/images/rectangle70Jpg.jpg",
+                          fullWidth: 846,
+                          fullHeight: 756,
+                          aspectRatio: undefined
+                        }}
+                      />
+
+                      <Stack__
+                        as={"div"}
+                        data-plasmic-name={"title2"}
+                        data-plasmic-override={overrides.title2}
+                        hasGap={true}
+                        className={classNames(projectcss.all, sty.title2)}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__oq2Ex
+                          )}
+                        >
+                          {"Viaje redondo GDL - TQL - GDL"}
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text___7XsHt
+                          )}
+                        >
+                          {hasVariant(globalVariants, "screen", "medium")
+                            ? "$3,400.00 MXN"
+                            : "$3,400.00 MXN"}
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__rcd9U
+                          )}
+                        >
+                          <React.Fragment>
+                            <React.Fragment>{""}</React.Fragment>
+                            {
+                              <ul
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.ul,
+                                  sty.ul__ph1Fh
+                                )}
+                              >
+                                <li
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.li,
+                                    projectcss.__wab_text,
+                                    sty.li__gcdr7
+                                  )}
+                                >
+                                  {
+                                    "Servicio de estacionamiento en C\u00e1mara de Comercio Guadalajara"
+                                  }
+                                </li>
+                              </ul>
+                            }
+
+                            <React.Fragment>{""}</React.Fragment>
+                            {
+                              <ul
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.ul,
+                                  sty.ul__mfTSd
+                                )}
+                              >
+                                <li
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.li,
+                                    projectcss.__wab_text,
+                                    sty.li__vJD0
+                                  )}
+                                >
+                                  {
+                                    "Recepci\u00f3n con Coffee break (galletas y pan dulce)"
+                                  }
+                                </li>
+                              </ul>
+                            }
+
+                            <React.Fragment>{""}</React.Fragment>
+                            {
+                              <ul
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.ul,
+                                  sty.ul__x2IwR
+                                )}
+                              >
+                                <li
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.li,
+                                    projectcss.__wab_text,
+                                    sty.li__lnd0O
+                                  )}
+                                >
+                                  {
+                                    "Transportes en autob\u00fas a estaci\u00f3n de tren"
+                                  }
+                                </li>
+                              </ul>
+                            }
+
+                            <React.Fragment>{""}</React.Fragment>
+                            {
+                              <ul
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.ul,
+                                  sty.ul__eyBhF
+                                )}
+                              >
+                                <li
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.li,
+                                    projectcss.__wab_text,
+                                    sty.li___2C1Uc
+                                  )}
+                                >
+                                  {"Servicios a bordo del tren:"}
+                                </li>
+                                <li
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.li,
+                                    projectcss.__wab_text,
+                                    sty.li__cmdqC
+                                  )}
+                                >
+                                  {"Gu\u00eda tur\u00edstico biling\u00fce"}
+                                </li>
+                                <li
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.li,
+                                    projectcss.__wab_text,
+                                    sty.li__hOn8J
+                                  )}
+                                >
+                                  {"Servicio de meseros"}
+                                </li>
+                                <li
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.li,
+                                    projectcss.__wab_text,
+                                    sty.li__ihjRr
+                                  )}
+                                >
+                                  {"Param\u00e9dico"}
+                                </li>
+                                <li
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.li,
+                                    projectcss.__wab_text,
+                                    sty.li__idl6J
+                                  )}
+                                >
+                                  {"Personal de apoyo"}
+                                </li>
+                                <li
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.li,
+                                    projectcss.__wab_text,
+                                    sty.li__erKr
+                                  )}
+                                >
+                                  {
+                                    "Cocteler\u00eda (seg\u00fan la categor\u00eda)"
+                                  }
+                                </li>
+                              </ul>
+                            }
+
+                            <React.Fragment>{""}</React.Fragment>
+                            {
+                              <ul
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.ul,
+                                  sty.ul__h06J5
+                                )}
+                              >
+                                <li
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.li,
+                                    projectcss.__wab_text,
+                                    sty.li__usfY9
+                                  )}
+                                >
+                                  {"Cantarito de bienvenida en Campos Agaveros"}
+                                </li>
+                              </ul>
+                            }
+
+                            <React.Fragment>{""}</React.Fragment>
+                            {
+                              <ul
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.ul,
+                                  sty.ul__z7Eni
+                                )}
+                              >
+                                <li
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.li,
+                                    projectcss.__wab_text,
+                                    sty.li__xPlYh
+                                  )}
+                                >
+                                  {"Men\u00fa de comida en Quinta Sauza"}
+                                </li>
+                              </ul>
+                            }
+
+                            <React.Fragment>{""}</React.Fragment>
+                            {
+                              <ul
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.ul,
+                                  sty.ul___4J9QA
+                                )}
+                              >
+                                <li
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.li,
+                                    projectcss.__wab_text,
+                                    sty.li__e346
+                                  )}
+                                >
+                                  {
+                                    "Espect\u00e1culo \u201cEstampas de M\u00e9xico\u201d"
+                                  }
+                                </li>
+                              </ul>
+                            }
+
+                            <React.Fragment>{""}</React.Fragment>
+                            {
+                              <ul
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.ul,
+                                  sty.ul__hbCmm
+                                )}
+                              >
+                                <li
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.li,
+                                    projectcss.__wab_text,
+                                    sty.li__hkNy
+                                  )}
+                                >
+                                  {
+                                    "Visita guiada al centro de Tequila (biling\u00fce)"
+                                  }
+                                </li>
+                              </ul>
+                            }
+
+                            <React.Fragment>{""}</React.Fragment>
+                          </React.Fragment>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__bNy6F
+                          )}
+                          onClick={async event => {
+                            const $steps = {};
+                            $steps["updateItineraryModalOpened"] = true
+                              ? (() => {
+                                  const actionArgs = {
+                                    variable: {
+                                      objRoot: $state,
+                                      variablePath: ["itineraryModalOpened"]
+                                    },
+                                    operation: 0,
+                                    value: true
+                                  };
+                                  return (({
+                                    variable,
+                                    value,
+                                    startIndex,
+                                    deleteCount
+                                  }) => {
+                                    if (!variable) {
+                                      return;
+                                    }
+                                    const { objRoot, variablePath } = variable;
+                                    $stateSet(objRoot, variablePath, value);
+                                    return value;
+                                  })?.apply(null, [actionArgs]);
+                                })()
+                              : undefined;
+                            if (
+                              $steps["updateItineraryModalOpened"] != null &&
+                              typeof $steps["updateItineraryModalOpened"] ===
+                                "object" &&
+                              typeof $steps["updateItineraryModalOpened"]
+                                .then === "function"
+                            ) {
+                              $steps["updateItineraryModalOpened"] =
+                                await $steps["updateItineraryModalOpened"];
+                            }
+                          }}
+                        >
+                          {"Ver Itinerario"}
+                        </div>
+                      </Stack__>
+                    </Stack__>
+                  </Stack__>
+                </div>
+                <div
+                  data-plasmic-name={"bar"}
+                  data-plasmic-override={overrides.bar}
+                  className={classNames(projectcss.all, sty.bar)}
+                >
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox___06UX7)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__ugzp8
+                      )}
+                    >
+                      {"Vag\u00f3n Bar"}
+                    </div>
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___9ZPBm
+                      )}
+                    >
+                      {"Exclusivo para mayores de edad"}
+                    </div>
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___5OgS4
+                      )}
+                    >
+                      {
+                        "Da un upgrade a tu trayecto con un exquisito servicio de mixolog\u00eda a bordo y beneficios exclusivos."
+                      }
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__kjlCh)}
+                  >
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__aEqiR)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__b2Mmt
+                        )}
+                      >
+                        {"Men\u00fa a bordo (ida GDL - TQL):"}
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__uuG
+                        )}
+                      >
+                        <React.Fragment>
+                          <React.Fragment>{""}</React.Fragment>
+                          {
+                            <ul
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.ul,
+                                sty.ul___6Bpfc
+                              )}
+                            >
+                              <li
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.li,
+                                  projectcss.__wab_text,
+                                  sty.li___04Egz
+                                )}
+                              >
+                                {"Servicio de canap\u00e9s y jugo"}
+                              </li>
+                              <li
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.li,
+                                  projectcss.__wab_text,
+                                  sty.li__aVnJ3
+                                )}
+                              >
+                                {"Cata de trufas/borrachitos"}
+                              </li>
+                              <li
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.li,
+                                  projectcss.__wab_text,
+                                  sty.li__ricEy
+                                )}
+                              >
+                                {"Mixolog\u00eda a bordo"}
+                              </li>
+                              <li
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.li,
+                                  projectcss.__wab_text,
+                                  sty.li__e5QZb
+                                )}
+                              >
+                                {
+                                  "Cocteles preparados con Tequila 3 Generaciones (blanco, reposado, a\u00f1ejo)"
+                                }
+                              </li>
+                              <li
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.li,
+                                  projectcss.__wab_text,
+                                  sty.li__rBaE0
+                                )}
+                              >
+                                {"Cerveza, refrescos y agua natural"}
+                              </li>
+                            </ul>
+                          }
+
+                          <React.Fragment>{""}</React.Fragment>
+                        </React.Fragment>
+                      </div>
+                    </div>
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__xvCsp)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text___7Ghqu
+                        )}
+                      >
+                        {"Men\u00fa Quinta Sauza:"}
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__pVi9O
+                        )}
+                      >
+                        <React.Fragment>
+                          <React.Fragment>{""}</React.Fragment>
+                          {
+                            <ul
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.ul,
+                                sty.ul__dcte
+                              )}
+                            >
+                              <li
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.li,
+                                  projectcss.__wab_text,
+                                  sty.li__xHa8Q
+                                )}
+                              >
+                                {"Entradas: plat\u00f3n de botana mexicana"}
+                              </li>
+                              <li
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.li,
+                                  projectcss.__wab_text,
+                                  sty.li__x16Tj
+                                )}
+                              >
+                                {"Parrillada de cortes con guarniciones"}
+                              </li>
+                              <li
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.li,
+                                  projectcss.__wab_text,
+                                  sty.li__w27Xn
+                                )}
+                              >
+                                {"Postre a la mesa"}
+                              </li>
+                              <li
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.li,
+                                  projectcss.__wab_text,
+                                  sty.li__brlMl
+                                )}
+                              >
+                                {
+                                  "Servicio de tequila, refresco, cerveza, aguas frescas y caf\u00e9"
+                                }
+                              </li>
+                            </ul>
+                          }
+
+                          <React.Fragment>{""}</React.Fragment>
+                        </React.Fragment>
+                      </div>
+                    </div>
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__zng9B)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__lNfeb
+                        )}
+                      >
+                        {"Men\u00fa a bordo (vuelta TQL - GDL):"}
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__kGhnG
+                        )}
+                      >
+                        <React.Fragment>
+                          <React.Fragment>{""}</React.Fragment>
+                          {
+                            <ul
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.ul,
+                                sty.ul__vToI
+                              )}
+                            >
+                              <li
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.li,
+                                  projectcss.__wab_text,
+                                  sty.li__fmRH
+                                )}
+                              >
+                                {"Botana selecta"}
+                              </li>
+                              <li
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.li,
+                                  projectcss.__wab_text,
+                                  sty.li__iq9Nq
+                                )}
+                              >
+                                {
+                                  "Servicio de tequila, refrescos, cerveza y agua natural"
+                                }
+                              </li>
+                            </ul>
+                          }
+
+                          <React.Fragment>{""}</React.Fragment>
+                        </React.Fragment>
+                      </div>
+                    </div>
+                  </div>
+                  <Stack__
+                    as={"div"}
+                    hasGap={true}
+                    className={classNames(projectcss.all, sty.freeBox__nQeS)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__u2Nij
+                      )}
+                    >
+                      {"Traslado redondo con experiencia (GDL - TQL - GDL)"}
+                    </div>
+                    <Stack__
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(projectcss.all, sty.freeBox__yFpoe)}
+                    >
+                      <PlasmicImg__
+                        alt={""}
+                        className={classNames(sty.img___70Q9Y)}
+                        displayHeight={
+                          hasVariant(globalVariants, "screen", "tablet")
+                            ? "300px"
+                            : "100%"
+                        }
+                        displayMaxHeight={"none"}
+                        displayMaxWidth={"100%"}
+                        displayMinHeight={"0"}
+                        displayMinWidth={"40%"}
+                        displayWidth={
+                          hasVariant(globalVariants, "screen", "tablet")
+                            ? "100%"
+                            : "40%"
+                        }
+                        loading={"lazy"}
+                        src={{
+                          src: "/plasmic/tequila_express/images/rectangle70Jpg.jpg",
+                          fullWidth: 846,
+                          fullHeight: 756,
+                          aspectRatio: undefined
+                        }}
+                      />
+
+                      <Stack__
+                        as={"div"}
+                        data-plasmic-name={"title3"}
+                        data-plasmic-override={overrides.title3}
+                        hasGap={true}
+                        className={classNames(projectcss.all, sty.title3)}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text___6Q30C
+                          )}
+                        >
+                          {"Viaje sencillo GDL - TQL"}
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__kynyD
+                          )}
+                        >
+                          {hasVariant(globalVariants, "screen", "medium")
+                            ? "$3,900.00 MXN"
+                            : "$3,900.00 MXN"}
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__jj1Ip
+                          )}
+                        >
+                          {hasVariant(globalVariants, "screen", "medium")
+                            ? "$XXX.00 MXN"
+                            : "Solo mayores de edad"}
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text___3CScy
+                          )}
+                        >
+                          <React.Fragment>
+                            <React.Fragment>{""}</React.Fragment>
+                            {
+                              <ul
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.ul,
+                                  sty.ul__pyTpT
+                                )}
+                              >
+                                <li
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.li,
+                                    projectcss.__wab_text,
+                                    sty.li__dCp7N
+                                  )}
+                                >
+                                  {
+                                    "Servicio de estacionamiento en C\u00e1mara de Comercio Guadalajara"
+                                  }
+                                </li>
+                              </ul>
+                            }
+
+                            <React.Fragment>{""}</React.Fragment>
+                            {
+                              <ul
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.ul,
+                                  sty.ul__rq5Xm
+                                )}
+                              >
+                                <li
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.li,
+                                    projectcss.__wab_text,
+                                    sty.li__norZi
+                                  )}
+                                >
+                                  {
+                                    "Recepci\u00f3n con Coffee break (galletas y pan dulce)"
+                                  }
+                                </li>
+                              </ul>
+                            }
+
+                            <React.Fragment>{""}</React.Fragment>
+                            {
+                              <ul
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.ul,
+                                  sty.ul___5Aoi
+                                )}
+                              >
+                                <li
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.li,
+                                    projectcss.__wab_text,
+                                    sty.li__nhyim
+                                  )}
+                                >
+                                  {
+                                    "Transportes en autob\u00fas a estaci\u00f3n de tren"
+                                  }
+                                </li>
+                              </ul>
+                            }
+
+                            <React.Fragment>{""}</React.Fragment>
+                            {
+                              <ul
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.ul,
+                                  sty.ul___7D7Bc
+                                )}
+                              >
+                                <li
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.li,
+                                    projectcss.__wab_text,
+                                    sty.li___4N0Xb
+                                  )}
+                                >
+                                  {"Servicios a bordo del tren:"}
+                                </li>
+                                <li
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.li,
+                                    projectcss.__wab_text,
+                                    sty.li__r5GVb
+                                  )}
+                                >
+                                  {"Gu\u00eda tur\u00edstico biling\u00fce"}
+                                </li>
+                                <li
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.li,
+                                    projectcss.__wab_text,
+                                    sty.li__ymEn
+                                  )}
+                                >
+                                  {"Servicio de meseros"}
+                                </li>
+                                <li
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.li,
+                                    projectcss.__wab_text,
+                                    sty.li__wYj7D
+                                  )}
+                                >
+                                  {"Param\u00e9dico"}
+                                </li>
+                                <li
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.li,
+                                    projectcss.__wab_text,
+                                    sty.li__z8GSj
+                                  )}
+                                >
+                                  {"Personal de apoyo"}
+                                </li>
+                                <li
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.li,
+                                    projectcss.__wab_text,
+                                    sty.li__yn2Gm
+                                  )}
+                                >
+                                  {
+                                    "Cocteler\u00eda (seg\u00fan la categor\u00eda)"
+                                  }
+                                </li>
+                              </ul>
+                            }
+
+                            <React.Fragment>{""}</React.Fragment>
+                            {
+                              <ul
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.ul,
+                                  sty.ul__iZpIs
+                                )}
+                              >
+                                <li
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.li,
+                                    projectcss.__wab_text,
+                                    sty.li__zkQsn
+                                  )}
+                                >
+                                  {"Cantarito de bienvenida en Campos Agaveros"}
+                                </li>
+                              </ul>
+                            }
+
+                            <React.Fragment>{""}</React.Fragment>
+                            {
+                              <ul
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.ul,
+                                  sty.ul__ze2Ma
+                                )}
+                              >
+                                <li
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.li,
+                                    projectcss.__wab_text,
+                                    sty.li__lAgYx
+                                  )}
+                                >
+                                  {"Men\u00fa de comida en Quinta Sauza"}
+                                </li>
+                              </ul>
+                            }
+
+                            <React.Fragment>{""}</React.Fragment>
+                            {
+                              <ul
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.ul,
+                                  sty.ul__qyEQ
+                                )}
+                              >
+                                <li
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.li,
+                                    projectcss.__wab_text,
+                                    sty.li__gr4S
+                                  )}
+                                >
+                                  {
+                                    "Espect\u00e1culo \u201cEstampas de M\u00e9xico\u201d"
+                                  }
+                                </li>
+                              </ul>
+                            }
+
+                            <React.Fragment>{""}</React.Fragment>
+                            {
+                              <ul
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.ul,
+                                  sty.ul__dChJ
+                                )}
+                              >
+                                <li
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.li,
+                                    projectcss.__wab_text,
+                                    sty.li__bpWf
+                                  )}
+                                >
+                                  {
+                                    "Visita guiada al centro de Tequila (biling\u00fce)"
+                                  }
+                                </li>
+                              </ul>
+                            }
+
+                            <React.Fragment>{""}</React.Fragment>
+                          </React.Fragment>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__ao8V2
+                          )}
+                          onClick={async event => {
+                            const $steps = {};
+                            $steps["updateItineraryModalOpened"] = true
+                              ? (() => {
+                                  const actionArgs = {
+                                    variable: {
+                                      objRoot: $state,
+                                      variablePath: ["itineraryModalOpened"]
+                                    },
+                                    operation: 0,
+                                    value: true
+                                  };
+                                  return (({
+                                    variable,
+                                    value,
+                                    startIndex,
+                                    deleteCount
+                                  }) => {
+                                    if (!variable) {
+                                      return;
+                                    }
+                                    const { objRoot, variablePath } = variable;
+                                    $stateSet(objRoot, variablePath, value);
+                                    return value;
+                                  })?.apply(null, [actionArgs]);
+                                })()
+                              : undefined;
+                            if (
+                              $steps["updateItineraryModalOpened"] != null &&
+                              typeof $steps["updateItineraryModalOpened"] ===
+                                "object" &&
+                              typeof $steps["updateItineraryModalOpened"]
+                                .then === "function"
+                            ) {
+                              $steps["updateItineraryModalOpened"] =
+                                await $steps["updateItineraryModalOpened"];
+                            }
+                          }}
+                        >
+                          {"Ver Itinerario"}
+                        </div>
+                      </Stack__>
+                    </Stack__>
+                  </Stack__>
+                </div>
               </div>
               <div
                 className={classNames(projectcss.all, sty.freeBox__z5Vkv)}
@@ -1287,6 +2080,234 @@ function PlasmicRecorridoCamaraDeComercioDeGuadalajara__RenderFunc(props) {
             data-plasmic-override={overrides.footer}
             className={classNames("__wab_instance", sty.footer)}
           />
+
+          <AntdModal
+            data-plasmic-name={"itineraryModal"}
+            data-plasmic-override={overrides.itineraryModal}
+            className={classNames("__wab_instance", sty.itineraryModal)}
+            closeIcon={
+              <XSvgIcon
+                data-plasmic-name={"svg"}
+                data-plasmic-override={overrides.svg}
+                className={classNames(projectcss.all, sty.svg)}
+                role={"img"}
+              />
+            }
+            defaultStylesClassName={classNames(
+              projectcss.root_reset,
+              projectcss.plasmic_default_styles,
+              projectcss.plasmic_mixins,
+              projectcss.plasmic_tokens,
+              plasmic_antd_5_hostless_css.plasmic_tokens
+            )}
+            hideFooter={true}
+            modalScopeClassName={sty["itineraryModal__modal"]}
+            onCancel={async () => {
+              const $steps = {};
+              $steps["updateItineraryModalOpened"] = true
+                ? (() => {
+                    const actionArgs = {
+                      variable: {
+                        objRoot: $state,
+                        variablePath: ["itineraryModalOpened"]
+                      },
+                      operation: 0,
+                      value: false
+                    };
+                    return (({ variable, value, startIndex, deleteCount }) => {
+                      if (!variable) {
+                        return;
+                      }
+                      const { objRoot, variablePath } = variable;
+                      $stateSet(objRoot, variablePath, value);
+                      return value;
+                    })?.apply(null, [actionArgs]);
+                  })()
+                : undefined;
+              if (
+                $steps["updateItineraryModalOpened"] != null &&
+                typeof $steps["updateItineraryModalOpened"] === "object" &&
+                typeof $steps["updateItineraryModalOpened"].then === "function"
+              ) {
+                $steps["updateItineraryModalOpened"] = await $steps[
+                  "updateItineraryModalOpened"
+                ];
+              }
+            }}
+            onOpenChange={generateStateOnChangeProp($state, [
+              "itineraryModal",
+              "open"
+            ])}
+            open={generateStateValueProp($state, ["itineraryModal", "open"])}
+            title={null}
+            trigger={null}
+            width={
+              hasVariant(globalVariants, "screen", "tablet") ? "95%" : "850px"
+            }
+          >
+            <div className={classNames(projectcss.all, sty.freeBox__khOvw)}>
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__qxw0N
+                )}
+              >
+                {"Itinerario"}
+              </div>
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__gq9Y
+                )}
+              >
+                {"Traslado redondo con experiencia (GDL - TQL - GDL)"}
+              </div>
+              <Stack__
+                as={"div"}
+                hasGap={true}
+                className={classNames(projectcss.all, sty.freeBox__wlVal)}
+              >
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text___9RbRk
+                  )}
+                >
+                  {
+                    "7:00 / Recepci\u00f3n en C\u00e1mara de Comercio de Guadalajara\n7:20 / Abordaje y salida en autob\u00fas rumbo a la Estaci\u00f3n de ferrocarril GDL\n8:00 / Salida del tren destino a Tequila\n10:00 / Llegada a Estaci\u00f3n Tequila\n10:15 / Abordaje y salida en autob\u00fas rumbo a Casa Sauza\n10:30 / Llegada a los campos agaveros de Casa Sauza\n\n10:45 / Demostraci\u00f3n de la jima del agave y plantaci\u00f3n\n11:30 / Visita a Bodegas de a\u00f1ejamiento \u201cLa Constancia\u201d de Casa Sauza y degustaci\u00f3n de Tequila Premium\n12:00 / Visita a f\u00e1brica \u201cLa Perseverancia\u201d de Casa Sauza para conocer el proceso de elaboraci\u00f3n del Tequila\n13:15 / Entrega de cantarito de bienvenida\n13:30 / Comida en Quinta Sauza\n14:15 / Espect\u00e1culo \u201cEstampas de M\u00e9xico\u201d\n15:45 / Visita guiada al centro de Tequila\n16:15 / Abordaje y salida en autob\u00fas rumbo Estaci\u00f3n Tequila\n16:30 / Abordaje al tren en Estaci\u00f3n Tequila\n17:00 / Salida del tren destino a Guadalajara\n19:00 / Llegada a Estaci\u00f3n GDL\n19:20 / Abordaje y salida en autob\u00fas rumbo a C\u00e1mara de Comercio de Guadalajara\n19:45 / Llegada a C\u00e1mara de Comercio GDL"
+                  }
+                </div>
+                {(() => {
+                  const child$Props = {
+                    arrows: false,
+                    autoplay: true,
+                    autoplaySpeed: 5000,
+                    beforeChange: generateStateOnChangePropForCodeComponents(
+                      $state,
+                      "currentSlide",
+                      ["sliderCarousel", "currentSlide"],
+                      SliderWrapper_Helpers
+                    ),
+                    centerMode: false,
+                    className: classNames("__wab_instance", sty.sliderCarousel),
+                    dots: true,
+                    initialSlide: generateStateValueProp($state, [
+                      "sliderCarousel",
+                      "currentSlide"
+                    ]),
+                    ref: ref => {
+                      $refs["sliderCarousel"] = ref;
+                    },
+                    sliderScopeClassName: sty["sliderCarousel__slider"]
+                  };
+                  initializeCodeComponentStates(
+                    $state,
+                    [
+                      {
+                        name: "currentSlide",
+                        plasmicStateName: "sliderCarousel.currentSlide"
+                      }
+                    ],
+
+                    [],
+                    SliderWrapper_Helpers ?? {},
+                    child$Props
+                  );
+                  return (
+                    <SliderWrapper
+                      data-plasmic-name={"sliderCarousel"}
+                      data-plasmic-override={overrides.sliderCarousel}
+                      {...child$Props}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__x3AtC
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__w4Q7X
+                          )}
+                        >
+                          {"Danzas Prehisp\u00e1nicas"}
+                        </div>
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__vsg6B
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__kLOr
+                          )}
+                        >
+                          {"Ballet Folcl\u00f3rico"}
+                        </div>
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__if0Np
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__usEcL
+                          )}
+                        >
+                          {"Suertes Charras"}
+                        </div>
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox___2Ox7Z
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__h9X
+                          )}
+                        >
+                          {"Mariachi en vivo"}
+                        </div>
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__y2Wt6
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text___01Xh1
+                          )}
+                        >
+                          {"Cantantes de m\u00fasica vern\u00e1cula"}
+                        </div>
+                      </div>
+                    </SliderWrapper>
+                  );
+                })()}
+              </Stack__>
+            </div>
+          </AntdModal>
         </div>
       </div>
     </React.Fragment>
@@ -1303,10 +2324,14 @@ const PlasmicDescendants = {
     "divider",
     "meta",
     "anchor",
-    "accordion",
+    "ejecutivo",
     "title2",
+    "bar",
     "title3",
-    "footer"
+    "footer",
+    "itineraryModal",
+    "sliderCarousel",
+    "svg"
   ],
 
   mainHeader: ["mainHeader"],
@@ -1314,12 +2339,16 @@ const PlasmicDescendants = {
   banner: ["banner"],
   description: ["description"],
   divider: ["divider"],
-  meta: ["meta", "anchor", "accordion", "title2", "title3"],
+  meta: ["meta", "anchor", "ejecutivo", "title2", "bar", "title3"],
   anchor: ["anchor"],
-  accordion: ["accordion", "title2", "title3"],
+  ejecutivo: ["ejecutivo", "title2"],
   title2: ["title2"],
+  bar: ["bar", "title3"],
   title3: ["title3"],
-  footer: ["footer"]
+  footer: ["footer"],
+  itineraryModal: ["itineraryModal", "sliderCarousel", "svg"],
+  sliderCarousel: ["sliderCarousel"],
+  svg: ["svg"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -1363,10 +2392,14 @@ export const PlasmicRecorridoCamaraDeComercioDeGuadalajara = Object.assign(
     divider: makeNodeComponent("divider"),
     meta: makeNodeComponent("meta"),
     anchor: makeNodeComponent("anchor"),
-    accordion: makeNodeComponent("accordion"),
+    ejecutivo: makeNodeComponent("ejecutivo"),
     title2: makeNodeComponent("title2"),
+    bar: makeNodeComponent("bar"),
     title3: makeNodeComponent("title3"),
     footer: makeNodeComponent("footer"),
+    itineraryModal: makeNodeComponent("itineraryModal"),
+    sliderCarousel: makeNodeComponent("sliderCarousel"),
+    svg: makeNodeComponent("svg"),
     // Metadata about props expected for PlasmicRecorridoCamaraDeComercioDeGuadalajara
     internalVariantProps:
       PlasmicRecorridoCamaraDeComercioDeGuadalajara__VariantProps,
