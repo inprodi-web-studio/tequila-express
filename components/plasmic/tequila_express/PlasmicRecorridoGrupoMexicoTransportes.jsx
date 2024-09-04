@@ -205,6 +205,17 @@ function PlasmicRecorridoGrupoMexicoTransportes__RenderFunc(props) {
                   "Descubre Tequila junto a Grupo M\u00e9xico Transportes, la empresa de transporte ferroviario m\u00e1s grande y de mayor cobertura en M\u00e9xico.\n\nEste majestuoso trayecto te permitir\u00e1 descubrir desde el tren la cara m\u00e1s aut\u00e9ntica de Tequila. Complementa tu viaje con una cuidada selecci\u00f3n de alimentos, bebidas y experiencias ofrecidas por Grupo M\u00e9xico, o bien, reserva \u00fanicamente el transporte y avent\u00farate a explorar esta ic\u00f3nica ciudad por tu cuenta."
                 }
               </div>
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__vXo6
+                )}
+              >
+                {
+                  "Complementa tu viaje con las diferentes opciones de alimentos y bebidas, o con las experiencias y alojamientos ofrecidas por Grupo M\u00e9xico Transportes."
+                }
+              </div>
               <Button2
                 className={classNames("__wab_instance", sty.button2__yjea5)}
                 label={"Reservar"}
@@ -245,18 +256,7 @@ function PlasmicRecorridoGrupoMexicoTransportes__RenderFunc(props) {
                     sty.text__szx9X
                   )}
                 >
-                  {"Todos los s\u00e1bados.\nAlgunos viernes y domingos."}
-                </div>
-                <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__iPaT
-                  )}
-                >
-                  {
-                    "11:00 - 13:00 / Tren GDL-TQL\n13:00 - 13:20 / Autob\u00fas Estaci\u00f3n TQL-TQL Centro\n18:40 - 19:00 / Autob\u00fas TQL Centro-Estaci\u00f3n TQL\n19:00 - 21:00 / Tren TQL-GDL"
-                  }
+                  {"Todos los viernes, s\u00e1bados y domingos"}
                 </div>
               </Stack__>
             </Stack__>
@@ -398,9 +398,77 @@ function PlasmicRecorridoGrupoMexicoTransportes__RenderFunc(props) {
                     sty.text___6XUi8
                   )}
                 >
-                  {
-                    "Itinerario:\n11:00 - 13:00 / Tren GDL-TQL\n13:00 - 13:20 / Autob\u00fas Estaci\u00f3n TQL-TQL Centro\n18:40 - 19:00 / Autob\u00fas TQL Centro-Estaci\u00f3n TQL\n19:00 - 21:00 / Tren TQL-GDL"
-                  }
+                  {"Itinerario:"}
+                </div>
+                <div className={classNames(projectcss.all, sty.freeBox__sqt0E)}>
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__qxSxE
+                    )}
+                  >
+                    {"Viernes"}
+                  </div>
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__ms4Hc
+                    )}
+                  >
+                    {
+                      "Salida 10:00 / Llegada a las 12:00\nRegreso 19:00 / Llegada 21:00"
+                    }
+                  </div>
+                </div>
+                <div
+                  className={classNames(projectcss.all, sty.freeBox___08AqD)}
+                >
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__y23Q3
+                    )}
+                  >
+                    {"S\u00e1bado"}
+                  </div>
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__mhCXo
+                    )}
+                  >
+                    {
+                      "Salida 10:30 / Llegada a las 12:30\nRegreso 19:00 / Llegada 21:00"
+                    }
+                  </div>
+                </div>
+                <div
+                  className={classNames(projectcss.all, sty.freeBox___2IJpl)}
+                >
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__ig8Qx
+                    )}
+                  >
+                    {"Domingo"}
+                  </div>
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__oaF
+                    )}
+                  >
+                    {
+                      "Salida 10:00 / Llegada a las 12:00\nRegreso 17:30 / Llegada 19:30"
+                    }
+                  </div>
                 </div>
               </div>
               <div
@@ -462,7 +530,11 @@ function PlasmicRecorridoGrupoMexicoTransportes__RenderFunc(props) {
                             <PlasmicImg__
                               alt={""}
                               className={classNames(sty.img__wdUw)}
-                              displayHeight={"375px"}
+                              displayHeight={
+                                hasVariant(globalVariants, "screen", "tablet")
+                                  ? "350px"
+                                  : "100%"
+                              }
                               displayMaxHeight={"none"}
                               displayMaxWidth={"100%"}
                               displayMinHeight={"0"}
@@ -491,22 +563,78 @@ function PlasmicRecorridoGrupoMexicoTransportes__RenderFunc(props) {
                               <div
                                 className={classNames(
                                   projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text__fvFm1
+                                  sty.freeBox___8LCyI
                                 )}
                               >
-                                {"Viaje Sencillo"}
-                              </div>
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text__v7Qh
-                                )}
-                              >
-                                {hasVariant(globalVariants, "screen", "medium")
-                                  ? "$XXX.00 MXN"
-                                  : "$XXX.00 MXN"}
+                                <div
+                                  className={classNames(
+                                    projectcss.all,
+                                    sty.freeBox__wnDY
+                                  )}
+                                >
+                                  <div
+                                    className={classNames(
+                                      projectcss.all,
+                                      projectcss.__wab_text,
+                                      sty.text__fvFm1
+                                    )}
+                                  >
+                                    {"Viaje Sencillo"}
+                                  </div>
+                                  <div
+                                    className={classNames(
+                                      projectcss.all,
+                                      projectcss.__wab_text,
+                                      sty.text__v7Qh
+                                    )}
+                                  >
+                                    {hasVariant(
+                                      globalVariants,
+                                      "screen",
+                                      "medium"
+                                    )
+                                      ? "$1,150.00 MXN"
+                                      : "$1,150.00 MXN"}
+                                  </div>
+                                </div>
+                                <div
+                                  className={classNames(
+                                    projectcss.all,
+                                    sty.freeBox__h1Ota
+                                  )}
+                                />
+
+                                <div
+                                  className={classNames(
+                                    projectcss.all,
+                                    sty.freeBox__zXhMj
+                                  )}
+                                >
+                                  <div
+                                    className={classNames(
+                                      projectcss.all,
+                                      projectcss.__wab_text,
+                                      sty.text__pqZaE
+                                    )}
+                                  >
+                                    {"Viaje Redondo"}
+                                  </div>
+                                  <div
+                                    className={classNames(
+                                      projectcss.all,
+                                      projectcss.__wab_text,
+                                      sty.text__bziq
+                                    )}
+                                  >
+                                    {hasVariant(
+                                      globalVariants,
+                                      "screen",
+                                      "medium"
+                                    )
+                                      ? "$1,785.00 MXN"
+                                      : "$1,785.00 MXN"}
+                                  </div>
+                                </div>
                               </div>
                               <div
                                 className={classNames(
@@ -518,7 +646,7 @@ function PlasmicRecorridoGrupoMexicoTransportes__RenderFunc(props) {
                                 <React.Fragment>
                                   <React.Fragment>
                                     {
-                                      "La mayor comodidad para viajar con gran espacio entre asientos y una disposici\u00f3n que favorece la convivencia.\n"
+                                      "La mayor comodidad para viajar con gran espacio entre asientos y una disposici\u00f3n que favorece la convivencia.\n\n"
                                     }
                                   </React.Fragment>
                                   {
@@ -526,7 +654,7 @@ function PlasmicRecorridoGrupoMexicoTransportes__RenderFunc(props) {
                                       className={classNames(
                                         projectcss.all,
                                         projectcss.ul,
-                                        sty.ul__ms79M
+                                        sty.ul__mqYbk
                                       )}
                                     >
                                       <li
@@ -534,29 +662,7 @@ function PlasmicRecorridoGrupoMexicoTransportes__RenderFunc(props) {
                                           projectcss.all,
                                           projectcss.li,
                                           projectcss.__wab_text,
-                                          sty.li__wwwQm
-                                        )}
-                                      >
-                                        {"Vag\u00f3n Bar"}
-                                      </li>
-                                    </ul>
-                                  }
-
-                                  <React.Fragment>{""}</React.Fragment>
-                                  {
-                                    <ul
-                                      className={classNames(
-                                        projectcss.all,
-                                        projectcss.ul,
-                                        sty.ul__lIy6C
-                                      )}
-                                    >
-                                      <li
-                                        className={classNames(
-                                          projectcss.all,
-                                          projectcss.li,
-                                          projectcss.__wab_text,
-                                          sty.li___5Qsjd
+                                          sty.li__h5WLh
                                         )}
                                       >
                                         {"Ventanas panor\u00e1micas"}
@@ -570,7 +676,7 @@ function PlasmicRecorridoGrupoMexicoTransportes__RenderFunc(props) {
                                       className={classNames(
                                         projectcss.all,
                                         projectcss.ul,
-                                        sty.ul__q37JN
+                                        sty.ul__qysMa
                                       )}
                                     >
                                       <li
@@ -578,7 +684,7 @@ function PlasmicRecorridoGrupoMexicoTransportes__RenderFunc(props) {
                                           projectcss.all,
                                           projectcss.li,
                                           projectcss.__wab_text,
-                                          sty.li__duvgN
+                                          sty.li__w27VR
                                         )}
                                       >
                                         {"60 asientos"}
@@ -592,7 +698,7 @@ function PlasmicRecorridoGrupoMexicoTransportes__RenderFunc(props) {
                                       className={classNames(
                                         projectcss.all,
                                         projectcss.ul,
-                                        sty.ul__th5Mq
+                                        sty.ul___4Ueub
                                       )}
                                     >
                                       <li
@@ -600,10 +706,10 @@ function PlasmicRecorridoGrupoMexicoTransportes__RenderFunc(props) {
                                           projectcss.all,
                                           projectcss.li,
                                           projectcss.__wab_text,
-                                          sty.li__hdh90
+                                          sty.li__l6LpR
                                         )}
                                       >
-                                        {"2 ba\u00f1os\n"}
+                                        {"2 ba\u00f1os"}
                                       </li>
                                     </ul>
                                   }
@@ -616,7 +722,7 @@ function PlasmicRecorridoGrupoMexicoTransportes__RenderFunc(props) {
                                       className={classNames(
                                         projectcss.all,
                                         projectcss.ul,
-                                        sty.ul___3GgQf
+                                        sty.ul__l35Hp
                                       )}
                                     >
                                       <li
@@ -624,55 +730,7 @@ function PlasmicRecorridoGrupoMexicoTransportes__RenderFunc(props) {
                                           projectcss.all,
                                           projectcss.li,
                                           projectcss.__wab_text,
-                                          sty.li__cWbv9
-                                        )}
-                                      >
-                                        {
-                                          "Espacio para almacenar una maleta de mano (medidas)\u2026"
-                                        }
-                                      </li>
-                                    </ul>
-                                  }
-
-                                  <React.Fragment>{""}</React.Fragment>
-                                  {
-                                    <ul
-                                      className={classNames(
-                                        projectcss.all,
-                                        projectcss.ul,
-                                        sty.ul__dxy95
-                                      )}
-                                    >
-                                      <li
-                                        className={classNames(
-                                          projectcss.all,
-                                          projectcss.li,
-                                          projectcss.__wab_text,
-                                          sty.li__qetMm
-                                        )}
-                                      >
-                                        {
-                                          "Traslado en cami\u00f3n Estaci\u00f3n Tequila - Tequila Centro (ida y vuelta)"
-                                        }
-                                      </li>
-                                    </ul>
-                                  }
-
-                                  <React.Fragment>{""}</React.Fragment>
-                                  {
-                                    <ul
-                                      className={classNames(
-                                        projectcss.all,
-                                        projectcss.ul,
-                                        sty.ul__vh6C
-                                      )}
-                                    >
-                                      <li
-                                        className={classNames(
-                                          projectcss.all,
-                                          projectcss.li,
-                                          projectcss.__wab_text,
-                                          sty.li__s662S
+                                          sty.li__ly4UY
                                         )}
                                       >
                                         {"Seguro de viaje en el transporte"}
@@ -716,7 +774,11 @@ function PlasmicRecorridoGrupoMexicoTransportes__RenderFunc(props) {
                             <PlasmicImg__
                               alt={""}
                               className={classNames(sty.img___5PqrW)}
-                              displayHeight={"375px"}
+                              displayHeight={
+                                hasVariant(globalVariants, "screen", "tablet")
+                                  ? "350px"
+                                  : "100%"
+                              }
                               displayMaxHeight={"none"}
                               displayMaxWidth={"100%"}
                               displayMinHeight={"0"}
@@ -745,22 +807,78 @@ function PlasmicRecorridoGrupoMexicoTransportes__RenderFunc(props) {
                               <div
                                 className={classNames(
                                   projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text__ypqTb
+                                  sty.freeBox__ikWic
                                 )}
                               >
-                                {"Viaje Sencillo"}
-                              </div>
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text__qpnsX
-                                )}
-                              >
-                                {hasVariant(globalVariants, "screen", "medium")
-                                  ? "$XXX.00 MXN"
-                                  : "$XXX.00 MXN"}
+                                <div
+                                  className={classNames(
+                                    projectcss.all,
+                                    sty.freeBox__uA1SK
+                                  )}
+                                >
+                                  <div
+                                    className={classNames(
+                                      projectcss.all,
+                                      projectcss.__wab_text,
+                                      sty.text__vtd8E
+                                    )}
+                                  >
+                                    {"Viaje Sencillo"}
+                                  </div>
+                                  <div
+                                    className={classNames(
+                                      projectcss.all,
+                                      projectcss.__wab_text,
+                                      sty.text__nAfDs
+                                    )}
+                                  >
+                                    {hasVariant(
+                                      globalVariants,
+                                      "screen",
+                                      "medium"
+                                    )
+                                      ? "$1,400.00 MXN"
+                                      : "$1,400.00 MXN"}
+                                  </div>
+                                </div>
+                                <div
+                                  className={classNames(
+                                    projectcss.all,
+                                    sty.freeBox__e5ITd
+                                  )}
+                                />
+
+                                <div
+                                  className={classNames(
+                                    projectcss.all,
+                                    sty.freeBox__nyNg0
+                                  )}
+                                >
+                                  <div
+                                    className={classNames(
+                                      projectcss.all,
+                                      projectcss.__wab_text,
+                                      sty.text__ipXeJ
+                                    )}
+                                  >
+                                    {"Viaje Redondo"}
+                                  </div>
+                                  <div
+                                    className={classNames(
+                                      projectcss.all,
+                                      projectcss.__wab_text,
+                                      sty.text___3QWot
+                                    )}
+                                  >
+                                    {hasVariant(
+                                      globalVariants,
+                                      "screen",
+                                      "medium"
+                                    )
+                                      ? "$2,200.00 MXN"
+                                      : "$2,200.00 MXN"}
+                                  </div>
+                                </div>
                               </div>
                               <div
                                 className={classNames(
@@ -772,7 +890,7 @@ function PlasmicRecorridoGrupoMexicoTransportes__RenderFunc(props) {
                                 <React.Fragment>
                                   <React.Fragment>
                                     {
-                                      "La mayor comodidad para viajar con gran espacio entre asientos y una disposici\u00f3n que favorece la convivencia.\n"
+                                      "La mayor comodidad para viajar con gran espacio entre asientos y una disposici\u00f3n que favorece la convivencia.\n\n"
                                     }
                                   </React.Fragment>
                                   {
@@ -780,7 +898,7 @@ function PlasmicRecorridoGrupoMexicoTransportes__RenderFunc(props) {
                                       className={classNames(
                                         projectcss.all,
                                         projectcss.ul,
-                                        sty.ul__at58G
+                                        sty.ul__c7HPx
                                       )}
                                     >
                                       <li
@@ -788,10 +906,10 @@ function PlasmicRecorridoGrupoMexicoTransportes__RenderFunc(props) {
                                           projectcss.all,
                                           projectcss.li,
                                           projectcss.__wab_text,
-                                          sty.li__f2Klw
+                                          sty.li__xdv7U
                                         )}
                                       >
-                                        {"Vag\u00f3n Bar"}
+                                        {"Bar dentro de vag\u00f3n"}
                                       </li>
                                     </ul>
                                   }
@@ -802,7 +920,7 @@ function PlasmicRecorridoGrupoMexicoTransportes__RenderFunc(props) {
                                       className={classNames(
                                         projectcss.all,
                                         projectcss.ul,
-                                        sty.ul__b9T9V
+                                        sty.ul__cscht
                                       )}
                                     >
                                       <li
@@ -810,7 +928,29 @@ function PlasmicRecorridoGrupoMexicoTransportes__RenderFunc(props) {
                                           projectcss.all,
                                           projectcss.li,
                                           projectcss.__wab_text,
-                                          sty.li__agjVs
+                                          sty.li__w1UzL
+                                        )}
+                                      >
+                                        {"Incluye el acceso al vag\u00f3n Bar"}
+                                      </li>
+                                    </ul>
+                                  }
+
+                                  <React.Fragment>{""}</React.Fragment>
+                                  {
+                                    <ul
+                                      className={classNames(
+                                        projectcss.all,
+                                        projectcss.ul,
+                                        sty.ul__qc13C
+                                      )}
+                                    >
+                                      <li
+                                        className={classNames(
+                                          projectcss.all,
+                                          projectcss.li,
+                                          projectcss.__wab_text,
+                                          sty.li__nbzo
                                         )}
                                       >
                                         {"Ventanas panor\u00e1micas"}
@@ -824,7 +964,7 @@ function PlasmicRecorridoGrupoMexicoTransportes__RenderFunc(props) {
                                       className={classNames(
                                         projectcss.all,
                                         projectcss.ul,
-                                        sty.ul__did3X
+                                        sty.ul__bDlR
                                       )}
                                     >
                                       <li
@@ -832,10 +972,10 @@ function PlasmicRecorridoGrupoMexicoTransportes__RenderFunc(props) {
                                           projectcss.all,
                                           projectcss.li,
                                           projectcss.__wab_text,
-                                          sty.li___74QHe
+                                          sty.li__nw16I
                                         )}
                                       >
-                                        {"60 asientos"}
+                                        {"52 asientos"}
                                       </li>
                                     </ul>
                                   }
@@ -846,7 +986,7 @@ function PlasmicRecorridoGrupoMexicoTransportes__RenderFunc(props) {
                                       className={classNames(
                                         projectcss.all,
                                         projectcss.ul,
-                                        sty.ul__wYplp
+                                        sty.ul__nDAnc
                                       )}
                                     >
                                       <li
@@ -854,10 +994,10 @@ function PlasmicRecorridoGrupoMexicoTransportes__RenderFunc(props) {
                                           projectcss.all,
                                           projectcss.li,
                                           projectcss.__wab_text,
-                                          sty.li__po0E6
+                                          sty.li__wcu3W
                                         )}
                                       >
-                                        {"2 ba\u00f1os\n"}
+                                        {"2 ba\u00f1os"}
                                       </li>
                                     </ul>
                                   }
@@ -870,7 +1010,7 @@ function PlasmicRecorridoGrupoMexicoTransportes__RenderFunc(props) {
                                       className={classNames(
                                         projectcss.all,
                                         projectcss.ul,
-                                        sty.ul__vxrq8
+                                        sty.ul__kUjhX
                                       )}
                                     >
                                       <li
@@ -878,55 +1018,7 @@ function PlasmicRecorridoGrupoMexicoTransportes__RenderFunc(props) {
                                           projectcss.all,
                                           projectcss.li,
                                           projectcss.__wab_text,
-                                          sty.li___4Ap
-                                        )}
-                                      >
-                                        {
-                                          "Espacio para almacenar una maleta de mano (medidas)\u2026"
-                                        }
-                                      </li>
-                                    </ul>
-                                  }
-
-                                  <React.Fragment>{""}</React.Fragment>
-                                  {
-                                    <ul
-                                      className={classNames(
-                                        projectcss.all,
-                                        projectcss.ul,
-                                        sty.ul__eka6E
-                                      )}
-                                    >
-                                      <li
-                                        className={classNames(
-                                          projectcss.all,
-                                          projectcss.li,
-                                          projectcss.__wab_text,
-                                          sty.li___4GRD
-                                        )}
-                                      >
-                                        {
-                                          "Traslado en cami\u00f3n Estaci\u00f3n Tequila - Tequila Centro (ida y vuelta)"
-                                        }
-                                      </li>
-                                    </ul>
-                                  }
-
-                                  <React.Fragment>{""}</React.Fragment>
-                                  {
-                                    <ul
-                                      className={classNames(
-                                        projectcss.all,
-                                        projectcss.ul,
-                                        sty.ul__fvuzv
-                                      )}
-                                    >
-                                      <li
-                                        className={classNames(
-                                          projectcss.all,
-                                          projectcss.li,
-                                          projectcss.__wab_text,
-                                          sty.li__ops4V
+                                          sty.li___9DffV
                                         )}
                                       >
                                         {"Seguro de viaje en el transporte"}
@@ -1028,7 +1120,16 @@ function PlasmicRecorridoGrupoMexicoTransportes__RenderFunc(props) {
                         sty.text__a2KZ1
                       )}
                     >
-                      {"Estaci\u00f3n de Ferrocarriles\nMexicanos (Ferromex)"}
+                      {"Estaci\u00f3n Ferromex"}
+                    </div>
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__y9JFb
+                      )}
+                    >
+                      {"No cuenta con estacionamiento"}
                     </div>
                     <div
                       className={classNames(
@@ -1158,7 +1259,7 @@ function PlasmicRecorridoGrupoMexicoTransportes__RenderFunc(props) {
                             sty.li___59Cm9
                           )}
                         >
-                          {"Lentes de sol y sombrero"}
+                          {"Lentes de sol y sombrero/gorra"}
                         </li>
                       </ul>
                     }
@@ -1276,77 +1377,41 @@ function PlasmicRecorridoGrupoMexicoTransportes__RenderFunc(props) {
                           )}
                         >
                           {
-                            "Las bebidas y alimentos consumidos en el vag\u00f3n-bar tienen un costo adicional"
-                          }
-                        </li>
-                      </ul>
-                    }
-
-                    <React.Fragment>{""}</React.Fragment>
-                    {
-                      <ul
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.ul,
-                          sty.ul__wWgWd
-                        )}
-                      >
-                        <li
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.li,
-                            projectcss.__wab_text,
-                            sty.li__hTnwi
-                          )}
-                        >
-                          {
                             "Presentarse con una hora de anticipaci\u00f3n para el registro"
                           }
                         </li>
-                      </ul>
-                    }
-
-                    <React.Fragment>{""}</React.Fragment>
-                    {
-                      <ul
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.ul,
-                          sty.ul__ucg40
-                        )}
-                      >
                         <li
                           className={classNames(
                             projectcss.all,
                             projectcss.li,
                             projectcss.__wab_text,
-                            sty.li___2IgCr
+                            sty.li__s8VTy
                           )}
                         >
                           {"Itinerarios sujetos a cambios"}
                         </li>
-                      </ul>
-                    }
-
-                    <React.Fragment>{""}</React.Fragment>
-                    {
-                      <ul
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.ul,
-                          sty.ul__ykIm
-                        )}
-                      >
                         <li
                           className={classNames(
                             projectcss.all,
                             projectcss.li,
                             projectcss.__wab_text,
-                            sty.li__s0DAg
+                            sty.li__cocoQ
                           )}
                         >
                           {
                             "Los tiempos de traslados del tren y autob\u00fas son aproximados y sujetos a situaciones ajenas a la empresa"
+                          }
+                        </li>
+                        <li
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.li,
+                            projectcss.__wab_text,
+                            sty.li__sMaEn
+                          )}
+                        >
+                          {
+                            "No contamos con estacionamiento, sugerimos llegar en taxi o servicio de transporte de plataforma digital"
                           }
                         </li>
                       </ul>

@@ -270,56 +270,6 @@
   color: var(--token-iDr9UfHUA5XI);
   min-width: 0;
 }
-.freeBox__dwUmZ {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  background: #dde7e7;
-  min-width: 0;
-  border-radius: 20px;
-  padding: 30px;
-}
-.freeBox__dwUmZ > :global(.__wab_flex-container) {
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  min-width: 0;
-  margin-top: calc(0px - 16px);
-  height: calc(100% + 16px);
-}
-.freeBox__dwUmZ > :global(.__wab_flex-container) > *,
-.freeBox__dwUmZ > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
-.freeBox__dwUmZ > :global(.__wab_flex-container) > picture > img,
-.freeBox__dwUmZ
-  > :global(.__wab_flex-container)
-  > :global(.__wab_slot)
-  > picture
-  > img {
-  margin-top: 16px;
-}
-.text___2O0Xp {
-  position: relative;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--token-iDr9UfHUA5XI);
-  min-width: 0;
-}
-.text__bvas7 {
-  position: relative;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--token-iDr9UfHUA5XI);
-  min-width: 0;
-}
 .frequentQuestions {
   display: flex;
   flex-direction: row;

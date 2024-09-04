@@ -314,7 +314,7 @@ function PlasmicInicio__RenderFunc(props) {
                   sty.text__oOfb0
                 )}
               >
-                {"Un viaje panor\u00e1mico,\nun viaje sustentable"}
+                {"Un viaje panor\u00e1mico,\nun viaje m\u00e1s ecol\u00f3gico"}
               </div>
               <div
                 className={classNames(
@@ -343,7 +343,7 @@ function PlasmicInicio__RenderFunc(props) {
                 )}
               >
                 {
-                  "Tequila Express es m\u00e1s que una experiencia cultural en Jalisco; tambi\u00e9n es una manera de practicar el turismo responsable, utilizando uno de los medios de transporte m\u00e1s sustentables mientras descubres el paisaje agavero catalogado por la UNESCO como Patrimonio Cultural de la Humanidad."
+                  "Tequila Express es m\u00e1s que una experiencia cultural en Jalisco; tambi\u00e9n es una manera de practicar el turismo responsable, utilizando uno de los medios de transporte m\u00e1s ecol\u00f3gicos mientras descubres el paisaje agavero catalogado por la UNESCO como Patrimonio Cultural de la Humanidad."
                 }
               </div>
             </Stack__>
@@ -764,7 +764,7 @@ function PlasmicInicio__RenderFunc(props) {
                   sty.text__zSBkQ
                 )}
               >
-                {"Una experiencia aut\u00e9ntica mexicana"}
+                {"Una aut\u00e9ntica experiencia mexicana"}
               </div>
               <Button2
                 data-plasmic-name={"button2"}

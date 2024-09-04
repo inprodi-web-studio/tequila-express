@@ -181,7 +181,7 @@ function PlasmicNosotros__RenderFunc(props) {
               )}
             >
               {
-                "Sum\u00e9rgete en un pintoresco paisaje de interminables campos de agave, con un trayecto que crea un puente entre el pasado y el presente, permiti\u00e9ndote conectar con la esencia misma de Tequila desde que inicia tu viaje."
+                "Sum\u00e9rgete en un pintoresco paisaje de interminables campos de agave, con un trayecto que crea un puente entre el pasado y el presente, permiti\u00e9ndote conectar con la esencia misma de Tequila desde el inicio de tu viaje."
               }
             </div>
           </div>
@@ -271,7 +271,7 @@ function PlasmicNosotros__RenderFunc(props) {
                 sty.text__eFXkH
               )}
             >
-              {"Una experiencia aut\u00e9ntica mexicana"}
+              {"Una aut\u00e9ntica experiencia mexicana"}
             </div>
             <div
               className={classNames(
@@ -281,7 +281,7 @@ function PlasmicNosotros__RenderFunc(props) {
               )}
             >
               {
-                "Sigue la ruta del tequila en esta aventura ferroviaria que te llevar\u00e1 a conocer la historia de una de las bebidas m\u00e1s emblem\u00e1ticas del pa\u00eds desde el pueblo m\u00e1gico que la vio nacer. Un viaje lleno de sabores, paisaje agavero y cultura."
+                "Sigue la ruta del tequila en esta aventura en tren que te llevar\u00e1 a conocer la historia de una de las bebidas m\u00e1s emblem\u00e1ticas del pa\u00eds desde el pueblo m\u00e1gico que la vio nacer. Un viaje lleno de sabores, cultura y paisaje agavero."
               }
             </div>
           </Stack__>

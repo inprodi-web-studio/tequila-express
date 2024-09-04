@@ -194,7 +194,7 @@ function PlasmicContacto__RenderFunc(props) {
                       sty.text___0Vzh0
                     )}
                   >
-                    {"Tel\u00e9fono"}
+                    {"Grupo M\u00e9xico Transportes"}
                   </div>
                   <div
                     className={classNames(
@@ -203,7 +203,7 @@ function PlasmicContacto__RenderFunc(props) {
                       sty.text__h886R
                     )}
                   >
-                    {"Morbi torquent etiam tincidunt nisi tempus rutrum porta."}
+                    {"Tel\u00e9fono\nCorreo electr\u00f3nico"}
                   </div>
                 </Stack__>
                 <Stack__
@@ -227,31 +227,7 @@ function PlasmicContacto__RenderFunc(props) {
                       sty.text__ffzHs
                     )}
                   >
-                    {"Morbi torquent etiam tincidunt nisi tempus rutrum porta."}
-                  </div>
-                </Stack__>
-                <Stack__
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox__dwUmZ)}
-                >
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text___2O0Xp
-                    )}
-                  >
-                    {"Direcci\u00f3n"}
-                  </div>
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__bvas7
-                    )}
-                  >
-                    {"Morbi torquent etiam tincidunt nisi tempus rutrum porta."}
+                    {"Tel\u00e9fono\nCorreo electr\u00f3nico"}
                   </div>
                 </Stack__>
               </Stack__>

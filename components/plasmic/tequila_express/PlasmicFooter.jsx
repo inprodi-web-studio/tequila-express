@@ -265,6 +265,86 @@ function PlasmicFooter__RenderFunc(props) {
       <div className={classNames(projectcss.all, sty.freeBox__ynpfu)}>
         <PlasmicImg__
           alt={""}
+          className={classNames(sty.img__iaELh)}
+          displayHeight={"auto"}
+          displayMaxHeight={"none"}
+          displayMaxWidth={"100%"}
+          displayMinHeight={"0"}
+          displayMinWidth={"0"}
+          displayWidth={"104px"}
+          loading={"lazy"}
+          src={{
+            src: "/plasmic/tequila_express/images/gpoiMx1Png.png",
+            fullWidth: 209,
+            fullHeight: 41,
+            aspectRatio: undefined
+          }}
+        />
+
+        {(
+          hasVariant(globalVariants, "screen", "mobile")
+            ? true
+            : hasVariant(globalVariants, "screen", "tablet")
+            ? true
+            : false
+        ) ? (
+          <PlasmicImg__
+            alt={""}
+            className={classNames(sty.img__d5CS)}
+            displayHeight={"auto"}
+            displayMaxHeight={"none"}
+            displayMaxWidth={"100%"}
+            displayMinHeight={"0"}
+            displayMinWidth={"0"}
+            displayWidth={"104px"}
+            loading={"lazy"}
+            src={{
+              src: "/plasmic/tequila_express/images/gpoiMx1Png.png",
+              fullWidth: 209,
+              fullHeight: 41,
+              aspectRatio: undefined
+            }}
+          />
+        ) : null}
+        <PlasmicImg__
+          alt={""}
+          className={classNames(sty.img__alwPc)}
+          displayHeight={"auto"}
+          displayMaxHeight={"none"}
+          displayMaxWidth={"100%"}
+          displayMinHeight={"0"}
+          displayMinWidth={"0"}
+          displayWidth={"100px"}
+          loading={"lazy"}
+          src={{
+            src: "/plasmic/tequila_express/images/camaradc1Png.png",
+            fullWidth: 199,
+            fullHeight: 71,
+            aspectRatio: undefined
+          }}
+        />
+
+        {(hasVariant(globalVariants, "screen", "tablet") ? true : false) ? (
+          <PlasmicImg__
+            alt={""}
+            className={classNames(sty.img__chyP)}
+            displayHeight={"auto"}
+            displayMaxHeight={"none"}
+            displayMaxWidth={"100%"}
+            displayMinHeight={"0"}
+            displayMinWidth={"0"}
+            displayWidth={"100px"}
+            loading={"lazy"}
+            src={{
+              src: "/plasmic/tequila_express/images/camaradc1Png.png",
+              fullWidth: 199,
+              fullHeight: 71,
+              aspectRatio: undefined
+            }}
+          />
+        ) : null}
+        <PlasmicImg__
+          alt={""}
           className={classNames(sty.img__tFgH0)}
           displayHeight={"auto"}
           displayMaxHeight={"none"}
@@ -352,42 +432,6 @@ function PlasmicFooter__RenderFunc(props) {
             aspectRatio: undefined
           }}
         />
-
-        <PlasmicImg__
-          alt={""}
-          className={classNames(sty.img__alwPc)}
-          displayHeight={"auto"}
-          displayMaxHeight={"none"}
-          displayMaxWidth={"100%"}
-          displayMinHeight={"0"}
-          displayMinWidth={"0"}
-          displayWidth={"100px"}
-          loading={"lazy"}
-          src={{
-            src: "/plasmic/tequila_express/images/camaradc1Png.png",
-            fullWidth: 199,
-            fullHeight: 71,
-            aspectRatio: undefined
-          }}
-        />
-
-        <PlasmicImg__
-          alt={""}
-          className={classNames(sty.img__iaELh)}
-          displayHeight={"auto"}
-          displayMaxHeight={"none"}
-          displayMaxWidth={"100%"}
-          displayMinHeight={"0"}
-          displayMinWidth={"0"}
-          displayWidth={"104px"}
-          loading={"lazy"}
-          src={{
-            src: "/plasmic/tequila_express/images/gpoiMx1Png.png",
-            fullWidth: 209,
-            fullHeight: 41,
-            aspectRatio: undefined
-          }}
-        />
       </div>
       {(hasVariant(globalVariants, "screen", "mobile") ? true : false) ? (
         <div className={classNames(projectcss.all, sty.freeBox__e6AOq)}>
@@ -412,6 +456,24 @@ function PlasmicFooter__RenderFunc(props) {
           <PlasmicImg__
             alt={""}
             className={classNames(sty.img__yp7Ve)}
+            displayHeight={"auto"}
+            displayMaxHeight={"none"}
+            displayMaxWidth={"100%"}
+            displayMinHeight={"0"}
+            displayMinWidth={"0"}
+            displayWidth={"78px"}
+            loading={"lazy"}
+            src={{
+              src: "/plasmic/tequila_express/images/logoJaliscoEsMexicoBlancoPng.png",
+              fullWidth: 156,
+              fullHeight: 51,
+              aspectRatio: undefined
+            }}
+          />
+
+          <PlasmicImg__
+            alt={""}
+            className={classNames(sty.img__hE7Lc)}
             displayHeight={"auto"}
             displayMaxHeight={"none"}
             displayMaxWidth={"100%"}
@@ -576,6 +638,42 @@ function PlasmicFooter__RenderFunc(props) {
 
           <PlasmicImg__
             alt={""}
+            className={classNames(sty.img__sdnLy)}
+            displayHeight={"auto"}
+            displayMaxHeight={"none"}
+            displayMaxWidth={"100%"}
+            displayMinHeight={"0"}
+            displayMinWidth={"0"}
+            displayWidth={"87px"}
+            loading={"lazy"}
+            src={{
+              src: "/plasmic/tequila_express/images/ofvc1Png.png",
+              fullWidth: 175,
+              fullHeight: 101,
+              aspectRatio: undefined
+            }}
+          />
+
+          <PlasmicImg__
+            alt={""}
+            className={classNames(sty.img__qkbsa)}
+            displayHeight={"auto"}
+            displayMaxHeight={"none"}
+            displayMaxWidth={"100%"}
+            displayMinHeight={"0"}
+            displayMinWidth={"0"}
+            displayWidth={"85px"}
+            loading={"lazy"}
+            src={{
+              src: "/plasmic/tequila_express/images/logoGdlGdlBcoPng.png",
+              fullWidth: 171,
+              fullHeight: 71,
+              aspectRatio: undefined
+            }}
+          />
+
+          <PlasmicImg__
+            alt={""}
             className={classNames(sty.img__khtuh)}
             displayHeight={"auto"}
             displayMaxHeight={"none"}
@@ -588,42 +686,6 @@ function PlasmicFooter__RenderFunc(props) {
               src: "/plasmic/tequila_express/images/turismoPng.png",
               fullWidth: 210,
               fullHeight: 81,
-              aspectRatio: undefined
-            }}
-          />
-
-          <PlasmicImg__
-            alt={""}
-            className={classNames(sty.img__l0RaH)}
-            displayHeight={"auto"}
-            displayMaxHeight={"none"}
-            displayMaxWidth={"100%"}
-            displayMinHeight={"0"}
-            displayMinWidth={"0"}
-            displayWidth={"100px"}
-            loading={"lazy"}
-            src={{
-              src: "/plasmic/tequila_express/images/camaradc1Png.png",
-              fullWidth: 199,
-              fullHeight: 71,
-              aspectRatio: undefined
-            }}
-          />
-
-          <PlasmicImg__
-            alt={""}
-            className={classNames(sty.img__cfxoK)}
-            displayHeight={"auto"}
-            displayMaxHeight={"none"}
-            displayMaxWidth={"100%"}
-            displayMinHeight={"0"}
-            displayMinWidth={"0"}
-            displayWidth={"104px"}
-            loading={"lazy"}
-            src={{
-              src: "/plasmic/tequila_express/images/gpoiMx1Png.png",
-              fullWidth: 209,
-              fullHeight: 41,
               aspectRatio: undefined
             }}
           />

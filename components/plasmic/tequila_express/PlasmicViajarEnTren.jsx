@@ -211,7 +211,7 @@ function PlasmicViajarEnTren__RenderFunc(props) {
                 )}
               >
                 {
-                  "Abre los ojos para disfrutar cada segundo de tu camino destino Tequila con vistas inaccesibles desde la carretera.\n\nTequila Express es m\u00e1s que una experiencia cultural en Jalisco; tambi\u00e9n es una manera de practicar el turismo responsable, utilizando uno de los medios de transporte m\u00e1s sustentables mientras descubres el paisaje agavero catalogado por la UNESCO como Patrimonio Cultural de la Humanidad."
+                  "Abre los ojos para disfrutar cada segundo de tu camino destino Tequila con vistas inaccesibles desde la carretera.\n\nTequila Express es m\u00e1s que una experiencia cultural en Jalisco; tambi\u00e9n es una manera de practicar el turismo responsable, utilizando uno de los medios de transporte m\u00e1s ecol\u00f3gicos mientras descubres el paisaje agavero catalogado por la UNESCO como Patrimonio Cultural de la Humanidad."
                 }
               </div>
             </Stack__>

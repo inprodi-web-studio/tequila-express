@@ -181,70 +181,6 @@ function PlasmicMainHeader__RenderFunc(props) {
         className={classNames(projectcss.all, sty.menu)}
       >
         <MenuLink
-          className={classNames("__wab_instance", sty.menuLink__uG8Ho)}
-          label={"Inicio"}
-          onClick={async () => {
-            const $steps = {};
-            $steps["goToInicio"] = true
-              ? (() => {
-                  const actionArgs = { destination: `/` };
-                  return (({ destination }) => {
-                    if (
-                      typeof destination === "string" &&
-                      destination.startsWith("#")
-                    ) {
-                      document
-                        .getElementById(destination.substr(1))
-                        .scrollIntoView({ behavior: "smooth" });
-                    } else {
-                      __nextRouter?.push(destination);
-                    }
-                  })?.apply(null, [actionArgs]);
-                })()
-              : undefined;
-            if (
-              $steps["goToInicio"] != null &&
-              typeof $steps["goToInicio"] === "object" &&
-              typeof $steps["goToInicio"].then === "function"
-            ) {
-              $steps["goToInicio"] = await $steps["goToInicio"];
-            }
-          }}
-        />
-
-        <MenuLink
-          className={classNames("__wab_instance", sty.menuLink__lhhH2)}
-          label={"Nosotros"}
-          onClick={async () => {
-            const $steps = {};
-            $steps["goToNosotros"] = true
-              ? (() => {
-                  const actionArgs = { destination: `/nosotros` };
-                  return (({ destination }) => {
-                    if (
-                      typeof destination === "string" &&
-                      destination.startsWith("#")
-                    ) {
-                      document
-                        .getElementById(destination.substr(1))
-                        .scrollIntoView({ behavior: "smooth" });
-                    } else {
-                      __nextRouter?.push(destination);
-                    }
-                  })?.apply(null, [actionArgs]);
-                })()
-              : undefined;
-            if (
-              $steps["goToNosotros"] != null &&
-              typeof $steps["goToNosotros"] === "object" &&
-              typeof $steps["goToNosotros"].then === "function"
-            ) {
-              $steps["goToNosotros"] = await $steps["goToNosotros"];
-            }
-          }}
-        />
-
-        <MenuLink
           className={classNames("__wab_instance", sty.menuLink__dS26B)}
           label={"Viaja en Tren"}
           onClick={async () => {
@@ -413,6 +349,38 @@ function PlasmicMainHeader__RenderFunc(props) {
           </Stack__>
         </AntdDropdown>
         <MenuLink
+          className={classNames("__wab_instance", sty.menuLink__lhhH2)}
+          label={"Nosotros"}
+          onClick={async () => {
+            const $steps = {};
+            $steps["goToNosotros"] = true
+              ? (() => {
+                  const actionArgs = { destination: `/nosotros` };
+                  return (({ destination }) => {
+                    if (
+                      typeof destination === "string" &&
+                      destination.startsWith("#")
+                    ) {
+                      document
+                        .getElementById(destination.substr(1))
+                        .scrollIntoView({ behavior: "smooth" });
+                    } else {
+                      __nextRouter?.push(destination);
+                    }
+                  })?.apply(null, [actionArgs]);
+                })()
+              : undefined;
+            if (
+              $steps["goToNosotros"] != null &&
+              typeof $steps["goToNosotros"] === "object" &&
+              typeof $steps["goToNosotros"].then === "function"
+            ) {
+              $steps["goToNosotros"] = await $steps["goToNosotros"];
+            }
+          }}
+        />
+
+        <MenuLink
           className={classNames("__wab_instance", sty.menuLink___7UJ5)}
           label={"Contacto"}
           onClick={async () => {
@@ -523,142 +491,6 @@ function PlasmicMainHeader__RenderFunc(props) {
             hasGap={true}
             className={classNames(projectcss.all, sty.freeBox__z4Ma)}
           >
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__zroml
-              )}
-              onClick={async event => {
-                const $steps = {};
-                $steps["goToInicio"] = true
-                  ? (() => {
-                      const actionArgs = { destination: `/` };
-                      return (({ destination }) => {
-                        if (
-                          typeof destination === "string" &&
-                          destination.startsWith("#")
-                        ) {
-                          document
-                            .getElementById(destination.substr(1))
-                            .scrollIntoView({ behavior: "smooth" });
-                        } else {
-                          __nextRouter?.push(destination);
-                        }
-                      })?.apply(null, [actionArgs]);
-                    })()
-                  : undefined;
-                if (
-                  $steps["goToInicio"] != null &&
-                  typeof $steps["goToInicio"] === "object" &&
-                  typeof $steps["goToInicio"].then === "function"
-                ) {
-                  $steps["goToInicio"] = await $steps["goToInicio"];
-                }
-                $steps["updateMenuOpen"] = true
-                  ? (() => {
-                      const actionArgs = {
-                        variable: {
-                          objRoot: $state,
-                          variablePath: ["menuOpen"]
-                        },
-                        operation: 0,
-                        value: false
-                      };
-                      return (({
-                        variable,
-                        value,
-                        startIndex,
-                        deleteCount
-                      }) => {
-                        if (!variable) {
-                          return;
-                        }
-                        const { objRoot, variablePath } = variable;
-                        $stateSet(objRoot, variablePath, value);
-                        return value;
-                      })?.apply(null, [actionArgs]);
-                    })()
-                  : undefined;
-                if (
-                  $steps["updateMenuOpen"] != null &&
-                  typeof $steps["updateMenuOpen"] === "object" &&
-                  typeof $steps["updateMenuOpen"].then === "function"
-                ) {
-                  $steps["updateMenuOpen"] = await $steps["updateMenuOpen"];
-                }
-              }}
-            >
-              {"Inicio"}
-            </div>
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__uLs
-              )}
-              onClick={async event => {
-                const $steps = {};
-                $steps["goToNosotros"] = true
-                  ? (() => {
-                      const actionArgs = { destination: `/nosotros` };
-                      return (({ destination }) => {
-                        if (
-                          typeof destination === "string" &&
-                          destination.startsWith("#")
-                        ) {
-                          document
-                            .getElementById(destination.substr(1))
-                            .scrollIntoView({ behavior: "smooth" });
-                        } else {
-                          __nextRouter?.push(destination);
-                        }
-                      })?.apply(null, [actionArgs]);
-                    })()
-                  : undefined;
-                if (
-                  $steps["goToNosotros"] != null &&
-                  typeof $steps["goToNosotros"] === "object" &&
-                  typeof $steps["goToNosotros"].then === "function"
-                ) {
-                  $steps["goToNosotros"] = await $steps["goToNosotros"];
-                }
-                $steps["updateMenuOpen"] = true
-                  ? (() => {
-                      const actionArgs = {
-                        variable: {
-                          objRoot: $state,
-                          variablePath: ["menuOpen"]
-                        },
-                        operation: 0,
-                        value: false
-                      };
-                      return (({
-                        variable,
-                        value,
-                        startIndex,
-                        deleteCount
-                      }) => {
-                        if (!variable) {
-                          return;
-                        }
-                        const { objRoot, variablePath } = variable;
-                        $stateSet(objRoot, variablePath, value);
-                        return value;
-                      })?.apply(null, [actionArgs]);
-                    })()
-                  : undefined;
-                if (
-                  $steps["updateMenuOpen"] != null &&
-                  typeof $steps["updateMenuOpen"] === "object" &&
-                  typeof $steps["updateMenuOpen"].then === "function"
-                ) {
-                  $steps["updateMenuOpen"] = await $steps["updateMenuOpen"];
-                }
-              }}
-            >
-              {"Nosotros"}
-            </div>
             <div
               className={classNames(
                 projectcss.all,
@@ -882,6 +714,74 @@ function PlasmicMainHeader__RenderFunc(props) {
               }}
             >
               {"C\u00e1mara de Comercio de Guadalajara"}
+            </div>
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__uLs
+              )}
+              onClick={async event => {
+                const $steps = {};
+                $steps["goToNosotros"] = true
+                  ? (() => {
+                      const actionArgs = { destination: `/nosotros` };
+                      return (({ destination }) => {
+                        if (
+                          typeof destination === "string" &&
+                          destination.startsWith("#")
+                        ) {
+                          document
+                            .getElementById(destination.substr(1))
+                            .scrollIntoView({ behavior: "smooth" });
+                        } else {
+                          __nextRouter?.push(destination);
+                        }
+                      })?.apply(null, [actionArgs]);
+                    })()
+                  : undefined;
+                if (
+                  $steps["goToNosotros"] != null &&
+                  typeof $steps["goToNosotros"] === "object" &&
+                  typeof $steps["goToNosotros"].then === "function"
+                ) {
+                  $steps["goToNosotros"] = await $steps["goToNosotros"];
+                }
+                $steps["updateMenuOpen"] = true
+                  ? (() => {
+                      const actionArgs = {
+                        variable: {
+                          objRoot: $state,
+                          variablePath: ["menuOpen"]
+                        },
+                        operation: 0,
+                        value: false
+                      };
+                      return (({
+                        variable,
+                        value,
+                        startIndex,
+                        deleteCount
+                      }) => {
+                        if (!variable) {
+                          return;
+                        }
+                        const { objRoot, variablePath } = variable;
+                        $stateSet(objRoot, variablePath, value);
+                        return value;
+                      })?.apply(null, [actionArgs]);
+                    })()
+                  : undefined;
+                if (
+                  $steps["updateMenuOpen"] != null &&
+                  typeof $steps["updateMenuOpen"] === "object" &&
+                  typeof $steps["updateMenuOpen"].then === "function"
+                ) {
+                  $steps["updateMenuOpen"] = await $steps["updateMenuOpen"];
+                }
+              }}
+            >
+              {"Nosotros"}
             </div>
             <div
               className={classNames(
