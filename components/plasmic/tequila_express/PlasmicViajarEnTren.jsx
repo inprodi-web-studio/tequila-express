@@ -405,7 +405,7 @@ function PlasmicViajarEnTren__RenderFunc(props) {
                         sty.text__iOzTp
                       )}
                     >
-                      {"Un Viaje para aprender"}
+                      {"Un viaje para aprender"}
                     </div>
                   </div>
                   <div
