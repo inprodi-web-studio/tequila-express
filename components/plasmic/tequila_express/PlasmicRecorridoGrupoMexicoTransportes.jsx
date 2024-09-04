@@ -389,7 +389,7 @@ function PlasmicRecorridoGrupoMexicoTransportes__RenderFunc(props) {
                     sty.text__hb7W
                   )}
                 >
-                  {"Todos los s\u00e1bados, algunos viernes y domingos."}
+                  {"Todos los viernes, s\u00e1bados y domingos."}
                 </div>
                 <div
                   className={classNames(
