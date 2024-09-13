@@ -50,7 +50,16 @@ function useNextRouter() {
 
 function PlasmicNosotros__RenderFunc(props) {
   const { variants, overrides, forNode } = props;
-  const args = React.useMemo(() => Object.assign({}, props.args), [props.args]);
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+        Object.fromEntries(
+          Object.entries(props.args).filter(([_, v]) => v !== undefined)
+        )
+      ),
+    [props.args]
+  );
   const $props = {
     ...args,
     ...variants
@@ -255,6 +264,33 @@ function PlasmicNosotros__RenderFunc(props) {
                   data-plasmic-override={overrides.button2}
                   className={classNames("__wab_instance", sty.button2)}
                   label={"Conocer Recorridos"}
+                  onClick={async () => {
+                    const $steps = {};
+                    $steps["goToRecorridos"] = true
+                      ? (() => {
+                          const actionArgs = { destination: "/#recorridos" };
+                          return (({ destination }) => {
+                            if (
+                              typeof destination === "string" &&
+                              destination.startsWith("#")
+                            ) {
+                              document
+                                .getElementById(destination.substr(1))
+                                .scrollIntoView({ behavior: "smooth" });
+                            } else {
+                              __nextRouter?.push(destination);
+                            }
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                    if (
+                      $steps["goToRecorridos"] != null &&
+                      typeof $steps["goToRecorridos"] === "object" &&
+                      typeof $steps["goToRecorridos"].then === "function"
+                    ) {
+                      $steps["goToRecorridos"] = await $steps["goToRecorridos"];
+                    }
+                  }}
                 />
               </Stack__>
             </Stack__>

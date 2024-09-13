@@ -41,99 +41,6 @@
     padding-right: 16px;
   }
 }
-.slide1 {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  width: 100%;
-  height: 754px;
-  max-width: 100%;
-  justify-content: center;
-  align-items: center;
-  background: url("/plasmic/tequila_express/images/frame23Jpg.jpg") top 0% left 50% / cover no-repeat;
-  min-width: 0;
-  border-radius: 20px;
-}
-@media (max-width: 1600px) {
-  .slide1 {
-    height: 668px;
-  }
-}
-.freeBox__rjZir {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  width: auto;
-  height: 100%;
-  max-width: 100%;
-  min-height: 0;
-  padding: 8px;
-}
-.freeBox__rjZir > :global(.__wab_flex-container) {
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 0;
-  margin-top: calc(0px - 32px);
-  height: calc(100% + 32px);
-}
-.freeBox__rjZir > :global(.__wab_flex-container) > *,
-.freeBox__rjZir > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
-.freeBox__rjZir > :global(.__wab_flex-container) > picture > img,
-.freeBox__rjZir
-  > :global(.__wab_flex-container)
-  > :global(.__wab_slot)
-  > picture
-  > img {
-  margin-top: 32px;
-}
-@media (max-width: 1200px) {
-  .freeBox__rjZir {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
-.text__gJpEt {
-  position: relative;
-  width: 800px;
-  height: auto;
-  max-width: 100%;
-  font-size: 48px;
-  color: #ffffff;
-  font-weight: 600;
-  text-align: center;
-  line-height: 1.25;
-}
-@media (max-width: 1200px) {
-  .text__gJpEt {
-    font-size: 38px;
-  }
-}
-@media (min-width: 0px) and (max-width: 768px) {
-  .text__gJpEt {
-    font-size: 30px;
-  }
-}
-.text__h6Hm {
-  position: relative;
-  width: 800px;
-  height: auto;
-  max-width: 100%;
-  font-size: 24px;
-  color: #ffffff;
-  font-weight: 500;
-  text-align: center;
-}
-@media (max-width: 1200px) {
-  .text__h6Hm {
-    font-size: 18px;
-  }
-}
-@media (min-width: 0px) and (max-width: 768px) {
-  .text__h6Hm {
-    font-size: 14px;
-  }
-}
 .slide2 {
   display: flex;
   flex-direction: column;
@@ -224,6 +131,99 @@
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .text__bXg7J {
+    font-size: 14px;
+  }
+}
+.slide1 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 754px;
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
+  background: url("/plasmic/tequila_express/images/frame23Jpg.jpg") top 0% left 50% / cover no-repeat;
+  min-width: 0;
+  border-radius: 20px;
+}
+@media (max-width: 1600px) {
+  .slide1 {
+    height: 668px;
+  }
+}
+.freeBox__rjZir {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  min-height: 0;
+  padding: 8px;
+}
+.freeBox__rjZir > :global(.__wab_flex-container) {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+  margin-top: calc(0px - 32px);
+  height: calc(100% + 32px);
+}
+.freeBox__rjZir > :global(.__wab_flex-container) > *,
+.freeBox__rjZir > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.freeBox__rjZir > :global(.__wab_flex-container) > picture > img,
+.freeBox__rjZir
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-top: 32px;
+}
+@media (max-width: 1200px) {
+  .freeBox__rjZir {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.text__gJpEt {
+  position: relative;
+  width: 800px;
+  height: auto;
+  max-width: 100%;
+  font-size: 48px;
+  color: #ffffff;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.25;
+}
+@media (max-width: 1200px) {
+  .text__gJpEt {
+    font-size: 38px;
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .text__gJpEt {
+    font-size: 30px;
+  }
+}
+.text__h6Hm {
+  position: relative;
+  width: 800px;
+  height: auto;
+  max-width: 100%;
+  font-size: 24px;
+  color: #ffffff;
+  font-weight: 500;
+  text-align: center;
+}
+@media (max-width: 1200px) {
+  .text__h6Hm {
+    font-size: 18px;
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .text__h6Hm {
     font-size: 14px;
   }
 }

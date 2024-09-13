@@ -27,7 +27,7 @@ createPlasmicElementProxy;
 
 export const PlasmicButton2__VariantProps = new Array("light");
 
-export const PlasmicButton2__ArgProps = new Array("label");
+export const PlasmicButton2__ArgProps = new Array("label", "onClick");
 
 const $$ = {};
 
@@ -46,7 +46,9 @@ function PlasmicButton2__RenderFunc(props) {
         {
           label: "Button Label"
         },
-        props.args
+        Object.fromEntries(
+          Object.entries(props.args).filter(([_, v]) => v !== undefined)
+        )
       ),
     [props.args]
   );
@@ -93,6 +95,24 @@ function PlasmicButton2__RenderFunc(props) {
         sty.root,
         { [sty.rootlight]: hasVariant($state, "light", "light") }
       )}
+      onClick={async event => {
+        const $steps = {};
+        $steps["runOnClick"] = true
+          ? (() => {
+              const actionArgs = { eventRef: $props["onClick"] };
+              return (({ eventRef, args }) => {
+                return eventRef?.(...(args ?? []));
+              })?.apply(null, [actionArgs]);
+            })()
+          : undefined;
+        if (
+          $steps["runOnClick"] != null &&
+          typeof $steps["runOnClick"] === "object" &&
+          typeof $steps["runOnClick"].then === "function"
+        ) {
+          $steps["runOnClick"] = await $steps["runOnClick"];
+        }
+      }}
     >
       <div
         data-plasmic-name={"text"}

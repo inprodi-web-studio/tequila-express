@@ -57,7 +57,16 @@ function useNextRouter() {
 
 function PlasmicInicio__RenderFunc(props) {
   const { variants, overrides, forNode } = props;
-  const args = React.useMemo(() => Object.assign({}, props.args), [props.args]);
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+        Object.fromEntries(
+          Object.entries(props.args).filter(([_, v]) => v !== undefined)
+        )
+      ),
+    [props.args]
+  );
   const $props = {
     ...args,
     ...variants
@@ -195,38 +204,6 @@ function PlasmicInicio__RenderFunc(props) {
                 {...child$Props}
               >
                 <div
-                  data-plasmic-name={"slide1"}
-                  data-plasmic-override={overrides.slide1}
-                  className={classNames(projectcss.all, sty.slide1)}
-                >
-                  <Stack__
-                    as={"div"}
-                    hasGap={true}
-                    className={classNames(projectcss.all, sty.freeBox__rjZir)}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__gJpEt
-                      )}
-                    >
-                      {"Convierte el trayecto en \nparte de tu destino"}
-                    </div>
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__h6Hm
-                      )}
-                    >
-                      {
-                        "Descubre la esencia de Jalisco entre rieles y ra\u00edces. Emprende un viaje inolvidable a bordo del tren tur\u00edstico a Tequila."
-                      }
-                    </div>
-                  </Stack__>
-                </div>
-                <div
                   data-plasmic-name={"slide2"}
                   data-plasmic-override={overrides.slide2}
                   className={classNames(projectcss.all, sty.slide2)}
@@ -250,6 +227,38 @@ function PlasmicInicio__RenderFunc(props) {
                         projectcss.all,
                         projectcss.__wab_text,
                         sty.text__bXg7J
+                      )}
+                    >
+                      {
+                        "Descubre la esencia de Jalisco entre rieles y ra\u00edces. Emprende un viaje inolvidable a bordo del tren tur\u00edstico a Tequila."
+                      }
+                    </div>
+                  </Stack__>
+                </div>
+                <div
+                  data-plasmic-name={"slide1"}
+                  data-plasmic-override={overrides.slide1}
+                  className={classNames(projectcss.all, sty.slide1)}
+                >
+                  <Stack__
+                    as={"div"}
+                    hasGap={true}
+                    className={classNames(projectcss.all, sty.freeBox__rjZir)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__gJpEt
+                      )}
+                    >
+                      {"Convierte el trayecto en \nparte de tu destino"}
+                    </div>
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__h6Hm
                       )}
                     >
                       {
@@ -324,7 +333,7 @@ function PlasmicInicio__RenderFunc(props) {
                 )}
               >
                 {
-                  "Abre los ojos para disfrutar cada segundo de tu camino destino Tequila con vistas inaccesibles desde la carretera."
+                  "Abre los ojos para disfrutar cada segundo de tu camino con vistas inaccesibles desde la carretera."
                 }
               </div>
             </Stack__>
@@ -354,6 +363,7 @@ function PlasmicInicio__RenderFunc(props) {
             data-plasmic-override={overrides.options}
             hasGap={true}
             className={classNames(projectcss.all, sty.options)}
+            id={"recorridos"}
           >
             <Stack__
               as={"div"}
@@ -771,6 +781,33 @@ function PlasmicInicio__RenderFunc(props) {
                 data-plasmic-override={overrides.button2}
                 className={classNames("__wab_instance", sty.button2)}
                 label={"Sobre Nosotros"}
+                onClick={async () => {
+                  const $steps = {};
+                  $steps["goToNosotros"] = true
+                    ? (() => {
+                        const actionArgs = { destination: `/nosotros` };
+                        return (({ destination }) => {
+                          if (
+                            typeof destination === "string" &&
+                            destination.startsWith("#")
+                          ) {
+                            document
+                              .getElementById(destination.substr(1))
+                              .scrollIntoView({ behavior: "smooth" });
+                          } else {
+                            __nextRouter?.push(destination);
+                          }
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["goToNosotros"] != null &&
+                    typeof $steps["goToNosotros"] === "object" &&
+                    typeof $steps["goToNosotros"].then === "function"
+                  ) {
+                    $steps["goToNosotros"] = await $steps["goToNosotros"];
+                  }
+                }}
               />
             </Stack__>
           </div>
@@ -790,8 +827,8 @@ const PlasmicDescendants = {
     "mainSection",
     "mainHeader",
     "sliderCarousel",
-    "slide1",
     "slide2",
+    "slide1",
     "slide3",
     "stats",
     "left",
@@ -811,9 +848,9 @@ const PlasmicDescendants = {
   ],
 
   mainHeader: ["mainHeader"],
-  sliderCarousel: ["sliderCarousel", "slide1", "slide2", "slide3"],
-  slide1: ["slide1"],
+  sliderCarousel: ["sliderCarousel", "slide2", "slide1", "slide3"],
   slide2: ["slide2"],
+  slide1: ["slide1"],
   slide3: ["slide3"],
   stats: ["stats", "left", "right"],
   left: ["left"],
@@ -866,8 +903,8 @@ export const PlasmicInicio = Object.assign(
     // Helper components rendering sub-elements
     mainHeader: makeNodeComponent("mainHeader"),
     sliderCarousel: makeNodeComponent("sliderCarousel"),
-    slide1: makeNodeComponent("slide1"),
     slide2: makeNodeComponent("slide2"),
+    slide1: makeNodeComponent("slide1"),
     slide3: makeNodeComponent("slide3"),
     stats: makeNodeComponent("stats"),
     left: makeNodeComponent("left"),

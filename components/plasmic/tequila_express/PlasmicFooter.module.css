@@ -32,7 +32,6 @@
   max-width: 100%;
   grid-column-gap: 150px;
   min-width: 0;
-  padding: 8px;
 }
 @media (max-width: 1600px) {
   .freeBox__spqza {
@@ -102,6 +101,90 @@
   font-weight: 500;
   color: #ffffff;
   min-width: 0;
+}
+.freeBox__dcZUj {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+}
+.freeBox__dcZUj > :global(.__wab_flex-container) {
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 0;
+  margin-left: calc(0px - 16px);
+  width: calc(100% + 16px);
+}
+.freeBox__dcZUj > :global(.__wab_flex-container) > *,
+.freeBox__dcZUj > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.freeBox__dcZUj > :global(.__wab_flex-container) > picture > img,
+.freeBox__dcZUj
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 16px;
+}
+.link__xG0C {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  min-height: 0;
+}
+.svg__cMipZ {
+  object-fit: cover;
+  max-width: 100%;
+  color: #ffffff;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+.link__sIgst {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  min-height: 0;
+}
+.svg__tXwXa {
+  object-fit: cover;
+  max-width: 100%;
+  color: #ffffff;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+.link__isyO5 {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  min-height: 0;
+}
+.svg__t7Gh {
+  object-fit: cover;
+  max-width: 100%;
+  color: #ffffff;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
 }
 .freeBox__htcdu {
   display: flex;
@@ -456,7 +539,7 @@
 .img__alwPc {
   object-fit: cover;
   max-width: 100%;
-  width: 100px;
+  width: 150px;
   flex-shrink: 0;
 }
 .img__alwPc > picture > img {
@@ -470,7 +553,7 @@
 .img__chyP {
   object-fit: cover;
   max-width: 100%;
-  width: 100px;
+  width: 125px;
   flex-shrink: 0;
 }
 .img__chyP > picture > img {

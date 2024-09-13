@@ -258,6 +258,21 @@
           "id": "wbQGNqEUKbny",
           "name": "XSvgIcon",
           "moduleFilePath": "plasmic/tequila_express/icons/PlasmicIcon__XSvg.jsx"
+        },
+        {
+          "id": "hpSkrGRlYZy4",
+          "name": "FacebookLogoFillSvgIcon",
+          "moduleFilePath": "plasmic/tequila_express/icons/PlasmicIcon__FacebookLogoFillSvg.jsx"
+        },
+        {
+          "id": "QNAuphGqDTWh",
+          "name": "InstagramLogoFillSvgIcon",
+          "moduleFilePath": "plasmic/tequila_express/icons/PlasmicIcon__InstagramLogoFillSvg.jsx"
+        },
+        {
+          "id": "p7v8uldEwDCJ",
+          "name": "TiktokLogoFillSvgIcon",
+          "moduleFilePath": "plasmic/tequila_express/icons/PlasmicIcon__TiktokLogoFillSvg.jsx"
         }
       ],
       "images": [
@@ -470,6 +485,21 @@
           "id": "iSxTJaHTFgkX",
           "name": "Rectangle 125.jpg 4",
           "filePath": "../public/plasmic/tequila_express/images/rectangle125Jpg4.jpg"
+        },
+        {
+          "id": "xhrvL0ak9et5",
+          "name": "Capa 1.png",
+          "filePath": "../public/plasmic/tequila_express/images/capa1Png.png"
+        },
+        {
+          "id": "s44Ml5fe_3Lk",
+          "name": "img_1.jpg 3",
+          "filePath": "../public/plasmic/tequila_express/images/img1Jpg3.jpg"
+        },
+        {
+          "id": "wYj1wHidDzDd",
+          "name": "Rectangle 70.jpg 3",
+          "filePath": "../public/plasmic/tequila_express/images/rectangle70Jpg3.jpg"
         }
       ],
       "indirect": false,

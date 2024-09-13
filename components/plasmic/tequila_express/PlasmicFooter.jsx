@@ -27,6 +27,9 @@ import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import projectcss from "../website_starter/plasmic.module.css"; // plasmic-import: uEWT1C6ySrjtSMWJntBego/projectcss
 import sty from "./PlasmicFooter.module.css"; // plasmic-import: Iz_Y_kKZMHTD/css
+import FacebookLogoFillSvgIcon from "./icons/PlasmicIcon__FacebookLogoFillSvg"; // plasmic-import: hpSkrGRlYZy4/icon
+import InstagramLogoFillSvgIcon from "./icons/PlasmicIcon__InstagramLogoFillSvg"; // plasmic-import: QNAuphGqDTWh/icon
+import TiktokLogoFillSvgIcon from "./icons/PlasmicIcon__TiktokLogoFillSvg"; // plasmic-import: p7v8uldEwDCJ/icon
 
 createPlasmicElementProxy;
 
@@ -45,7 +48,16 @@ function useNextRouter() {
 
 function PlasmicFooter__RenderFunc(props) {
   const { variants, overrides, forNode } = props;
-  const args = React.useMemo(() => Object.assign({}, props.args), [props.args]);
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+        Object.fromEntries(
+          Object.entries(props.args).filter(([_, v]) => v !== undefined)
+        )
+      ),
+    [props.args]
+  );
   const $props = {
     ...args,
     ...variants
@@ -106,6 +118,66 @@ function PlasmicFooter__RenderFunc(props) {
           >
             {"Un viaje inolvidable a bordo\ndel tren tur\u00edstico a Tequila."}
           </div>
+          <Stack__
+            as={"div"}
+            hasGap={true}
+            className={classNames(projectcss.all, sty.freeBox__dcZUj)}
+          >
+            <PlasmicLink__
+              className={classNames(
+                projectcss.all,
+                projectcss.a,
+                sty.link__xG0C
+              )}
+              component={Link}
+              href={
+                "https://www.facebook.com/tequilaexpressoficial?mibextid=ZbWKwL"
+              }
+              platform={"nextjs"}
+              target={"_blank"}
+            >
+              <FacebookLogoFillSvgIcon
+                className={classNames(projectcss.all, sty.svg__cMipZ)}
+                role={"img"}
+              />
+            </PlasmicLink__>
+            <PlasmicLink__
+              className={classNames(
+                projectcss.all,
+                projectcss.a,
+                sty.link__sIgst
+              )}
+              component={Link}
+              href={
+                "https://www.instagram.com/tequilaexpress?igsh=YnltaTlhZGx5YzV1"
+              }
+              platform={"nextjs"}
+              target={"_blank"}
+            >
+              <InstagramLogoFillSvgIcon
+                className={classNames(projectcss.all, sty.svg__tXwXa)}
+                role={"img"}
+              />
+            </PlasmicLink__>
+            <PlasmicLink__
+              className={classNames(
+                projectcss.all,
+                projectcss.a,
+                sty.link__isyO5
+              )}
+              component={Link}
+              href={
+                "https://www.tiktok.com/@tequilaexpressoficial?_t=8pgrEmFACwg&_r=1"
+              }
+              platform={"nextjs"}
+              target={"_blank"}
+            >
+              <TiktokLogoFillSvgIcon
+                className={classNames(projectcss.all, sty.svg__t7Gh)}
+                role={"img"}
+              />
+            </PlasmicLink__>
+          </Stack__>
         </Stack__>
         <Stack__
           as={"div"}
@@ -314,12 +386,12 @@ function PlasmicFooter__RenderFunc(props) {
           displayMaxWidth={"100%"}
           displayMinHeight={"0"}
           displayMinWidth={"0"}
-          displayWidth={"100px"}
+          displayWidth={"150px"}
           loading={"lazy"}
           src={{
-            src: "/plasmic/tequila_express/images/camaradc1Png.png",
-            fullWidth: 199,
-            fullHeight: 71,
+            src: "/plasmic/tequila_express/images/capa1Png.png",
+            fullWidth: 293,
+            fullHeight: 81,
             aspectRatio: undefined
           }}
         />
@@ -333,12 +405,12 @@ function PlasmicFooter__RenderFunc(props) {
             displayMaxWidth={"100%"}
             displayMinHeight={"0"}
             displayMinWidth={"0"}
-            displayWidth={"100px"}
+            displayWidth={"125px"}
             loading={"lazy"}
             src={{
-              src: "/plasmic/tequila_express/images/camaradc1Png.png",
-              fullWidth: 199,
-              fullHeight: 71,
+              src: "/plasmic/tequila_express/images/capa1Png.png",
+              fullWidth: 293,
+              fullHeight: 81,
               aspectRatio: undefined
             }}
           />

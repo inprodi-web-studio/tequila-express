@@ -53,7 +53,16 @@ function useNextRouter() {
 
 function PlasmicContacto__RenderFunc(props) {
   const { variants, overrides, forNode } = props;
-  const args = React.useMemo(() => Object.assign({}, props.args), [props.args]);
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+        Object.fromEntries(
+          Object.entries(props.args).filter(([_, v]) => v !== undefined)
+        )
+      ),
+    [props.args]
+  );
   const $props = {
     ...args,
     ...variants
@@ -218,7 +227,7 @@ function PlasmicContacto__RenderFunc(props) {
                       sty.text__mzJV
                     )}
                   >
-                    {"Correo Electr\u00f3nico"}
+                    {"C\u00e1mara de Comercio de Guadalajara"}
                   </div>
                   <div
                     className={classNames(

@@ -58,7 +58,16 @@ function useNextRouter() {
 
 function PlasmicMainHeader__RenderFunc(props) {
   const { variants, overrides, forNode } = props;
-  const args = React.useMemo(() => Object.assign({}, props.args), [props.args]);
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+        Object.fromEntries(
+          Object.entries(props.args).filter(([_, v]) => v !== undefined)
+        )
+      ),
+    [props.args]
+  );
   const $props = {
     ...args,
     ...variants
@@ -293,7 +302,7 @@ function PlasmicMainHeader__RenderFunc(props) {
               }
             };
             __composite["1"]["label"] =
-              "C\u00e1mara de Comercio de Guadalajara";
+              "Tequila Express experiencia Casa Sauza";
             __composite["1"]["onClick"] = async info => {
               const $steps = {};
               $steps["goToRecorridoCamaraDeComercioDeGuadalajara"] = true
@@ -713,7 +722,14 @@ function PlasmicMainHeader__RenderFunc(props) {
                 }
               }}
             >
-              {"C\u00e1mara de Comercio de Guadalajara"}
+              <React.Fragment>
+                <span
+                  className={"plasmic_default__all plasmic_default__span"}
+                  style={{ fontWeight: 700 }}
+                >
+                  {"Tequila Express experiencia Casa Sauza"}
+                </span>
+              </React.Fragment>
             </div>
             <div
               className={classNames(

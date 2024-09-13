@@ -61,7 +61,16 @@ function useNextRouter() {
 
 function PlasmicRecorridoCamaraDeComercioDeGuadalajara__RenderFunc(props) {
   const { variants, overrides, forNode } = props;
-  const args = React.useMemo(() => Object.assign({}, props.args), [props.args]);
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+        Object.fromEntries(
+          Object.entries(props.args).filter(([_, v]) => v !== undefined)
+        )
+      ),
+    [props.args]
+  );
   const $props = {
     ...args,
     ...variants
@@ -222,7 +231,7 @@ function PlasmicRecorridoCamaraDeComercioDeGuadalajara__RenderFunc(props) {
                   sty.text__jyD2E
                 )}
               >
-                {"Recorridos\nC\u00e1mara de Comercio de Guadalajara"}
+                {"Tequila Express experiencia Casa Sauza"}
               </div>
               <div
                 className={classNames(
@@ -550,9 +559,7 @@ function PlasmicRecorridoCamaraDeComercioDeGuadalajara__RenderFunc(props) {
                                   sty.li__laMjI
                                 )}
                               >
-                                {
-                                  "Cocteles preparados con Tequila Hornitos\n(blanco, reposado y a\u00f1ejo)"
-                                }
+                                {"Cocteles preparados con Tequila"}
                               </li>
                             </ul>
                           }
@@ -574,7 +581,7 @@ function PlasmicRecorridoCamaraDeComercioDeGuadalajara__RenderFunc(props) {
                                   sty.li__dYyDf
                                 )}
                               >
-                                {"Cerveza, refrescos y agua natura"}
+                                {"Cerveza, refrescos y agua natural"}
                               </li>
                             </ul>
                           }
@@ -851,9 +858,7 @@ function PlasmicRecorridoCamaraDeComercioDeGuadalajara__RenderFunc(props) {
                                     sty.li__vJD0
                                   )}
                                 >
-                                  {
-                                    "Recepci\u00f3n con Coffee break (galletas y pan dulce)"
-                                  }
+                                  {"Recepci\u00f3n con Coffee break"}
                                 </li>
                               </ul>
                             }
@@ -949,9 +954,7 @@ function PlasmicRecorridoCamaraDeComercioDeGuadalajara__RenderFunc(props) {
                                     sty.li__erKr
                                   )}
                                 >
-                                  {
-                                    "Cocteler\u00eda (seg\u00fan la categor\u00eda)"
-                                  }
+                                  {"Cocteles preparados con tequila"}
                                 </li>
                               </ul>
                             }
@@ -973,7 +976,7 @@ function PlasmicRecorridoCamaraDeComercioDeGuadalajara__RenderFunc(props) {
                                     sty.li__usfY9
                                   )}
                                 >
-                                  {"Cantarito de bienvenida en Campos Agaveros"}
+                                  {"Cantarito de bienvenida"}
                                 </li>
                               </ul>
                             }
@@ -1190,7 +1193,7 @@ function PlasmicRecorridoCamaraDeComercioDeGuadalajara__RenderFunc(props) {
                                   sty.li__aVnJ3
                                 )}
                               >
-                                {"Cata de trufas/borrachitos"}
+                                {"Cata de tequila"}
                               </li>
                               <li
                                 className={classNames(
@@ -1210,9 +1213,7 @@ function PlasmicRecorridoCamaraDeComercioDeGuadalajara__RenderFunc(props) {
                                   sty.li__e5QZb
                                 )}
                               >
-                                {
-                                  "Cocteles preparados con Tequila 3 Generaciones (blanco, reposado, a\u00f1ejo)"
-                                }
+                                {"Cocteles preparados con Tequila Premium"}
                               </li>
                               <li
                                 className={classNames(
@@ -1406,7 +1407,7 @@ function PlasmicRecorridoCamaraDeComercioDeGuadalajara__RenderFunc(props) {
                         }
                         loading={"lazy"}
                         src={{
-                          src: "/plasmic/tequila_express/images/rectangle70Jpg.jpg",
+                          src: "/plasmic/tequila_express/images/rectangle70Jpg3.jpg",
                           fullWidth: 846,
                           fullHeight: 756,
                           aspectRatio: undefined
@@ -1500,9 +1501,7 @@ function PlasmicRecorridoCamaraDeComercioDeGuadalajara__RenderFunc(props) {
                                     sty.li__norZi
                                   )}
                                 >
-                                  {
-                                    "Recepci\u00f3n con Coffee break (galletas y pan dulce)"
-                                  }
+                                  {"Recepci\u00f3n con Coffee break"}
                                 </li>
                               </ul>
                             }
@@ -1598,9 +1597,7 @@ function PlasmicRecorridoCamaraDeComercioDeGuadalajara__RenderFunc(props) {
                                     sty.li__yn2Gm
                                   )}
                                 >
-                                  {
-                                    "Cocteler\u00eda (seg\u00fan la categor\u00eda)"
-                                  }
+                                  {"Cocteles preparados con tequila"}
                                 </li>
                               </ul>
                             }
@@ -1622,7 +1619,7 @@ function PlasmicRecorridoCamaraDeComercioDeGuadalajara__RenderFunc(props) {
                                     sty.li__zkQsn
                                   )}
                                 >
-                                  {"Cantarito de bienvenida en Campos Agaveros"}
+                                  {"Cantarito de bienvenida"}
                                 </li>
                               </ul>
                             }
@@ -2177,7 +2174,7 @@ function PlasmicRecorridoCamaraDeComercioDeGuadalajara__RenderFunc(props) {
                   )}
                 >
                   {
-                    "7:00 / Recepci\u00f3n en C\u00e1mara de Comercio de Guadalajara\n7:20 / Abordaje y salida en autob\u00fas rumbo a la Estaci\u00f3n de ferrocarril GDL\n8:00 / Salida del tren destino a Tequila\n10:00 / Llegada a Estaci\u00f3n Tequila\n10:15 / Abordaje y salida en autob\u00fas rumbo a Casa Sauza\n10:30 / Llegada a los campos agaveros de Casa Sauza\n\n10:45 / Demostraci\u00f3n de la jima del agave y plantaci\u00f3n\n11:30 / Visita a Bodegas de a\u00f1ejamiento \u201cLa Constancia\u201d de Casa Sauza y degustaci\u00f3n de Tequila Premium\n12:00 / Visita a f\u00e1brica \u201cLa Perseverancia\u201d de Casa Sauza para conocer el proceso de elaboraci\u00f3n del Tequila\n13:15 / Entrega de cantarito de bienvenida\n13:30 / Comida en Quinta Sauza\n14:15 / Espect\u00e1culo \u201cEstampas de M\u00e9xico\u201d\n15:45 / Visita guiada al centro de Tequila\n16:15 / Abordaje y salida en autob\u00fas rumbo Estaci\u00f3n Tequila\n16:30 / Abordaje al tren en Estaci\u00f3n Tequila\n17:00 / Salida del tren destino a Guadalajara\n19:00 / Llegada a Estaci\u00f3n GDL\n19:20 / Abordaje y salida en autob\u00fas rumbo a C\u00e1mara de Comercio de Guadalajara\n19:45 / Llegada a C\u00e1mara de Comercio GDL"
+                    "09:00 Recepci\u00f3n en C\u00e1mara de Comercio de Guadalajara con coffee break.\n09:30 Salida en autobuses hacia estaci\u00f3n del ferrocarril en Av. Washington.\n10:30 Salida en tren hacia Tequila.\n12:30 Llegada a Tequila y traslado en autobuses hacia campos agaveros.\n13:00 Llegada a campos agaveros de Casa Sauza, demostraci\u00f3n de la jima del agave y plantaci\u00f3n.\n13:45 Visita a \u201cLa Constancia\u201d bodega de a\u00f1ejamiento.\n14:15 Visita a \u201cLa Perseverancia\u201d, f\u00e1brica de elaboraci\u00f3n de tequila.\n15:00 Cantarito de bienvenida\n15:15 Comida en Quinta Sauza\n15:30 Espect\u00e1culo con mariachi, ballet folcl\u00f3rico, suertes charras y cantantes.\n16:45 Visita al centro de Tequila.\n17:45 Abordaje de autobuses hacia Estaci\u00f3n de tequila.\n18:15 Abordaje de los vagones.\n18:30 Salida en tren hacia Guadalajara.\n20:30 Llegada a Guadalajara.\n20:50 Traslado a C\u00e1mara de Comercio de Guadalajara.\n21:15 Llegada a C\u00e1mara de Comercio."
                   }
                 </div>
                 {(() => {
