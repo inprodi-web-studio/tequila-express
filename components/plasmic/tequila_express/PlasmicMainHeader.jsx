@@ -89,22 +89,7 @@ function PlasmicMainHeader__RenderFunc(props) {
         path: "modal.open",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) =>
-          hasVariant(globalVariants, "screen", "mobile")
-            ? (() => {
-                try {
-                  return $state.menuOpen;
-                } catch (e) {
-                  if (
-                    e instanceof TypeError ||
-                    e?.plasmicType === "PlasmicUndefinedDataError"
-                  ) {
-                    return false;
-                  }
-                  throw e;
-                }
-              })()
-            : undefined
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
       }
     ],
 
@@ -877,12 +862,12 @@ function PlasmicMainHeader__RenderFunc(props) {
           className={classNames("__wab_instance", sty.button)}
           onClick={async () => {
             const $steps = {};
-            $steps["updateMenuOpen"] = true
+            $steps["updateModalOpen"] = true
               ? (() => {
                   const actionArgs = {
                     variable: {
                       objRoot: $state,
-                      variablePath: ["menuOpen"]
+                      variablePath: ["modal", "open"]
                     },
                     operation: 0,
                     value: true
@@ -898,11 +883,30 @@ function PlasmicMainHeader__RenderFunc(props) {
                 })()
               : undefined;
             if (
-              $steps["updateMenuOpen"] != null &&
-              typeof $steps["updateMenuOpen"] === "object" &&
-              typeof $steps["updateMenuOpen"].then === "function"
+              $steps["updateModalOpen"] != null &&
+              typeof $steps["updateModalOpen"] === "object" &&
+              typeof $steps["updateModalOpen"].then === "function"
             ) {
-              $steps["updateMenuOpen"] = await $steps["updateMenuOpen"];
+              $steps["updateModalOpen"] = await $steps["updateModalOpen"];
+            }
+            $steps["updateMenuOpen2"] = true
+              ? (() => {
+                  const actionArgs = {
+                    customFunction: async () => {
+                      return console.log($state.menuOpen);
+                    }
+                  };
+                  return (({ customFunction }) => {
+                    return customFunction();
+                  })?.apply(null, [actionArgs]);
+                })()
+              : undefined;
+            if (
+              $steps["updateMenuOpen2"] != null &&
+              typeof $steps["updateMenuOpen2"] === "object" &&
+              typeof $steps["updateMenuOpen2"].then === "function"
+            ) {
+              $steps["updateMenuOpen2"] = await $steps["updateMenuOpen2"];
             }
           }}
           type={"default"}
