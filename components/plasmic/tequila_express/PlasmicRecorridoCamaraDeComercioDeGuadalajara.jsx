@@ -119,6 +119,33 @@ function PlasmicRecorridoCamaraDeComercioDeGuadalajara__RenderFunc(props) {
         initFunc: ({ $props, $state, $queries, $ctx }) => 0,
         refName: "sliderCarousel",
         onMutate: generateOnMutateForSpec("currentSlide", SliderWrapper_Helpers)
+      },
+      {
+        path: "bookModalOpened",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => false
+      },
+      {
+        path: "bookingModal.open",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) =>
+          (() => {
+            try {
+              return (() => {
+                return $state.bookModalOpened;
+              })();
+            } catch (e) {
+              if (
+                e instanceof TypeError ||
+                e?.plasmicType === "PlasmicUndefinedDataError"
+              ) {
+                return true;
+              }
+              throw e;
+            }
+          })()
       }
     ],
 
@@ -258,6 +285,43 @@ function PlasmicRecorridoCamaraDeComercioDeGuadalajara__RenderFunc(props) {
               <Button2
                 className={classNames("__wab_instance", sty.button2__htEo1)}
                 label={"Reservar"}
+                onClick={async () => {
+                  const $steps = {};
+                  $steps["updateBookModalOpened"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          variable: {
+                            objRoot: $state,
+                            variablePath: ["bookModalOpened"]
+                          },
+                          operation: 0,
+                          value: true
+                        };
+                        return (({
+                          variable,
+                          value,
+                          startIndex,
+                          deleteCount
+                        }) => {
+                          if (!variable) {
+                            return;
+                          }
+                          const { objRoot, variablePath } = variable;
+                          $stateSet(objRoot, variablePath, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateBookModalOpened"] != null &&
+                    typeof $steps["updateBookModalOpened"] === "object" &&
+                    typeof $steps["updateBookModalOpened"].then === "function"
+                  ) {
+                    $steps["updateBookModalOpened"] = await $steps[
+                      "updateBookModalOpened"
+                    ];
+                  }
+                }}
               />
             </div>
             <Stack__
@@ -349,7 +413,7 @@ function PlasmicRecorridoCamaraDeComercioDeGuadalajara__RenderFunc(props) {
                 },
                 { key: "reservar", href: "#reservar", title: "Reservar" }
               ]}
-              offsetTop={75}
+              offsetTop={100}
               targetOffset={500}
             />
 
@@ -2067,6 +2131,44 @@ function PlasmicRecorridoCamaraDeComercioDeGuadalajara__RenderFunc(props) {
                     className={classNames("__wab_instance", sty.button2__lmWa4)}
                     label={"Reservar"}
                     light={true}
+                    onClick={async () => {
+                      const $steps = {};
+                      $steps["updateBookModalOpened"] = true
+                        ? (() => {
+                            const actionArgs = {
+                              variable: {
+                                objRoot: $state,
+                                variablePath: ["bookModalOpened"]
+                              },
+                              operation: 0,
+                              value: true
+                            };
+                            return (({
+                              variable,
+                              value,
+                              startIndex,
+                              deleteCount
+                            }) => {
+                              if (!variable) {
+                                return;
+                              }
+                              const { objRoot, variablePath } = variable;
+                              $stateSet(objRoot, variablePath, value);
+                              return value;
+                            })?.apply(null, [actionArgs]);
+                          })()
+                        : undefined;
+                      if (
+                        $steps["updateBookModalOpened"] != null &&
+                        typeof $steps["updateBookModalOpened"] === "object" &&
+                        typeof $steps["updateBookModalOpened"].then ===
+                          "function"
+                      ) {
+                        $steps["updateBookModalOpened"] = await $steps[
+                          "updateBookModalOpened"
+                        ];
+                      }
+                    }}
                   />
                 </Stack__>
               </div>
@@ -2084,9 +2186,7 @@ function PlasmicRecorridoCamaraDeComercioDeGuadalajara__RenderFunc(props) {
             className={classNames("__wab_instance", sty.itineraryModal)}
             closeIcon={
               <XSvgIcon
-                data-plasmic-name={"svg"}
-                data-plasmic-override={overrides.svg}
-                className={classNames(projectcss.all, sty.svg)}
+                className={classNames(projectcss.all, sty.svg__uWgYj)}
                 role={"img"}
               />
             }
@@ -2305,6 +2405,95 @@ function PlasmicRecorridoCamaraDeComercioDeGuadalajara__RenderFunc(props) {
               </Stack__>
             </div>
           </AntdModal>
+          <AntdModal
+            data-plasmic-name={"bookingModal"}
+            data-plasmic-override={overrides.bookingModal}
+            className={classNames("__wab_instance", sty.bookingModal)}
+            closeIcon={
+              <XSvgIcon
+                className={classNames(projectcss.all, sty.svg__yRfM)}
+                role={"img"}
+              />
+            }
+            defaultStylesClassName={classNames(
+              projectcss.root_reset,
+              projectcss.plasmic_default_styles,
+              projectcss.plasmic_mixins,
+              projectcss.plasmic_tokens,
+              plasmic_antd_5_hostless_css.plasmic_tokens
+            )}
+            hideFooter={true}
+            modalScopeClassName={sty["bookingModal__modal"]}
+            onCancel={async () => {
+              const $steps = {};
+              $steps["updateBookModalOpened"] = true
+                ? (() => {
+                    const actionArgs = {
+                      variable: {
+                        objRoot: $state,
+                        variablePath: ["bookModalOpened"]
+                      },
+                      operation: 0,
+                      value: false
+                    };
+                    return (({ variable, value, startIndex, deleteCount }) => {
+                      if (!variable) {
+                        return;
+                      }
+                      const { objRoot, variablePath } = variable;
+                      $stateSet(objRoot, variablePath, value);
+                      return value;
+                    })?.apply(null, [actionArgs]);
+                  })()
+                : undefined;
+              if (
+                $steps["updateBookModalOpened"] != null &&
+                typeof $steps["updateBookModalOpened"] === "object" &&
+                typeof $steps["updateBookModalOpened"].then === "function"
+              ) {
+                $steps["updateBookModalOpened"] = await $steps[
+                  "updateBookModalOpened"
+                ];
+              }
+            }}
+            onOpenChange={generateStateOnChangeProp($state, [
+              "bookingModal",
+              "open"
+            ])}
+            open={generateStateValueProp($state, ["bookingModal", "open"])}
+            title={null}
+            trigger={null}
+            width={
+              hasVariant(globalVariants, "screen", "tablet") ? "95%" : "600px"
+            }
+          >
+            <Stack__
+              as={"div"}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.freeBox__qog2)}
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__jFwz
+                )}
+              >
+                {
+                  "Te recordamos que la venta\nde boletos comienza el\n27 de octubre."
+                }
+              </div>
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__wUcVo
+                )}
+              >
+                {"\u00a1No te lo pierdas!"}
+              </div>
+            </Stack__>
+          </AntdModal>
         </div>
       </div>
     </React.Fragment>
@@ -2328,7 +2517,7 @@ const PlasmicDescendants = {
     "footer",
     "itineraryModal",
     "sliderCarousel",
-    "svg"
+    "bookingModal"
   ],
 
   mainHeader: ["mainHeader"],
@@ -2343,9 +2532,9 @@ const PlasmicDescendants = {
   bar: ["bar", "title3"],
   title3: ["title3"],
   footer: ["footer"],
-  itineraryModal: ["itineraryModal", "sliderCarousel", "svg"],
+  itineraryModal: ["itineraryModal", "sliderCarousel"],
   sliderCarousel: ["sliderCarousel"],
-  svg: ["svg"]
+  bookingModal: ["bookingModal"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -2396,7 +2585,7 @@ export const PlasmicRecorridoCamaraDeComercioDeGuadalajara = Object.assign(
     footer: makeNodeComponent("footer"),
     itineraryModal: makeNodeComponent("itineraryModal"),
     sliderCarousel: makeNodeComponent("sliderCarousel"),
-    svg: makeNodeComponent("svg"),
+    bookingModal: makeNodeComponent("bookingModal"),
     // Metadata about props expected for PlasmicRecorridoCamaraDeComercioDeGuadalajara
     internalVariantProps:
       PlasmicRecorridoCamaraDeComercioDeGuadalajara__VariantProps,

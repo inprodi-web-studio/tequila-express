@@ -1720,3 +1720,60 @@
 .footer:global(.__wab_instance) {
   max-width: 100%;
 }
+.bookingModal:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+}
+.freeBox__ibeXg {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+}
+.freeBox__ibeXg > :global(.__wab_flex-container) {
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 0;
+  margin-top: calc(0px - 40px);
+  height: calc(100% + 40px);
+}
+.freeBox__ibeXg > :global(.__wab_flex-container) > *,
+.freeBox__ibeXg > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.freeBox__ibeXg > :global(.__wab_flex-container) > picture > img,
+.freeBox__ibeXg
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-top: 40px;
+}
+.text___2S0Vx {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  text-align: center;
+  color: var(--token-iInYpm5FuiZ3);
+  font-size: 32px;
+  font-weight: 700;
+  min-width: 0;
+}
+.text__dojeW {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  text-align: center;
+  color: var(--token-QI2jHrpLRZs5);
+  font-size: 24px;
+  font-weight: 700;
+  min-width: 0;
+}
+.svg {
+  object-fit: cover;
+  max-width: 100%;
+  height: 1em;
+}

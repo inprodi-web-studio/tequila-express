@@ -24,6 +24,7 @@ import {
   generateStateValueProp,
   hasVariant,
   initializeCodeComponentStates,
+  set as $stateSet,
   useDollarState
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
@@ -34,11 +35,13 @@ import { AntdAccordion } from "@plasmicpkgs/antd5/skinny/registerCollapse";
 import { accordionHelpers as AntdAccordion_Helpers } from "@plasmicpkgs/antd5/skinny/registerCollapse";
 import { AntdAccordionItem } from "@plasmicpkgs/antd5/skinny/registerCollapse";
 import Footer from "../../Footer"; // plasmic-import: Iz_Y_kKZMHTD/component
+import { AntdModal } from "@plasmicpkgs/antd5/skinny/registerModal";
 import { useScreenVariants as useScreenVariantsraGa2MJbEFd } from "../website_starter/PlasmicGlobalVariant__Screen"; // plasmic-import: RaGa2M-JbEFd/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import projectcss from "../website_starter/plasmic.module.css"; // plasmic-import: uEWT1C6ySrjtSMWJntBego/projectcss
 import sty from "./PlasmicRecorridoGrupoMexicoTransportes.module.css"; // plasmic-import: IQiQ2GDBiFpG/css
+import XSvgIcon from "./icons/PlasmicIcon__XSvg"; // plasmic-import: wbQGNqEUKbny/icon
 
 createPlasmicElementProxy;
 
@@ -89,6 +92,33 @@ function PlasmicRecorridoGrupoMexicoTransportes__RenderFunc(props) {
       },
       {
         path: "mainHeader.menuOpen",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => false
+      },
+      {
+        path: "bookingModal.open",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) =>
+          (() => {
+            try {
+              return (() => {
+                return $state.bookingModalOpened;
+              })();
+            } catch (e) {
+              if (
+                e instanceof TypeError ||
+                e?.plasmicType === "PlasmicUndefinedDataError"
+              ) {
+                return undefined;
+              }
+              throw e;
+            }
+          })()
+      },
+      {
+        path: "bookingModalOpened",
         type: "private",
         variableType: "boolean",
         initFunc: ({ $props, $state, $queries, $ctx }) => false
@@ -228,6 +258,44 @@ function PlasmicRecorridoGrupoMexicoTransportes__RenderFunc(props) {
               <Button2
                 className={classNames("__wab_instance", sty.button2__yjea5)}
                 label={"Reservar"}
+                onClick={async () => {
+                  const $steps = {};
+                  $steps["updateBookingModalOpened"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          variable: {
+                            objRoot: $state,
+                            variablePath: ["bookingModalOpened"]
+                          },
+                          operation: 0,
+                          value: true
+                        };
+                        return (({
+                          variable,
+                          value,
+                          startIndex,
+                          deleteCount
+                        }) => {
+                          if (!variable) {
+                            return;
+                          }
+                          const { objRoot, variablePath } = variable;
+                          $stateSet(objRoot, variablePath, value);
+                          return value;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateBookingModalOpened"] != null &&
+                    typeof $steps["updateBookingModalOpened"] === "object" &&
+                    typeof $steps["updateBookingModalOpened"].then ===
+                      "function"
+                  ) {
+                    $steps["updateBookingModalOpened"] = await $steps[
+                      "updateBookingModalOpened"
+                    ];
+                  }
+                }}
               />
             </div>
             <Stack__
@@ -310,7 +378,7 @@ function PlasmicRecorridoGrupoMexicoTransportes__RenderFunc(props) {
                 },
                 { key: "reservar", href: "#reservar", title: "Reservar" }
               ]}
-              offsetTop={75}
+              offsetTop={100}
               targetOffset={500}
             />
 
@@ -1470,6 +1538,45 @@ function PlasmicRecorridoGrupoMexicoTransportes__RenderFunc(props) {
                     )}
                     label={"Reservar"}
                     light={true}
+                    onClick={async () => {
+                      const $steps = {};
+                      $steps["updateBookingModalOpened"] = true
+                        ? (() => {
+                            const actionArgs = {
+                              variable: {
+                                objRoot: $state,
+                                variablePath: ["bookingModalOpened"]
+                              },
+                              operation: 0,
+                              value: true
+                            };
+                            return (({
+                              variable,
+                              value,
+                              startIndex,
+                              deleteCount
+                            }) => {
+                              if (!variable) {
+                                return;
+                              }
+                              const { objRoot, variablePath } = variable;
+                              $stateSet(objRoot, variablePath, value);
+                              return value;
+                            })?.apply(null, [actionArgs]);
+                          })()
+                        : undefined;
+                      if (
+                        $steps["updateBookingModalOpened"] != null &&
+                        typeof $steps["updateBookingModalOpened"] ===
+                          "object" &&
+                        typeof $steps["updateBookingModalOpened"].then ===
+                          "function"
+                      ) {
+                        $steps["updateBookingModalOpened"] = await $steps[
+                          "updateBookingModalOpened"
+                        ];
+                      }
+                    }}
                   />
                 </Stack__>
               </div>
@@ -1480,6 +1587,98 @@ function PlasmicRecorridoGrupoMexicoTransportes__RenderFunc(props) {
             data-plasmic-override={overrides.footer}
             className={classNames("__wab_instance", sty.footer)}
           />
+
+          <AntdModal
+            data-plasmic-name={"bookingModal"}
+            data-plasmic-override={overrides.bookingModal}
+            className={classNames("__wab_instance", sty.bookingModal)}
+            closeIcon={
+              <XSvgIcon
+                data-plasmic-name={"svg"}
+                data-plasmic-override={overrides.svg}
+                className={classNames(projectcss.all, sty.svg)}
+                role={"img"}
+              />
+            }
+            defaultStylesClassName={classNames(
+              projectcss.root_reset,
+              projectcss.plasmic_default_styles,
+              projectcss.plasmic_mixins,
+              projectcss.plasmic_tokens,
+              plasmic_antd_5_hostless_css.plasmic_tokens
+            )}
+            hideFooter={true}
+            modalScopeClassName={sty["bookingModal__modal"]}
+            onCancel={async () => {
+              const $steps = {};
+              $steps["updateBookingModalOpened"] = true
+                ? (() => {
+                    const actionArgs = {
+                      variable: {
+                        objRoot: $state,
+                        variablePath: ["bookingModalOpened"]
+                      },
+                      operation: 0,
+                      value: false
+                    };
+                    return (({ variable, value, startIndex, deleteCount }) => {
+                      if (!variable) {
+                        return;
+                      }
+                      const { objRoot, variablePath } = variable;
+                      $stateSet(objRoot, variablePath, value);
+                      return value;
+                    })?.apply(null, [actionArgs]);
+                  })()
+                : undefined;
+              if (
+                $steps["updateBookingModalOpened"] != null &&
+                typeof $steps["updateBookingModalOpened"] === "object" &&
+                typeof $steps["updateBookingModalOpened"].then === "function"
+              ) {
+                $steps["updateBookingModalOpened"] = await $steps[
+                  "updateBookingModalOpened"
+                ];
+              }
+            }}
+            onOpenChange={generateStateOnChangeProp($state, [
+              "bookingModal",
+              "open"
+            ])}
+            open={generateStateValueProp($state, ["bookingModal", "open"])}
+            title={null}
+            trigger={null}
+            width={
+              hasVariant(globalVariants, "screen", "tablet") ? "95%" : "600px"
+            }
+          >
+            <Stack__
+              as={"div"}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.freeBox__ibeXg)}
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text___2S0Vx
+                )}
+              >
+                {
+                  "Te recordamos que la venta\nde boletos comienza el\n23 de octubre."
+                }
+              </div>
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__dojeW
+                )}
+              >
+                {"\u00a1No te lo pierdas!"}
+              </div>
+            </Stack__>
+          </AntdModal>
         </div>
       </div>
     </React.Fragment>
@@ -1499,7 +1698,9 @@ const PlasmicDescendants = {
     "accordion",
     "title2",
     "title3",
-    "footer"
+    "footer",
+    "bookingModal",
+    "svg"
   ],
 
   mainHeader: ["mainHeader"],
@@ -1512,7 +1713,9 @@ const PlasmicDescendants = {
   accordion: ["accordion", "title2", "title3"],
   title2: ["title2"],
   title3: ["title3"],
-  footer: ["footer"]
+  footer: ["footer"],
+  bookingModal: ["bookingModal", "svg"],
+  svg: ["svg"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -1560,6 +1763,8 @@ export const PlasmicRecorridoGrupoMexicoTransportes = Object.assign(
     title2: makeNodeComponent("title2"),
     title3: makeNodeComponent("title3"),
     footer: makeNodeComponent("footer"),
+    bookingModal: makeNodeComponent("bookingModal"),
+    svg: makeNodeComponent("svg"),
     // Metadata about props expected for PlasmicRecorridoGrupoMexicoTransportes
     internalVariantProps: PlasmicRecorridoGrupoMexicoTransportes__VariantProps,
     internalArgProps: PlasmicRecorridoGrupoMexicoTransportes__ArgProps,
