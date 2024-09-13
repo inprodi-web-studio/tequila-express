@@ -2467,32 +2467,23 @@ function PlasmicRecorridoCamaraDeComercioDeGuadalajara__RenderFunc(props) {
               hasVariant(globalVariants, "screen", "tablet") ? "95%" : "600px"
             }
           >
-            <Stack__
-              as={"div"}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.freeBox__qog2)}
-            >
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text__jFwz
-                )}
-              >
-                {
-                  "Te recordamos que la venta\nde boletos comienza el\n27 de octubre."
-                }
-              </div>
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text__wUcVo
-                )}
-              >
-                {"\u00a1No te lo pierdas!"}
-              </div>
-            </Stack__>
+            <PlasmicImg__
+              alt={""}
+              className={classNames(sty.img___8NfRi)}
+              displayHeight={"auto"}
+              displayMaxHeight={"none"}
+              displayMaxWidth={"100%"}
+              displayMinHeight={"0"}
+              displayMinWidth={"0"}
+              displayWidth={"100%"}
+              loading={"lazy"}
+              src={{
+                src: "/plasmic/tequila_express/images/imagenDeWhatsApp20240913ALas1329440B7C32481Jpg.jpg",
+                fullWidth: 3200,
+                fullHeight: 2132,
+                aspectRatio: undefined
+              }}
+            />
           </AntdModal>
         </div>
       </div>

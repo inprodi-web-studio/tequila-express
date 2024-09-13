@@ -133,7 +133,7 @@ function PlasmicMainHeader__RenderFunc(props) {
           )}
         >
           {
-            "Te recordamos que la venta de boletos comienza el 27 de octubre. \u00a1No te lo pierdas!"
+            "\u00a1REGRESA LA EMOCI\u00d3N!    VENTA DE BOLETOS A PARTIR DEL 23 DE SEPTIEMBRE"
           }
         </div>
       </div>
