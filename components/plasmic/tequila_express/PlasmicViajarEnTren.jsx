@@ -418,19 +418,6 @@ function PlasmicViajarEnTren__RenderFunc(props) {
                     </div>
                   </div>
                   <div
-                    className={classNames(projectcss.all, sty.freeBox__sYHge)}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text___4C2T
-                      )}
-                    >
-                      {"Un lugar para fortalecer lazos"}
-                    </div>
-                  </div>
-                  <div
                     className={classNames(projectcss.all, sty.freeBox__fnyXo)}
                   >
                     <div
@@ -441,19 +428,6 @@ function PlasmicViajarEnTren__RenderFunc(props) {
                       )}
                     >
                       {"Una experiencia cultural en tu viaje de negocios"}
-                    </div>
-                  </div>
-                  <div
-                    className={classNames(projectcss.all, sty.freeBox__y8Hp)}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__ugqH8
-                      )}
-                    >
-                      {"Una escapada rom\u00e1ntica"}
                     </div>
                   </div>
                   <div
