@@ -505,6 +505,31 @@
           "id": "_3C-eJ0eFYWZ",
           "name": "Imagen de WhatsApp 2024-09-13 a las 13.29.44_0b7c3248 1.jpg",
           "filePath": "../public/plasmic/tequila_express/images/imagenDeWhatsApp20240913ALas1329440B7C32481Jpg.jpg"
+        },
+        {
+          "id": "rO6jV2hQ4hsd",
+          "name": "Frame 28.jpg",
+          "filePath": "../public/plasmic/tequila_express/images/frame28Jpg.jpg"
+        },
+        {
+          "id": "kIBmVy_eVLCx",
+          "name": "Rectangle 37.jpg 5",
+          "filePath": "../public/plasmic/tequila_express/images/rectangle37Jpg5.jpg"
+        },
+        {
+          "id": "kZ_5MgIxce-n",
+          "name": "Rectangle 37.jpg 6",
+          "filePath": "../public/plasmic/tequila_express/images/rectangle37Jpg6.jpg"
+        },
+        {
+          "id": "vsTig5Vw29CT",
+          "name": "Frame 75.jpg 2",
+          "filePath": "../public/plasmic/tequila_express/images/frame75Jpg2.jpg"
+        },
+        {
+          "id": "ENHb5RQ6HUF6",
+          "name": "Rectangle 37.jpg 7",
+          "filePath": "../public/plasmic/tequila_express/images/rectangle37Jpg7.jpg"
         }
       ],
       "indirect": false,
@@ -552,8 +577,7 @@
           "componentImportPath": "@plasmicpkgs/plasmic-embed-css"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "ohDidvG9XsCeFumugENU3J",
@@ -953,8 +977,7 @@
           "componentImportPath": "@plasmicpkgs/antd5/skinny/registerBreadcrumb"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "r3ASNrnyvLLLAtDvzUioQ",
@@ -980,8 +1003,7 @@
           }
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "sqPBLwEBBKHA2WDuGb17eV",
@@ -1071,8 +1093,7 @@
           "componentImportPath": "@plasmicpkgs/radix-ui"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     }
   ],
   "globalVariants": {

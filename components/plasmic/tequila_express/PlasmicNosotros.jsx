@@ -227,7 +227,7 @@ function PlasmicNosotros__RenderFunc(props) {
                 }
                 loading={"lazy"}
                 src={{
-                  src: "/plasmic/tequila_express/images/rectangle37Jpg2.jpg",
+                  src: "/plasmic/tequila_express/images/rectangle37Jpg5.jpg",
                   fullWidth: 1186,
                   fullHeight: 794,
                   aspectRatio: undefined
@@ -380,7 +380,7 @@ function PlasmicNosotros__RenderFunc(props) {
                 }
                 loading={"lazy"}
                 src={{
-                  src: "/plasmic/tequila_express/images/rectangle37Jpg3.jpg",
+                  src: "/plasmic/tequila_express/images/rectangle37Jpg6.jpg",
                   fullWidth: 1186,
                   fullHeight: 794,
                   aspectRatio: undefined

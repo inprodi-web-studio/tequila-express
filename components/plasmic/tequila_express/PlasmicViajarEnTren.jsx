@@ -283,7 +283,7 @@ function PlasmicViajarEnTren__RenderFunc(props) {
                 }
                 loading={"lazy"}
                 src={{
-                  src: "/plasmic/tequila_express/images/rectangle37Jpg2.jpg",
+                  src: "/plasmic/tequila_express/images/rectangle37Jpg7.jpg",
                   fullWidth: 1186,
                   fullHeight: 794,
                   aspectRatio: undefined
