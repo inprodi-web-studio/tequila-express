@@ -535,6 +535,41 @@
           "id": "8tjK03OK1iye",
           "name": "Prox-BannerWeb 1.jpg",
           "filePath": "../public/plasmic/tequila_express/images/proxBannerWeb1Jpg.jpg"
+        },
+        {
+          "id": "-3rms-xlDD0f",
+          "name": "attachment.jpeg",
+          "filePath": "../public/plasmic/tequila_express/images/attachmentJpeg.jpg"
+        },
+        {
+          "id": "4IngSWyJ_a_Q",
+          "name": "attachment.jpeg 2",
+          "filePath": "../public/plasmic/tequila_express/images/attachmentJpeg2.jpg"
+        },
+        {
+          "id": "Q9b3wF7u5dIr",
+          "name": "attachment.jpeg 3",
+          "filePath": "../public/plasmic/tequila_express/images/attachmentJpeg3.jpg"
+        },
+        {
+          "id": "YHdfOeGygHSn",
+          "name": "attachment.png",
+          "filePath": "../public/plasmic/tequila_express/images/attachmentPng.png"
+        },
+        {
+          "id": "3t-texF_hGwX",
+          "name": "Rectangle 123.jpg",
+          "filePath": "../public/plasmic/tequila_express/images/rectangle123Jpg.jpg"
+        },
+        {
+          "id": "eigrnl__Wvf6",
+          "name": "Rectangle 122.jpg 2",
+          "filePath": "../public/plasmic/tequila_express/images/rectangle122Jpg2.jpg"
+        },
+        {
+          "id": "wu7yhAHBCPQn",
+          "name": "BannerWebV02 1.jpg",
+          "filePath": "../public/plasmic/tequila_express/images/bannerWebV021Jpg.jpg"
         }
       ],
       "indirect": false,

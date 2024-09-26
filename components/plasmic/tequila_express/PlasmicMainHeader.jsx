@@ -132,7 +132,7 @@ function PlasmicMainHeader__RenderFunc(props) {
             sty.text___1O7S4
           )}
         >
-          {"\u00a1REGRESA LA EMOCI\u00d3N!    VENTA DE BOLETOS PROXIMAMENTEE"}
+          {"\u00a1REGRESA LA EMOCI\u00d3N!    VENTA DE BOLETOS PROXIMAMENTE"}
         </div>
       </div>
       <div
@@ -272,7 +272,8 @@ function PlasmicMainHeader__RenderFunc(props) {
                 { type: "item", value: "action2", label: null, onClick: null }
               ];
 
-              __composite["0"]["label"] = "Grupo M\u00e9xico Transportes";
+              __composite["0"]["label"] =
+                "Boletos GDL - Tequila (Solo Transporte)";
               __composite["0"]["onClick"] = async info => {
                 const $steps = {};
                 $steps["goToRecorridoGrupoMexicoTransportes"] = true
@@ -307,7 +308,7 @@ function PlasmicMainHeader__RenderFunc(props) {
                 }
               };
               __composite["1"]["label"] =
-                "Tequila Express experiencia Casa Sauza";
+                "Experiencia Casa Sauza (Incluye Transporte)";
               __composite["1"]["onClick"] = async info => {
                 const $steps = {};
                 $steps["goToRecorridoCamaraDeComercioDeGuadalajara"] = true
@@ -656,7 +657,7 @@ function PlasmicMainHeader__RenderFunc(props) {
                   }
                 }}
               >
-                {"Grupo M\u00e9xico Transportes"}
+                {"Boletos GDL - Tequila (Solo Transporte)"}
               </div>
               <div
                 className={classNames(
@@ -738,7 +739,7 @@ function PlasmicMainHeader__RenderFunc(props) {
                     className={"plasmic_default__all plasmic_default__span"}
                     style={{ fontWeight: 700 }}
                   >
-                    {"Tequila Express experiencia Casa Sauza"}
+                    {"Experiencia Casa Sauza (Incluye Transporte)"}
                   </span>
                 </React.Fragment>
               </div>

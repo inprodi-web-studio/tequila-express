@@ -283,9 +283,9 @@ function PlasmicViajarEnTren__RenderFunc(props) {
                 }
                 loading={"lazy"}
                 src={{
-                  src: "/plasmic/tequila_express/images/rectangle37Jpg7.jpg",
-                  fullWidth: 1186,
-                  fullHeight: 794,
+                  src: "/plasmic/tequila_express/images/attachmentPng.png",
+                  fullWidth: 2464,
+                  fullHeight: 1856,
                   aspectRatio: undefined
                 }}
               />
@@ -441,6 +441,32 @@ function PlasmicViajarEnTren__RenderFunc(props) {
                       )}
                     >
                       {"Una inmersi\u00f3n cultural personal"}
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__qDKmX)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__gtoNm
+                      )}
+                    >
+                      {"Un lugar para fortalecer lazos"}
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__gkWbW)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___5E5X
+                      )}
+                    >
+                      {"Una escapada rom\u00e1ntica"}
                     </div>
                   </div>
                 </SliderWrapper>

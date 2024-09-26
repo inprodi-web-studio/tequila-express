@@ -380,9 +380,9 @@ function PlasmicNosotros__RenderFunc(props) {
                 }
                 loading={"lazy"}
                 src={{
-                  src: "/plasmic/tequila_express/images/rectangle37Jpg6.jpg",
-                  fullWidth: 1186,
-                  fullHeight: 794,
+                  src: "/plasmic/tequila_express/images/attachmentJpeg2.jpg",
+                  fullWidth: 2464,
+                  fullHeight: 1856,
                   aspectRatio: undefined
                 }}
               />

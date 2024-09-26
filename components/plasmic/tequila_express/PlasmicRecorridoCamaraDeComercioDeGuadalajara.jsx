@@ -368,7 +368,7 @@ function PlasmicRecorridoCamaraDeComercioDeGuadalajara__RenderFunc(props) {
                     sty.text___8JEla
                   )}
                 >
-                  {"7:00 - 19:45 / Tren GDL-TQL-GDL con experiencia"}
+                  {"9:00 - 21:40 hrs / Tren GDL-TQL-GDL con experiencia"}
                 </div>
               </Stack__>
             </Stack__>
@@ -511,7 +511,7 @@ function PlasmicRecorridoCamaraDeComercioDeGuadalajara__RenderFunc(props) {
                   )}
                 >
                   {
-                    "Itinerario:\n7:00 - 19:45 / Tren GDL-TQL-GDL con experiencia"
+                    "Itinerario:\n9:00 - 21:40 hrs / Tren GDL-TQL-GDL con experiencia"
                   }
                 </div>
               </div>
@@ -945,7 +945,7 @@ function PlasmicRecorridoCamaraDeComercioDeGuadalajara__RenderFunc(props) {
                                   )}
                                 >
                                   {
-                                    "Transportes en autob\u00fas a estaci\u00f3n de tren"
+                                    "Transporte en autob\u00fas a estaci\u00f3n de tren"
                                   }
                                 </li>
                               </ul>
@@ -1492,7 +1492,7 @@ function PlasmicRecorridoCamaraDeComercioDeGuadalajara__RenderFunc(props) {
                             sty.text___6Q30C
                           )}
                         >
-                          {"Viaje sencillo GDL - TQL"}
+                          {"Viaje redondo GDL - TQL - GDL"}
                         </div>
                         <div
                           className={classNames(
@@ -1588,7 +1588,7 @@ function PlasmicRecorridoCamaraDeComercioDeGuadalajara__RenderFunc(props) {
                                   )}
                                 >
                                   {
-                                    "Transportes en autob\u00fas a estaci\u00f3n de tren"
+                                    "Transporte en autob\u00fas a estaci\u00f3n de tren"
                                   }
                                 </li>
                               </ul>
@@ -1887,9 +1887,7 @@ function PlasmicRecorridoCamaraDeComercioDeGuadalajara__RenderFunc(props) {
                         sty.text__n84ZA
                       )}
                     >
-                      {
-                        "Av. Ignacio L Vallarta 4085\nCamino Real\n45040\nZapopan, Jal."
-                      }
+                      {"Av. Vallarta 4095\nCamino Real\n45040\nZapopan, Jal."}
                     </div>
                   </div>
                 </Stack__>
@@ -2274,7 +2272,7 @@ function PlasmicRecorridoCamaraDeComercioDeGuadalajara__RenderFunc(props) {
                   )}
                 >
                   {
-                    "09:00 Recepci\u00f3n en C\u00e1mara de Comercio de Guadalajara con coffee break.\n09:30 Salida en autobuses hacia estaci\u00f3n del ferrocarril en Av. Washington.\n10:30 Salida en tren hacia Tequila.\n12:30 Llegada a Tequila y traslado en autobuses hacia campos agaveros.\n13:00 Llegada a campos agaveros de Casa Sauza, demostraci\u00f3n de la jima del agave y plantaci\u00f3n.\n13:45 Visita a \u201cLa Constancia\u201d bodega de a\u00f1ejamiento.\n14:15 Visita a \u201cLa Perseverancia\u201d, f\u00e1brica de elaboraci\u00f3n de tequila.\n15:00 Cantarito de bienvenida\n15:15 Comida en Quinta Sauza\n15:30 Espect\u00e1culo con mariachi, ballet folcl\u00f3rico, suertes charras y cantantes.\n16:45 Visita al centro de Tequila.\n17:45 Abordaje de autobuses hacia Estaci\u00f3n de tequila.\n18:15 Abordaje de los vagones.\n18:30 Salida en tren hacia Guadalajara.\n20:30 Llegada a Guadalajara.\n20:50 Traslado a C\u00e1mara de Comercio de Guadalajara.\n21:15 Llegada a C\u00e1mara de Comercio."
+                    "09:00 Recepci\u00f3n en C\u00e1mara de Comercio de Guadalajara con coffee break.\n09:30 Salida en autobuses hacia estaci\u00f3n del ferrocarril en Av. Washington.\n10:30 Salida en tren hacia Tequila.\n12:30 Llegada a Tequila y traslado en autobuses hacia campos agaveros.\n13:00 Llegada a campos agaveros de Casa Sauza, demostraci\u00f3n de la jima del agave y plantaci\u00f3n.\n13:45 Visita a \u201cLa Constancia\u201d bodega de a\u00f1ejamiento.\n14:15 Visita a \u201cLa Perseverancia\u201d, f\u00e1brica de elaboraci\u00f3n de tequila.\n15:00 Cantarito de bienvenida\n15:15 Comida en Quinta Sauza\n15:30 Espect\u00e1culo Estampas de M\u00e9xico.\n16:45 Visita al centro de Tequila.\n17:45 Abordaje de autobuses hacia Estaci\u00f3n de tequila.\n18:30 Abordaje de los vagones.\n19:00 Salida en tren hacia Guadalajara.\n21:00 Llegada a Guadalajara.\n21:15 Traslado a C\u00e1mara de Comercio de Guadalajara.\n21:40 Llegada a C\u00e1mara de Comercio."
                   }
                 </div>
                 {(() => {

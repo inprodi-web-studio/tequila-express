@@ -12,6 +12,7 @@ import * as React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import {
+  PlasmicImg as PlasmicImg__,
   Stack as Stack__,
   classNames,
   createPlasmicElementProxy,
@@ -34,6 +35,7 @@ import { accordionHelpers as AntdAccordion_Helpers } from "@plasmicpkgs/antd5/sk
 import { AntdAccordionItem } from "@plasmicpkgs/antd5/skinny/registerCollapse";
 import Button2 from "../../Button2"; // plasmic-import: 48nEEeCzck2s/component
 import Footer from "../../Footer"; // plasmic-import: Iz_Y_kKZMHTD/component
+import { AntdModal } from "@plasmicpkgs/antd5/skinny/registerModal";
 import { useScreenVariants as useScreenVariantsraGa2MJbEFd } from "../website_starter/PlasmicGlobalVariant__Screen"; // plasmic-import: RaGa2M-JbEFd/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
@@ -106,6 +108,12 @@ function PlasmicInicio__RenderFunc(props) {
         type: "private",
         variableType: "boolean",
         initFunc: ({ $props, $state, $queries, $ctx }) => false
+      },
+      {
+        path: "modal.open",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => true
       }
     ],
 
@@ -259,6 +267,38 @@ function PlasmicInicio__RenderFunc(props) {
                         projectcss.all,
                         projectcss.__wab_text,
                         sty.text__h6Hm
+                      )}
+                    >
+                      {
+                        "Descubre la esencia de Jalisco entre rieles y ra\u00edces. Emprende un viaje inolvidable a bordo del tren tur\u00edstico a Tequila."
+                      }
+                    </div>
+                  </Stack__>
+                </div>
+                <div
+                  data-plasmic-name={"slide4"}
+                  data-plasmic-override={overrides.slide4}
+                  className={classNames(projectcss.all, sty.slide4)}
+                >
+                  <Stack__
+                    as={"div"}
+                    hasGap={true}
+                    className={classNames(projectcss.all, sty.freeBox__pq8A)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__izL
+                      )}
+                    >
+                      {"Convierte el trayecto en \nparte de tu destino"}
+                    </div>
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__nomts
                       )}
                     >
                       {
@@ -587,7 +627,7 @@ function PlasmicInicio__RenderFunc(props) {
                         )}
                       >
                         {
-                          "Los recorridos generalmente est\u00e1n disponibles los s\u00e1bados, con algunas salidas adicionales los viernes y domingos, dependiendo del operador. Los horarios espec\u00edficos de salida y regreso var\u00edan seg\u00fan el itinerario seleccionado."
+                          "Los recorridos est\u00e1n disponibles los d\u00edas viernes, s\u00e1bados y domingos, con algunas excepciones dependiendo el operador. Los horarios espec\u00edficos de salida y regreso var\u00edan seg\u00fan el itinerario seleccionado."
                         }
                       </div>
                     </AntdAccordionItem>
@@ -816,6 +856,45 @@ function PlasmicInicio__RenderFunc(props) {
             data-plasmic-override={overrides.footer}
             className={classNames("__wab_instance", sty.footer)}
           />
+
+          <AntdModal
+            data-plasmic-name={"modal"}
+            data-plasmic-override={overrides.modal}
+            className={classNames("__wab_instance", sty.modal)}
+            defaultStylesClassName={classNames(
+              projectcss.root_reset,
+              projectcss.plasmic_default_styles,
+              projectcss.plasmic_mixins,
+              projectcss.plasmic_tokens,
+              plasmic_antd_5_hostless_css.plasmic_tokens
+            )}
+            hideFooter={true}
+            modalScopeClassName={sty["modal__modal"]}
+            onOpenChange={generateStateOnChangeProp($state, ["modal", "open"])}
+            open={generateStateValueProp($state, ["modal", "open"])}
+            title={null}
+            trigger={null}
+          >
+            <PlasmicImg__
+              data-plasmic-name={"img"}
+              data-plasmic-override={overrides.img}
+              alt={""}
+              className={classNames(sty.img)}
+              displayHeight={"auto"}
+              displayMaxHeight={"none"}
+              displayMaxWidth={"100%"}
+              displayMinHeight={"0"}
+              displayMinWidth={"0"}
+              displayWidth={"100%"}
+              loading={"lazy"}
+              src={{
+                src: "/plasmic/tequila_express/images/bannerWebV021Jpg.jpg",
+                fullWidth: 2400,
+                fullHeight: 1426,
+                aspectRatio: undefined
+              }}
+            />
+          </AntdModal>
         </div>
       </div>
     </React.Fragment>
@@ -829,6 +908,7 @@ const PlasmicDescendants = {
     "sliderCarousel",
     "slide2",
     "slide1",
+    "slide4",
     "slide3",
     "stats",
     "left",
@@ -844,13 +924,16 @@ const PlasmicDescendants = {
     "promoBanner",
     "banner",
     "button2",
-    "footer"
+    "footer",
+    "modal",
+    "img"
   ],
 
   mainHeader: ["mainHeader"],
-  sliderCarousel: ["sliderCarousel", "slide2", "slide1", "slide3"],
+  sliderCarousel: ["sliderCarousel", "slide2", "slide1", "slide4", "slide3"],
   slide2: ["slide2"],
   slide1: ["slide1"],
+  slide4: ["slide4"],
   slide3: ["slide3"],
   stats: ["stats", "left", "right"],
   left: ["left"],
@@ -866,7 +949,9 @@ const PlasmicDescendants = {
   promoBanner: ["promoBanner", "banner", "button2"],
   banner: ["banner", "button2"],
   button2: ["button2"],
-  footer: ["footer"]
+  footer: ["footer"],
+  modal: ["modal", "img"],
+  img: ["img"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -905,6 +990,7 @@ export const PlasmicInicio = Object.assign(
     sliderCarousel: makeNodeComponent("sliderCarousel"),
     slide2: makeNodeComponent("slide2"),
     slide1: makeNodeComponent("slide1"),
+    slide4: makeNodeComponent("slide4"),
     slide3: makeNodeComponent("slide3"),
     stats: makeNodeComponent("stats"),
     left: makeNodeComponent("left"),
@@ -921,6 +1007,8 @@ export const PlasmicInicio = Object.assign(
     banner: makeNodeComponent("banner"),
     button2: makeNodeComponent("button2"),
     footer: makeNodeComponent("footer"),
+    modal: makeNodeComponent("modal"),
+    img: makeNodeComponent("img"),
     // Metadata about props expected for PlasmicInicio
     internalVariantProps: PlasmicInicio__VariantProps,
     internalArgProps: PlasmicInicio__ArgProps,

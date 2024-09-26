@@ -212,7 +212,7 @@ function PlasmicContacto__RenderFunc(props) {
                       sty.text__h886R
                     )}
                   >
-                    {"Tel\u00e9fono\nCorreo electr\u00f3nico"}
+                    {"33 2309 4000\ntequila.express@ferromex.mx"}
                   </div>
                 </Stack__>
                 <Stack__
@@ -351,7 +351,7 @@ function PlasmicContacto__RenderFunc(props) {
                         )}
                       >
                         {
-                          "Los recorridos generalmente est\u00e1n disponibles los s\u00e1bados, con algunas salidas adicionales los viernes y domingos, dependiendo del operador. Los horarios espec\u00edficos de salida y regreso var\u00edan seg\u00fan el itinerario seleccionado."
+                          "Los recorridos est\u00e1n disponibles los d\u00edas viernes, s\u00e1bados y domingos, con algunas excepciones dependiendo el operador. Los horarios espec\u00edficos de salida y regreso var\u00edan seg\u00fan el itinerario seleccionado."
                         }
                       </div>
                     </AntdAccordionItem>
