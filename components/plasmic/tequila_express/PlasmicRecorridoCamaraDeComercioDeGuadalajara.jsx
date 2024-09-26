@@ -2478,9 +2478,9 @@ function PlasmicRecorridoCamaraDeComercioDeGuadalajara__RenderFunc(props) {
               displayWidth={"100%"}
               loading={"lazy"}
               src={{
-                src: "/plasmic/tequila_express/images/imagenDeWhatsApp20240913ALas1329440B7C32481Jpg.jpg",
-                fullWidth: 3200,
-                fullHeight: 2132,
+                src: "/plasmic/tequila_express/images/proxBannerWeb1Jpg.jpg",
+                fullWidth: 2400,
+                fullHeight: 1426,
                 aspectRatio: undefined
               }}
             />

@@ -132,9 +132,7 @@ function PlasmicMainHeader__RenderFunc(props) {
             sty.text___1O7S4
           )}
         >
-          {
-            "\u00a1REGRESA LA EMOCI\u00d3N!    VENTA DE BOLETOS A PARTIR DEL 23 DE SEPTIEMBRE"
-          }
+          {"\u00a1REGRESA LA EMOCI\u00d3N!    VENTA DE BOLETOS PROXIMAMENTEE"}
         </div>
       </div>
       <div
