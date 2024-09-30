@@ -24,7 +24,6 @@ import {
   generateStateValueProp,
   hasVariant,
   initializeCodeComponentStates,
-  set as $stateSet,
   useDollarState
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
@@ -35,13 +34,11 @@ import { AntdAccordion } from "@plasmicpkgs/antd5/skinny/registerCollapse";
 import { accordionHelpers as AntdAccordion_Helpers } from "@plasmicpkgs/antd5/skinny/registerCollapse";
 import { AntdAccordionItem } from "@plasmicpkgs/antd5/skinny/registerCollapse";
 import Footer from "../../Footer"; // plasmic-import: Iz_Y_kKZMHTD/component
-import { AntdModal } from "@plasmicpkgs/antd5/skinny/registerModal";
 import { useScreenVariants as useScreenVariantsraGa2MJbEFd } from "../website_starter/PlasmicGlobalVariant__Screen"; // plasmic-import: RaGa2M-JbEFd/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
 import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
 import projectcss from "../website_starter/plasmic.module.css"; // plasmic-import: uEWT1C6ySrjtSMWJntBego/projectcss
 import sty from "./PlasmicRecorridoGrupoMexicoTransportes.module.css"; // plasmic-import: IQiQ2GDBiFpG/css
-import XSvgIcon from "./icons/PlasmicIcon__XSvg"; // plasmic-import: wbQGNqEUKbny/icon
 
 createPlasmicElementProxy;
 
@@ -95,27 +92,6 @@ function PlasmicRecorridoGrupoMexicoTransportes__RenderFunc(props) {
         type: "private",
         variableType: "boolean",
         initFunc: ({ $props, $state, $queries, $ctx }) => false
-      },
-      {
-        path: "bookingModal.open",
-        type: "private",
-        variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) =>
-          (() => {
-            try {
-              return (() => {
-                return $state.bookingModalOpened;
-              })();
-            } catch (e) {
-              if (
-                e instanceof TypeError ||
-                e?.plasmicType === "PlasmicUndefinedDataError"
-              ) {
-                return undefined;
-              }
-              throw e;
-            }
-          })()
       },
       {
         path: "bookingModalOpened",
@@ -260,39 +236,43 @@ function PlasmicRecorridoGrupoMexicoTransportes__RenderFunc(props) {
                 label={"Reservar"}
                 onClick={async () => {
                   const $steps = {};
-                  $steps["updateBookingModalOpened"] = true
+                  $steps[
+                    "goToHttpsGmxtTequilaexpressMxReservacionesSeleccionar"
+                  ] = true
                     ? (() => {
                         const actionArgs = {
-                          variable: {
-                            objRoot: $state,
-                            variablePath: ["bookingModalOpened"]
-                          },
-                          operation: 0,
-                          value: true
+                          destination:
+                            "https://gmxt.tequilaexpress.mx/reservaciones/seleccionar"
                         };
-                        return (({
-                          variable,
-                          value,
-                          startIndex,
-                          deleteCount
-                        }) => {
-                          if (!variable) {
-                            return;
+                        return (({ destination }) => {
+                          if (
+                            typeof destination === "string" &&
+                            destination.startsWith("#")
+                          ) {
+                            document
+                              .getElementById(destination.substr(1))
+                              .scrollIntoView({ behavior: "smooth" });
+                          } else {
+                            __nextRouter?.push(destination);
                           }
-                          const { objRoot, variablePath } = variable;
-                          $stateSet(objRoot, variablePath, value);
-                          return value;
                         })?.apply(null, [actionArgs]);
                       })()
                     : undefined;
                   if (
-                    $steps["updateBookingModalOpened"] != null &&
-                    typeof $steps["updateBookingModalOpened"] === "object" &&
-                    typeof $steps["updateBookingModalOpened"].then ===
-                      "function"
+                    $steps[
+                      "goToHttpsGmxtTequilaexpressMxReservacionesSeleccionar"
+                    ] != null &&
+                    typeof $steps[
+                      "goToHttpsGmxtTequilaexpressMxReservacionesSeleccionar"
+                    ] === "object" &&
+                    typeof $steps[
+                      "goToHttpsGmxtTequilaexpressMxReservacionesSeleccionar"
+                    ].then === "function"
                   ) {
-                    $steps["updateBookingModalOpened"] = await $steps[
-                      "updateBookingModalOpened"
+                    $steps[
+                      "goToHttpsGmxtTequilaexpressMxReservacionesSeleccionar"
+                    ] = await $steps[
+                      "goToHttpsGmxtTequilaexpressMxReservacionesSeleccionar"
                     ];
                   }
                 }}
@@ -1540,40 +1520,43 @@ function PlasmicRecorridoGrupoMexicoTransportes__RenderFunc(props) {
                     light={true}
                     onClick={async () => {
                       const $steps = {};
-                      $steps["updateBookingModalOpened"] = true
+                      $steps[
+                        "goToHttpsGmxtTequilaexpressMxReservacionesSeleccionar"
+                      ] = true
                         ? (() => {
                             const actionArgs = {
-                              variable: {
-                                objRoot: $state,
-                                variablePath: ["bookingModalOpened"]
-                              },
-                              operation: 0,
-                              value: true
+                              destination:
+                                "https://gmxt.tequilaexpress.mx/reservaciones/seleccionar"
                             };
-                            return (({
-                              variable,
-                              value,
-                              startIndex,
-                              deleteCount
-                            }) => {
-                              if (!variable) {
-                                return;
+                            return (({ destination }) => {
+                              if (
+                                typeof destination === "string" &&
+                                destination.startsWith("#")
+                              ) {
+                                document
+                                  .getElementById(destination.substr(1))
+                                  .scrollIntoView({ behavior: "smooth" });
+                              } else {
+                                __nextRouter?.push(destination);
                               }
-                              const { objRoot, variablePath } = variable;
-                              $stateSet(objRoot, variablePath, value);
-                              return value;
                             })?.apply(null, [actionArgs]);
                           })()
                         : undefined;
                       if (
-                        $steps["updateBookingModalOpened"] != null &&
-                        typeof $steps["updateBookingModalOpened"] ===
-                          "object" &&
-                        typeof $steps["updateBookingModalOpened"].then ===
-                          "function"
+                        $steps[
+                          "goToHttpsGmxtTequilaexpressMxReservacionesSeleccionar"
+                        ] != null &&
+                        typeof $steps[
+                          "goToHttpsGmxtTequilaexpressMxReservacionesSeleccionar"
+                        ] === "object" &&
+                        typeof $steps[
+                          "goToHttpsGmxtTequilaexpressMxReservacionesSeleccionar"
+                        ].then === "function"
                       ) {
-                        $steps["updateBookingModalOpened"] = await $steps[
-                          "updateBookingModalOpened"
+                        $steps[
+                          "goToHttpsGmxtTequilaexpressMxReservacionesSeleccionar"
+                        ] = await $steps[
+                          "goToHttpsGmxtTequilaexpressMxReservacionesSeleccionar"
                         ];
                       }
                     }}
@@ -1587,89 +1570,6 @@ function PlasmicRecorridoGrupoMexicoTransportes__RenderFunc(props) {
             data-plasmic-override={overrides.footer}
             className={classNames("__wab_instance", sty.footer)}
           />
-
-          <AntdModal
-            data-plasmic-name={"bookingModal"}
-            data-plasmic-override={overrides.bookingModal}
-            className={classNames("__wab_instance", sty.bookingModal)}
-            closeIcon={
-              <XSvgIcon
-                data-plasmic-name={"svg"}
-                data-plasmic-override={overrides.svg}
-                className={classNames(projectcss.all, sty.svg)}
-                role={"img"}
-              />
-            }
-            defaultStylesClassName={classNames(
-              projectcss.root_reset,
-              projectcss.plasmic_default_styles,
-              projectcss.plasmic_mixins,
-              projectcss.plasmic_tokens,
-              plasmic_antd_5_hostless_css.plasmic_tokens
-            )}
-            hideFooter={true}
-            modalScopeClassName={sty["bookingModal__modal"]}
-            onCancel={async () => {
-              const $steps = {};
-              $steps["updateBookingModalOpened"] = true
-                ? (() => {
-                    const actionArgs = {
-                      variable: {
-                        objRoot: $state,
-                        variablePath: ["bookingModalOpened"]
-                      },
-                      operation: 0,
-                      value: false
-                    };
-                    return (({ variable, value, startIndex, deleteCount }) => {
-                      if (!variable) {
-                        return;
-                      }
-                      const { objRoot, variablePath } = variable;
-                      $stateSet(objRoot, variablePath, value);
-                      return value;
-                    })?.apply(null, [actionArgs]);
-                  })()
-                : undefined;
-              if (
-                $steps["updateBookingModalOpened"] != null &&
-                typeof $steps["updateBookingModalOpened"] === "object" &&
-                typeof $steps["updateBookingModalOpened"].then === "function"
-              ) {
-                $steps["updateBookingModalOpened"] = await $steps[
-                  "updateBookingModalOpened"
-                ];
-              }
-            }}
-            onOpenChange={generateStateOnChangeProp($state, [
-              "bookingModal",
-              "open"
-            ])}
-            open={generateStateValueProp($state, ["bookingModal", "open"])}
-            title={null}
-            trigger={null}
-            width={
-              hasVariant(globalVariants, "screen", "tablet") ? "95%" : "600px"
-            }
-          >
-            <PlasmicImg__
-              alt={""}
-              className={classNames(sty.img__e5C0M)}
-              displayHeight={"auto"}
-              displayMaxHeight={"none"}
-              displayMaxWidth={"100%"}
-              displayMinHeight={"0"}
-              displayMinWidth={"0"}
-              displayWidth={"100%"}
-              loading={"lazy"}
-              src={{
-                src: "/plasmic/tequila_express/images/proxBannerWeb1Jpg.jpg",
-                fullWidth: 2400,
-                fullHeight: 1426,
-                aspectRatio: undefined
-              }}
-            />
-          </AntdModal>
         </div>
       </div>
     </React.Fragment>
@@ -1689,9 +1589,7 @@ const PlasmicDescendants = {
     "accordion",
     "title2",
     "title3",
-    "footer",
-    "bookingModal",
-    "svg"
+    "footer"
   ],
 
   mainHeader: ["mainHeader"],
@@ -1704,9 +1602,7 @@ const PlasmicDescendants = {
   accordion: ["accordion", "title2", "title3"],
   title2: ["title2"],
   title3: ["title3"],
-  footer: ["footer"],
-  bookingModal: ["bookingModal", "svg"],
-  svg: ["svg"]
+  footer: ["footer"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -1754,8 +1650,6 @@ export const PlasmicRecorridoGrupoMexicoTransportes = Object.assign(
     title2: makeNodeComponent("title2"),
     title3: makeNodeComponent("title3"),
     footer: makeNodeComponent("footer"),
-    bookingModal: makeNodeComponent("bookingModal"),
-    svg: makeNodeComponent("svg"),
     // Metadata about props expected for PlasmicRecorridoGrupoMexicoTransportes
     internalVariantProps: PlasmicRecorridoGrupoMexicoTransportes__VariantProps,
     internalArgProps: PlasmicRecorridoGrupoMexicoTransportes__ArgProps,

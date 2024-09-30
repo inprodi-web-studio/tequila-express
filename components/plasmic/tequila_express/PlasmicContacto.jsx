@@ -203,7 +203,7 @@ function PlasmicContacto__RenderFunc(props) {
                       sty.text___0Vzh0
                     )}
                   >
-                    {"Grupo M\u00e9xico Transportes"}
+                    {"Contacto y Reservaciones"}
                   </div>
                   <div
                     className={classNames(
@@ -213,30 +213,6 @@ function PlasmicContacto__RenderFunc(props) {
                     )}
                   >
                     {"33 2309 4000\ntequila.express@ferromex.mx"}
-                  </div>
-                </Stack__>
-                <Stack__
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox___7Orrp)}
-                >
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__mzJV
-                    )}
-                  >
-                    {"C\u00e1mara de Comercio de Guadalajara"}
-                  </div>
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__ffzHs
-                    )}
-                  >
-                    {"Tel\u00e9fono\nCorreo electr\u00f3nico"}
                   </div>
                 </Stack__>
               </Stack__>

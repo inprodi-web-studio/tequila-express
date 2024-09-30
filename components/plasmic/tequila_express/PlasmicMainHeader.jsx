@@ -121,21 +121,6 @@ function PlasmicMainHeader__RenderFunc(props) {
       )}
     >
       <div
-        data-plasmic-name={"disclaimer"}
-        data-plasmic-override={overrides.disclaimer}
-        className={classNames(projectcss.all, sty.disclaimer)}
-      >
-        <div
-          className={classNames(
-            projectcss.all,
-            projectcss.__wab_text,
-            sty.text___1O7S4
-          )}
-        >
-          {"\u00a1REGRESA LA EMOCI\u00d3N!    VENTA DE BOLETOS PROXIMAMENTE"}
-        </div>
-      </div>
-      <div
         data-plasmic-name={"header"}
         data-plasmic-override={overrides.header}
         className={classNames(projectcss.all, sty.header)}
@@ -933,18 +918,7 @@ function PlasmicMainHeader__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: [
-    "root",
-    "disclaimer",
-    "header",
-    "img",
-    "menu",
-    "dropdown",
-    "modal",
-    "button"
-  ],
-
-  disclaimer: ["disclaimer"],
+  root: ["root", "header", "img", "menu", "dropdown", "modal", "button"],
   header: ["header", "img", "menu", "dropdown", "modal", "button"],
   img: ["img"],
   menu: ["menu", "dropdown"],
@@ -985,7 +959,6 @@ export const PlasmicMainHeader = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    disclaimer: makeNodeComponent("disclaimer"),
     header: makeNodeComponent("header"),
     img: makeNodeComponent("img"),
     menu: makeNodeComponent("menu"),

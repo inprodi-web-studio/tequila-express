@@ -125,27 +125,6 @@ function PlasmicRecorridoCamaraDeComercioDeGuadalajara__RenderFunc(props) {
         type: "private",
         variableType: "boolean",
         initFunc: ({ $props, $state, $queries, $ctx }) => false
-      },
-      {
-        path: "bookingModal.open",
-        type: "private",
-        variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) =>
-          (() => {
-            try {
-              return (() => {
-                return $state.bookModalOpened;
-              })();
-            } catch (e) {
-              if (
-                e instanceof TypeError ||
-                e?.plasmicType === "PlasmicUndefinedDataError"
-              ) {
-                return true;
-              }
-              throw e;
-            }
-          })()
       }
     ],
 
@@ -287,39 +266,42 @@ function PlasmicRecorridoCamaraDeComercioDeGuadalajara__RenderFunc(props) {
                 label={"Reservar"}
                 onClick={async () => {
                   const $steps = {};
-                  $steps["updateBookModalOpened"] = true
-                    ? (() => {
-                        const actionArgs = {
-                          variable: {
-                            objRoot: $state,
-                            variablePath: ["bookModalOpened"]
-                          },
-                          operation: 0,
-                          value: true
-                        };
-                        return (({
-                          variable,
-                          value,
-                          startIndex,
-                          deleteCount
-                        }) => {
-                          if (!variable) {
-                            return;
-                          }
-                          const { objRoot, variablePath } = variable;
-                          $stateSet(objRoot, variablePath, value);
-                          return value;
-                        })?.apply(null, [actionArgs]);
-                      })()
-                    : undefined;
+                  $steps["goToHttpsWwwTequilaexpressComMxReservacionesTren"] =
+                    true
+                      ? (() => {
+                          const actionArgs = {
+                            destination:
+                              "https://www.tequilaexpress.com.mx/reservaciones/tren"
+                          };
+                          return (({ destination }) => {
+                            if (
+                              typeof destination === "string" &&
+                              destination.startsWith("#")
+                            ) {
+                              document
+                                .getElementById(destination.substr(1))
+                                .scrollIntoView({ behavior: "smooth" });
+                            } else {
+                              __nextRouter?.push(destination);
+                            }
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
                   if (
-                    $steps["updateBookModalOpened"] != null &&
-                    typeof $steps["updateBookModalOpened"] === "object" &&
-                    typeof $steps["updateBookModalOpened"].then === "function"
+                    $steps[
+                      "goToHttpsWwwTequilaexpressComMxReservacionesTren"
+                    ] != null &&
+                    typeof $steps[
+                      "goToHttpsWwwTequilaexpressComMxReservacionesTren"
+                    ] === "object" &&
+                    typeof $steps[
+                      "goToHttpsWwwTequilaexpressComMxReservacionesTren"
+                    ].then === "function"
                   ) {
-                    $steps["updateBookModalOpened"] = await $steps[
-                      "updateBookModalOpened"
-                    ];
+                    $steps["goToHttpsWwwTequilaexpressComMxReservacionesTren"] =
+                      await $steps[
+                        "goToHttpsWwwTequilaexpressComMxReservacionesTren"
+                      ];
                   }
                 }}
               />
@@ -2131,39 +2113,43 @@ function PlasmicRecorridoCamaraDeComercioDeGuadalajara__RenderFunc(props) {
                     light={true}
                     onClick={async () => {
                       const $steps = {};
-                      $steps["updateBookModalOpened"] = true
+                      $steps[
+                        "goToHttpsWwwTequilaexpressComMxReservacionesTren"
+                      ] = true
                         ? (() => {
                             const actionArgs = {
-                              variable: {
-                                objRoot: $state,
-                                variablePath: ["bookModalOpened"]
-                              },
-                              operation: 0,
-                              value: true
+                              destination:
+                                "https://www.tequilaexpress.com.mx/reservaciones/tren"
                             };
-                            return (({
-                              variable,
-                              value,
-                              startIndex,
-                              deleteCount
-                            }) => {
-                              if (!variable) {
-                                return;
+                            return (({ destination }) => {
+                              if (
+                                typeof destination === "string" &&
+                                destination.startsWith("#")
+                              ) {
+                                document
+                                  .getElementById(destination.substr(1))
+                                  .scrollIntoView({ behavior: "smooth" });
+                              } else {
+                                __nextRouter?.push(destination);
                               }
-                              const { objRoot, variablePath } = variable;
-                              $stateSet(objRoot, variablePath, value);
-                              return value;
                             })?.apply(null, [actionArgs]);
                           })()
                         : undefined;
                       if (
-                        $steps["updateBookModalOpened"] != null &&
-                        typeof $steps["updateBookModalOpened"] === "object" &&
-                        typeof $steps["updateBookModalOpened"].then ===
-                          "function"
+                        $steps[
+                          "goToHttpsWwwTequilaexpressComMxReservacionesTren"
+                        ] != null &&
+                        typeof $steps[
+                          "goToHttpsWwwTequilaexpressComMxReservacionesTren"
+                        ] === "object" &&
+                        typeof $steps[
+                          "goToHttpsWwwTequilaexpressComMxReservacionesTren"
+                        ].then === "function"
                       ) {
-                        $steps["updateBookModalOpened"] = await $steps[
-                          "updateBookModalOpened"
+                        $steps[
+                          "goToHttpsWwwTequilaexpressComMxReservacionesTren"
+                        ] = await $steps[
+                          "goToHttpsWwwTequilaexpressComMxReservacionesTren"
                         ];
                       }
                     }}
@@ -2184,7 +2170,9 @@ function PlasmicRecorridoCamaraDeComercioDeGuadalajara__RenderFunc(props) {
             className={classNames("__wab_instance", sty.itineraryModal)}
             closeIcon={
               <XSvgIcon
-                className={classNames(projectcss.all, sty.svg__uWgYj)}
+                data-plasmic-name={"svg"}
+                data-plasmic-override={overrides.svg}
+                className={classNames(projectcss.all, sty.svg)}
                 role={"img"}
               />
             }
@@ -2403,86 +2391,6 @@ function PlasmicRecorridoCamaraDeComercioDeGuadalajara__RenderFunc(props) {
               </Stack__>
             </div>
           </AntdModal>
-          <AntdModal
-            data-plasmic-name={"bookingModal"}
-            data-plasmic-override={overrides.bookingModal}
-            className={classNames("__wab_instance", sty.bookingModal)}
-            closeIcon={
-              <XSvgIcon
-                className={classNames(projectcss.all, sty.svg__yRfM)}
-                role={"img"}
-              />
-            }
-            defaultStylesClassName={classNames(
-              projectcss.root_reset,
-              projectcss.plasmic_default_styles,
-              projectcss.plasmic_mixins,
-              projectcss.plasmic_tokens,
-              plasmic_antd_5_hostless_css.plasmic_tokens
-            )}
-            hideFooter={true}
-            modalScopeClassName={sty["bookingModal__modal"]}
-            onCancel={async () => {
-              const $steps = {};
-              $steps["updateBookModalOpened"] = true
-                ? (() => {
-                    const actionArgs = {
-                      variable: {
-                        objRoot: $state,
-                        variablePath: ["bookModalOpened"]
-                      },
-                      operation: 0,
-                      value: false
-                    };
-                    return (({ variable, value, startIndex, deleteCount }) => {
-                      if (!variable) {
-                        return;
-                      }
-                      const { objRoot, variablePath } = variable;
-                      $stateSet(objRoot, variablePath, value);
-                      return value;
-                    })?.apply(null, [actionArgs]);
-                  })()
-                : undefined;
-              if (
-                $steps["updateBookModalOpened"] != null &&
-                typeof $steps["updateBookModalOpened"] === "object" &&
-                typeof $steps["updateBookModalOpened"].then === "function"
-              ) {
-                $steps["updateBookModalOpened"] = await $steps[
-                  "updateBookModalOpened"
-                ];
-              }
-            }}
-            onOpenChange={generateStateOnChangeProp($state, [
-              "bookingModal",
-              "open"
-            ])}
-            open={generateStateValueProp($state, ["bookingModal", "open"])}
-            title={null}
-            trigger={null}
-            width={
-              hasVariant(globalVariants, "screen", "tablet") ? "95%" : "600px"
-            }
-          >
-            <PlasmicImg__
-              alt={""}
-              className={classNames(sty.img___8NfRi)}
-              displayHeight={"auto"}
-              displayMaxHeight={"none"}
-              displayMaxWidth={"100%"}
-              displayMinHeight={"0"}
-              displayMinWidth={"0"}
-              displayWidth={"100%"}
-              loading={"lazy"}
-              src={{
-                src: "/plasmic/tequila_express/images/proxBannerWeb1Jpg.jpg",
-                fullWidth: 2400,
-                fullHeight: 1426,
-                aspectRatio: undefined
-              }}
-            />
-          </AntdModal>
         </div>
       </div>
     </React.Fragment>
@@ -2506,7 +2414,7 @@ const PlasmicDescendants = {
     "footer",
     "itineraryModal",
     "sliderCarousel",
-    "bookingModal"
+    "svg"
   ],
 
   mainHeader: ["mainHeader"],
@@ -2521,9 +2429,9 @@ const PlasmicDescendants = {
   bar: ["bar", "title3"],
   title3: ["title3"],
   footer: ["footer"],
-  itineraryModal: ["itineraryModal", "sliderCarousel"],
+  itineraryModal: ["itineraryModal", "sliderCarousel", "svg"],
   sliderCarousel: ["sliderCarousel"],
-  bookingModal: ["bookingModal"]
+  svg: ["svg"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -2574,7 +2482,7 @@ export const PlasmicRecorridoCamaraDeComercioDeGuadalajara = Object.assign(
     footer: makeNodeComponent("footer"),
     itineraryModal: makeNodeComponent("itineraryModal"),
     sliderCarousel: makeNodeComponent("sliderCarousel"),
-    bookingModal: makeNodeComponent("bookingModal"),
+    svg: makeNodeComponent("svg"),
     // Metadata about props expected for PlasmicRecorridoCamaraDeComercioDeGuadalajara
     internalVariantProps:
       PlasmicRecorridoCamaraDeComercioDeGuadalajara__VariantProps,
